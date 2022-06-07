@@ -10,11 +10,13 @@ class CreateAnnouncement extends Component
     public $title;
     public $body;
     public $price;
+    public $category;
 
     protected $rules = [
         'title'=>'required|min:4',
         'body'=>'required|min:20',
         'price'=>'required|numeric',
+        'category'=>'required',
     ];
 
     protected $messages = [
@@ -28,6 +30,7 @@ class CreateAnnouncement extends Component
             'title'=>$this->title,
             'body'=>$this->body,
             'price'=>$this->price,
+            'category_id'=>$this->category,
         ]);
         session()->flash('message','Annuncio inserito correttamente');
         $this->cleanForm();

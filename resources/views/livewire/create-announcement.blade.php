@@ -1,6 +1,5 @@
 <div>
     <h1>Crea il tuo annuncio</h1>
-
     
 
     <form wire:submit.prevent="store">
@@ -19,6 +18,14 @@
             @error('body')
                 {{$message}}
             @enderror
+        </div>
+        <div class="mb-3">
+            <select wire:model.defer='category' id="">
+                <option value="">Scegli la categoria</option>
+                @foreach($categories as $category)
+                <option value="{{$category->id}}">{{$category->name}}</option>
+                @endforeach
+            </select>
         </div>
         <div class='mb-3'>
             <label for="price">Prezzo</label>
