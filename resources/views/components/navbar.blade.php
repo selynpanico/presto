@@ -4,11 +4,18 @@
     <img class="logo" src="/img/presto-logo.svg" alt="" width="200px">
   </a>
   <div class="row img-uno justify-content-end h-100">
+  @guest
     <div class="col-md-3 me-3 mt-1">
     <a href="{{route('login')}}"><img class="img-login" src="/img/presto-login-icon.svg" alt="" width="40%" height="">
     <p class="text-login">login</p></a>      
     </div>
-    
+    @else
+    <div class="col-md-3 me-3 mt-1">
+    <img class="img-login" src="/img/presto-login-icon.svg" alt="" width="40%" height="">
+      <p class="text-login">{{Auth::user()->name}}</p>
+      
+    </div>
+    @endguest
   </div>
 </div>
 

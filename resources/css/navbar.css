@@ -14,10 +14,12 @@
     font-size: 0.8rem;
     display: none;
 }
-
-.text-login:hover  {
+.img-login:hover + .text-login{
     display: block;
 }
+/* .text-login:hover {
+    display: block;
+} */
 
 .logo {
     margin-left: 1%;
