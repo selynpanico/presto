@@ -27,6 +27,7 @@ class CreateAnnouncement extends Component
      ];
 
     public function store(){
+        $this->validate();
         Announcement::create([
             'title'=>$this->title,
             'body'=>$this->body,
