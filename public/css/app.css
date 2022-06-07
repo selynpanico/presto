@@ -11292,4 +11292,6 @@ textarea.form-control-lg {
 h1,h2,h3{
     font-family: 'nima_linebold';
 }
-
+.h-custom{
+    height: 100vh;
+}
