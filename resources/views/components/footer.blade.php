@@ -1,1 +1,1 @@
-<p>Sono un footer</p>
+<!-- <p>Sono un footer</p> -->
