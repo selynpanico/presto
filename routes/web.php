@@ -19,3 +19,5 @@ Route::get('/',[PublicController::class,'home'])->name('home');
 
 Route::get('/nuovo/annuncio', [AnnouncementsController::class, 'createAnnouncement'])->middleware('auth')->name('announcements.create');
 
+
+Route::get('/show/{announcement}', [AnnouncementsController::class,'show'])->name('announcement.show');
