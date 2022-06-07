@@ -29,6 +29,9 @@
         </ul>
         @else
         <li>
+          <a href="{{route('announcements.create')}}">Nuovo Annuncio</a>
+        </li>
+        <li>
           <a href="/logout" onclick="event.preventDefault(); getElementById('form-logout').submit();">
             Logout
           </a>
