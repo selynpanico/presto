@@ -4,6 +4,7 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 use App\Models\Announcement;
+use Illuminate\Support\Facades\Auth;
 
 class CreateAnnouncement extends Component
 {
@@ -31,6 +32,7 @@ class CreateAnnouncement extends Component
             'body'=>$this->body,
             'price'=>$this->price,
             'category_id'=>$this->category,
+            'user_id'=>Auth::id(),
         ]);
         session()->flash('message','Annuncio inserito correttamente');
         $this->cleanForm();
