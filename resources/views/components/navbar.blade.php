@@ -1,6 +1,8 @@
 <!-- navbar -->
 <div class="navbar">
+  <a href="{{route('home')}}">
   <img class="logo" src="/img/presto-logo.svg" alt="" width="200px">
+  </a>
 </div>
 
   <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">

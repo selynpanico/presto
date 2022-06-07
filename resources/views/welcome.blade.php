@@ -31,7 +31,7 @@
 
     <x-bladewind.empty-state
         message="Momentaneamente non sono presenti annunci nel nostro sito, aggiungine uno o torna piu tardi">
-        <a href="{{route('register')}}">Registrati per creare un articolo</a>
+        <a href="{{route('register')}}" class="btn btn-primary">Registrati per creare un articolo</a>
     </x-bladewind.empty-state>
 
     @endif
