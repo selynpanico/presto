@@ -2,13 +2,14 @@
 <div class="navbar">
   <img class="logo" src="/img/presto-logo.svg" alt="" width="200px">
 </div>
+
   <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
-  <label for="openSidebarMenu" class="sidebarIconToggle">
-    <div class="spinner diagonal part-1"></div>
-    <div class="spinner horizontal"></div>
-    <div class="spinner diagonal part-2"></div>
-  </label>
-  <div id="sidebarMenu">
+    <label for="openSidebarMenu" class="sidebarIconToggle">
+      <div class="spinner diagonal part-1"></div>
+      <div class="spinner horizontal"></div>
+      <div class="spinner diagonal part-2"></div>
+    </label>
+  <div id="sidebarMenu" style="z-index: 99;">
     <ul class="sidebarMenuInner">
       <li><a class="title" href="/">home</a></li>
       <li><a class="title" href="#">vai agli articoli</a></li>

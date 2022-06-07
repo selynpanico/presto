@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PublicController;
 use App\Http\Controllers\AnnouncementsController;
 
 /*
@@ -14,9 +15,7 @@ use App\Http\Controllers\AnnouncementsController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/',[PublicController::class,'home'])->name('home');
 
 Route::get('/nuovo/annuncio', [AnnouncementsController::class, 'createAnnouncement'])->middleware('auth')->name('announcements.create');
 

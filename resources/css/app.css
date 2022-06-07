@@ -1,4 +1,6 @@
 @import '~bootstrap';
+@import 'swiper/css';
 @import './font.css';
 @import './style.css';
 @import './navbar.css';
+@import './swiperCarouselHome.css';
