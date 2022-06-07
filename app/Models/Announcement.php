@@ -14,10 +14,10 @@ class Announcement extends Model
     protected $fillable = ['title','body','price', 'category_id', 'user_id'];
 
     public function category(){
-        $this->belongsTo(Category::class);
+        return $this->belongsTo(Category::class);
     }
 
     public function user(){
-        $this->belongsTo(User::class);
+        return $this->belongsTo(User::class);
     }
 }
