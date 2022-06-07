@@ -3154,6 +3154,8 @@ function withinMaxClamp(min, value, max) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.esm.js");
 /* harmony import */ var _swiperCarouselHome_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./swiperCarouselHome.js */ "./resources/js/swiperCarouselHome.js");
+/* harmony import */ var _swiperThumbGallery__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./swiperThumbGallery */ "./resources/js/swiperThumbGallery.js");
+
 
 
 
@@ -3176,6 +3178,34 @@ var swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".swiperAnnounce
   pagination: {
     el: ".swiper-pagination",
     clickable: true
+  }
+});
+
+/***/ }),
+
+/***/ "./resources/js/swiperThumbGallery.js":
+/*!********************************************!*\
+  !*** ./resources/js/swiperThumbGallery.js ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.esm.js");
+
+var swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".swiperThumbGallery", {
+  spaceBetween: 10,
+  slidesPerView: 4,
+  freeMode: true,
+  watchSlidesProgress: true
+});
+var swiper2 = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".swiperThumbGallery2", {
+  spaceBetween: 10,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev"
+  },
+  thumbs: {
+    swiper: swiper
   }
 });
 
