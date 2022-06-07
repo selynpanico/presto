@@ -1,6 +1,6 @@
 <!-- navbar -->
 <div class="navbar">
-  <img class="logo" src="./img/presto-logo.svg" alt="" width="200px">
+  <img class="logo" src="/img/presto-logo.svg" alt="" width="200px">
 </div>
   <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
   <label for="openSidebarMenu" class="sidebarIconToggle">
@@ -10,9 +10,9 @@
   </label>
   <div id="sidebarMenu">
     <ul class="sidebarMenuInner">
-      <li><a class="title" href="/" target="_blank">home</a></li>
-      <li><a class="title" href="#" target="_blank">vai agli articoli</a></li>
-      <li><a class="title" href="#" target="_blank">contatti</a></li>
+      <li><a class="title" href="/">home</a></li>
+      <li><a class="title" href="#">vai agli articoli</a></li>
+      <li><a class="title" href="#">contatti</a></li>
      
       <hr>
 
