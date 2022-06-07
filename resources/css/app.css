@@ -1,7 +1,4 @@
 @import '~bootstrap';
 @import './font.css';
-
-
-.h-custom{
-    height: 100vh;
-}
+@import './style.css';
+@import './navbar.css';

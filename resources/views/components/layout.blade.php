@@ -8,6 +8,7 @@
     <link href="{{ asset('bladewind/css/bladewind-ui.min.css') }}" rel="stylesheet" />
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     @livewireStyles
+    <link rel="icon" href="{{ url('./presto-favicon.png') }}">
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
     <title>{{$title ?? 'Presto.it'}}</title>
 </head>
