@@ -41,7 +41,8 @@
     <x-bladewind.notification position="bottom right" />
     @if(session()->has('message'))
     <script>
-    showNotification('Success', "session(message)", 'success', 3);
+     showNotification('Success', "Annuncio caricato con succeso", 'success', 3);
     </script>   
     @endif
+
 </div>

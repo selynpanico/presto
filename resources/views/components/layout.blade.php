@@ -19,12 +19,18 @@
     <title>{{$title ?? 'Presto.it'}}</title>
 </head>
 <body>
+    <!-- Script Bladewind HELPER obbligatoriamente qui -->
+    <script src="{{ asset('bladewind/js/helpers.js') }}"></script>  
+
+    <!-- Notifiche -->
+
 
     <x-navbar/>
     {{$slot}}
     <x-footer/>
+
+
     <!-- JS Bladewind -->
-    <script src="{{ asset('bladewind/js/helpers.js') }}"></script>
     <!-- JS Livewire -->
     @livewireScripts
     <!-- CDN SwiperJS -->

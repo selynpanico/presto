@@ -16,10 +16,16 @@ use App\Http\Controllers\AnnouncementsController;
 */
 
 Route::get('/',[PublicController::class,'home'])->name('home');
-
-Route::get('/nuovo/annuncio', [AnnouncementsController::class, 'createAnnouncement'])->middleware('auth')->name('announcements.create');
-
-
 Route::get('/show/{announcement}', [AnnouncementsController::class,'show'])->name('announcement.show');
 Route::get('/category/{category}', [AnnouncementsController::class,'showCategory'])->name('category.show');
+Route::get('/make-revisor/{user}',[PublicController::class ,'makeRevisor'])->name('make.revisor');
+
+
+// Rotte con middleware auth
+Route::middleware('auth')->group(function(){
+    Route::get('/nuovo/annuncio', [AnnouncementsController::class, 'createAnnouncement'])->name('announcements.create'); 
+    Route::get('/became-revisor', [PublicController::class , 'requestRevisor'])->name('became.revisor');
+});    
+    
+
 
