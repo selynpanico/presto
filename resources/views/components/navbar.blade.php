@@ -1,7 +1,7 @@
 <!-- navbar -->
 <div class="navbar d-flex">
   <a href="{{route('home')}}">
-    <img class="logo" src="/img/presto-logo.svg" alt="" width="200px">
+    <img class="logo" id="logo" src="/img/presto-logo.svg" alt="" width="200px">
   </a>
   <div class="row img-uno justify-content-end h-100">
   @guest
