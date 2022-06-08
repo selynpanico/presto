@@ -22,16 +22,16 @@ return new class extends Migration
         });
 
         $categories = [
-            ['per la casa', 'icona'],
-            ['elettronica','icona'],
-            ['moda', 'icona'],
-            ['auto e moto', 'icona'],
-            ['sport', 'icona'],
-            ['musica', 'icona'],
-            ['collezionismo', 'icona'],
-            ['libri', 'icona'],
-            ['animali', 'icona'],
-            ['console e videogiochi', 'icona']
+            ['per la casa', '/img/icone/presto_icona-casa.svg'],
+            ['elettronica','/img/icone/presto_icona-elettronica.svg'],
+            ['moda', '/img/icone/presto_icona-moda.svg'],
+            ['auto e moto', '/img/icone/presto_icona-auto-moto.svg'],
+            ['sport', '/img/icone/presto_icona-sport.svg'],
+            ['musica', '/img/icone/presto_icona-musica.svg'],
+            ['collezionismo', '/img/icone/presto_icona-collezionismo.svg'],
+            ['libri', '/img/icone/presto_icona-libri.svg'],
+            ['animali', '/img/icone/presto_icona-animali.svg'],
+            ['console e videogiochi', '/img/icone/presto_icona-videogiochi.svg']
         ];
         foreach ($categories as $category) {
             Category::create(['name'=>$category[0],'icon'=>$category[1]]);

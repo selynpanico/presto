@@ -1,3 +1,4 @@
+@import url(https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css);
 @charset "UTF-8";
 /*!
  * Bootstrap v5.1.3 (https://getbootstrap.com/)
@@ -11540,9 +11541,16 @@ footer{
     
 }
 .social-container{
-    height: 30px;
+    
     background: linear-gradient(90deg, #FF0091, #0072FF);
 }
+
+@media (max-width: 768px) { 
+    .social-container p{
+        text-align: center !important;
+        margin: 0 !important;
+    }
+    }
 
 
 /* 

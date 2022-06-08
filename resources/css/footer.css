@@ -6,6 +6,13 @@ footer{
     
 }
 .social-container{
-    height: 30px;
+    
     background: linear-gradient(90deg, #FF0091, #0072FF);
 }
+
+@media (max-width: 768px) { 
+    .social-container p{
+        text-align: center !important;
+        margin: 0 !important;
+    }
+    }
