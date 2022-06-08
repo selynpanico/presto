@@ -10,7 +10,7 @@
                 <!-- Da inserire rotta parametrica per la visione dell'articolo -->
                 <!-- <img src="https://via.placeholder.com/300" alt=""> Da inserire IMG dell'immagine -->
                 <a href="{{route('announcement.show',$announcement)}}">
-                <div class="card bg-dark text-white position-relative">
+                <div class="card bg-dark text-white position-relative w-100">
                     <img src="https://via.placeholder.com/300" class="card-img" alt="...">
                     <div class="card-img-overlay">
                         <h5 class="card-title">{{$announcement->title}}</h5>
