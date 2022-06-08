@@ -1,9 +1,11 @@
 footer{
-    background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.3));
+    background-color: #D8DEE1;
     margin-top: 50px;
-    height: 20vh;
+    padding-top: 20px;
+    
+    
 }
 .social-container{
-    height: 20px;
+    height: 30px;
     background: linear-gradient(90deg, #FF0091, #0072FF);
 }
