@@ -11,7 +11,7 @@
     </div>
     @else
     <div class="col-md-3 me-3 mt-1">
-    <a href="">
+    <a href="{{route('profile', Auth::user())}}">
     <img class="img-login" src="/img/presto-login-icon.svg" alt="" width="40%" height="">
       <p class="text-login">{{Auth::user()->name}}</p> 
     </div>

@@ -25,6 +25,7 @@ Route::get('/make-revisor/{user}',[PublicController::class ,'makeRevisor'])->nam
 Route::middleware('auth')->group(function(){
     Route::get('/nuovo/annuncio', [AnnouncementsController::class, 'createAnnouncement'])->name('announcements.create'); 
     Route::get('/became-revisor', [PublicController::class , 'requestRevisor'])->name('became.revisor');
+    Route::get('/profile/{user}', [PublicController::class,'profile'])->name('profile');
 });    
     
 
