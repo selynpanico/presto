@@ -3215,6 +3215,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _swiperCarouselHome_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_swiperCarouselHome_js__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _main_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./main.js */ "./resources/js/main.js");
 /* harmony import */ var _main_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_main_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _swiperThumbGallery_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./swiperThumbGallery.js */ "./resources/js/swiperThumbGallery.js");
+/* harmony import */ var _swiperThumbGallery_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_swiperThumbGallery_js__WEBPACK_IMPORTED_MODULE_3__);
+
 
 
 
@@ -3277,6 +3280,31 @@ var swiper = new Swiper(".swiperAnnouncements", (_Swiper = {
   },
   centeredSlides: true
 }, _defineProperty(_Swiper, "spaceBetween", 30), _defineProperty(_Swiper, "grabCursor", true), _Swiper));
+
+/***/ }),
+
+/***/ "./resources/js/swiperThumbGallery.js":
+/*!********************************************!*\
+  !*** ./resources/js/swiperThumbGallery.js ***!
+  \********************************************/
+/***/ (() => {
+
+var swiper = new Swiper(".swiperThumbGallery", {
+  spaceBetween: 10,
+  slidesPerView: 4,
+  freeMode: true,
+  watchSlidesProgress: true
+});
+var swiper2 = new Swiper(".swiperThumbGallery2", {
+  spaceBetween: 10,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev"
+  },
+  thumbs: {
+    swiper: swiper
+  }
+});
 
 /***/ }),
 
