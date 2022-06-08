@@ -3232,7 +3232,7 @@ window.addEventListener('DOMContentLoaded', function () {
   var logo = document.getElementById('logo');
 
   if (theMusicPlay <= 425) {
-    logo.setAttribute('src', 'path');
+    logo.setAttribute('src', '/img/presto-logo-rid.svg');
   }
 
   console.log(theMusicPlay);

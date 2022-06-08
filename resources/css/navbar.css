@@ -17,12 +17,10 @@
 .img-login:hover + .text-login{
     display: block;
 }
-/* .text-login:hover {
-    display: block;
-} */
+
 
 .logo {
-    margin-left: 1%;
+    margin-left: 20px;
 }
 
 
@@ -183,4 +181,23 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
   }
   /* fine hover */
 
-  
+  /* media queries */
+
+  @media (max-width: 768px) { 
+      .logo {
+        margin-left: 20px;
+        width: 50px;
+      }
+
+      .img-login {
+        width: 8%;
+        position: absolute;
+        right: 50px;
+      }
+
+      .img-login:hover + .text-login {
+        display: block;
+        margin: 30px 20px;
+    }
+   }
+  /* fine media queries */
