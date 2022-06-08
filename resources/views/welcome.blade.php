@@ -3,7 +3,7 @@
     <h3 class="text-center mb-5">ultimi annunci caricati</h3>
     <!-- Swiper -->
     <div>
-        <div class="swiper swiperAnnouncements">
+        <div class="swiper swiperAnnouncements" >
           <div class="swiper-wrapper">
             @foreach($announcements as $announcement)
             <div class="swiper-slide mx-5">
@@ -25,7 +25,7 @@
             </div>
             @endforeach
           </div>
-          <div class="swiper-pagination"></div>
+          <div class="swiper-pagination mt-5"></div>
         </div>
     </div>
     @else

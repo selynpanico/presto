@@ -1,4 +1,4 @@
-import Swiper from 'swiper';
+
 
 var swiper = new Swiper(".swiperAnnouncements", {
     slidesPerView: 4,
