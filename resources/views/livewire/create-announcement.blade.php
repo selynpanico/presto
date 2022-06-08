@@ -38,11 +38,10 @@
         <button type="submit" class="btn btn-warning">Crea Annuncio</button>
 
     </form>
-
+    <x-bladewind.notification position="bottom right" />
     @if(session()->has('message'))
-        <div class='flex flex-row justify-content-center alert-success'>
-            {{session('message')}}
-        </div>
+    <script>
+    showNotification('Success', "session(message)", 'success', 3);
+    </script>   
     @endif
-    
 </div>
