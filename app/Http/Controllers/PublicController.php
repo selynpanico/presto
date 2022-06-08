@@ -16,14 +16,12 @@ class PublicController extends Controller
         $announcements = Announcement::take(10)->get()->sortByDesc('created_at');
         return view('welcome',compact('announcements'));
     }
-
-    public function requestRevisor(User $user){
-        Mail::to('admin@presto.it')->send(new BecomeAdvisor(Auth::user()));
-        return redirect()->back()->with('message','Richiesta inviata con successo');     
+    public function profile(User $user){
+        return view('auth.profile',compact('user'));
     }
 
     public function makeRevisor(User $user){
         Artisan::call('presto:MakeUserRevisor',["email"=>$user->email]);
-        return redirect('/')->with('message',"Complimenti hai reso revisore l'utente");
+        return redirect()->route('home')->with('message',"Complimenti hai reso revisore l'utente");
     }
 }

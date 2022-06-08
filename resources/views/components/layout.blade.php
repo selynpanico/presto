@@ -23,6 +23,12 @@
     <script src="{{ asset('bladewind/js/helpers.js') }}"></script>  
 
     <!-- Notifiche -->
+    <x-bladewind.notification position="bottom right"/>
+    @if(session()->has('message'))
+    <script>
+        showNotification('Success', "{{Session::get('message')}}", 'success', 3);
+    </script>
+    @endif
 
 
     <x-navbar/>
@@ -30,7 +36,6 @@
     <x-footer/>
 
 
-    <!-- JS Bladewind -->
     <!-- JS Livewire -->
     @livewireScripts
     <!-- CDN SwiperJS -->

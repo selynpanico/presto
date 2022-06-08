@@ -37,12 +37,15 @@
 
         <button type="submit" class="btn btn-warning">Crea Annuncio</button>
 
+        
     </form>
-    <x-bladewind.notification position="bottom right" />
+
     @if(session()->has('message'))
     <script>
-     showNotification('Success', "Annuncio caricato con succeso", 'success', 3);
-    </script>   
+        showNotification('Success', "{{Session::get('message')}}", 'success', 3);
+    </script>
     @endif
+
+
 
 </div>

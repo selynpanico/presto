@@ -3213,8 +3213,30 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.esm.js");
 /* harmony import */ var _swiperCarouselHome_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./swiperCarouselHome.js */ "./resources/js/swiperCarouselHome.js");
 /* harmony import */ var _swiperCarouselHome_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_swiperCarouselHome_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _main_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./main.js */ "./resources/js/main.js");
+/* harmony import */ var _main_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_main_js__WEBPACK_IMPORTED_MODULE_2__);
 
 
+
+
+/***/ }),
+
+/***/ "./resources/js/main.js":
+/*!******************************!*\
+  !*** ./resources/js/main.js ***!
+  \******************************/
+/***/ (() => {
+
+window.addEventListener('DOMContentLoaded', function () {
+  var theMusicPlay = screen.width;
+  var logo = document.getElementById('logo');
+
+  if (theMusicPlay <= 425) {
+    logo.setAttribute('src', 'path');
+  }
+
+  console.log(theMusicPlay);
+});
 
 /***/ }),
 
