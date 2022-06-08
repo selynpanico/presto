@@ -11321,6 +11321,10 @@ body {
     z-index: 10;
 }
 
+.ciao {
+    background-color:#0072FF;
+}
+
 .text-login  {
     font-size: 0.8rem;
     display: none;
