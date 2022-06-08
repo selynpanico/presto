@@ -11523,9 +11523,22 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
     -o-object-fit: cover;
        object-fit: cover;
   }
+
+  .color1{
+    color: #FF0091;
+  }
+  .color2{
+    color: #0072FF;
+  }
 footer{
     background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.3));
     margin-top: 50px;
     height: 20vh;
 }
-
+.social-container{
+    height: 20px;
+    background: linear-gradient(90deg, #FF0091, #0072FF);
+}
+:root{
+    /* Da inserire colori principali */
+}

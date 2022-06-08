@@ -29,3 +29,10 @@
     height: 100%;
     object-fit: cover;
   }
+
+  .color1{
+    color: #FF0091;
+  }
+  .color2{
+    color: #0072FF;
+  }

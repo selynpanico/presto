@@ -3,3 +3,7 @@ footer{
     margin-top: 50px;
     height: 20vh;
 }
+.social-container{
+    height: 20px;
+    background: linear-gradient(90deg, #FF0091, #0072FF);
+}

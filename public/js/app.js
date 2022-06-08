@@ -3246,16 +3246,37 @@ window.addEventListener('DOMContentLoaded', function () {
   \********************************************/
 /***/ (() => {
 
-var swiper = new Swiper(".swiperAnnouncements", {
-  slidesPerView: 4,
-  centeredSlides: true,
-  spaceBetween: 30,
-  grabCursor: true,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true
-  }
-});
+var _Swiper;
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var swiper = new Swiper(".swiperAnnouncements", (_Swiper = {
+  slidesPerView: 1,
+  spaceBetween: 10,
+  // Responsive breakpoints
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 2,
+      spaceBetween: 20
+    },
+    // when window width is >= 480px
+    480: {
+      slidesPerView: 3,
+      spaceBetween: 30
+    },
+    // when window width is >= 640px
+    640: {
+      slidesPerView: 4,
+      spaceBetween: 40
+    }
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev'
+  },
+  centeredSlides: true
+}, _defineProperty(_Swiper, "spaceBetween", 30), _defineProperty(_Swiper, "grabCursor", true), _Swiper));
 
 /***/ }),
 

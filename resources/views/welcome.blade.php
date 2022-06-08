@@ -25,7 +25,8 @@
             </div>
             @endforeach
           </div>
-          <div class="swiper-pagination mt-5"></div>
+            <div class="swiper-button-prev color1"></div>
+            <div class="swiper-button-next color2"></div>
         </div>
     </div>
     @else

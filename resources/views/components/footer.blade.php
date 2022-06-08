@@ -8,13 +8,9 @@
              </div>
         </div>
     </div>
-
-    <!-- @if(session()->has('ciaone'))
-        <script>
-            setInterval(()=>{
-                let session = @json(session('ciaone'));
-                console.log(session);
-            },500)
-        </script>
-    @endif -->
+    
+    
 </footer>
+<div class="social-container">
+
+</div>
