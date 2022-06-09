@@ -26,7 +26,7 @@ class PublicController extends Controller
     }
 
     public function allAnnouncement(){
-        $announcements = Announcement::all();
+        $announcements = Announcement::where('is_accepted', true)->paginate(9);
         return view('announcements.all_announcement', compact('announcements'));
     }
 
