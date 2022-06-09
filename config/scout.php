@@ -41,7 +41,7 @@ return [
     |
     */
 
-    'queue' => env('SCOUT_QUEUE', false),
+    'queue' => env('SCOUT_QUEUE', true),
 
     /*
     |--------------------------------------------------------------------------
@@ -133,5 +133,18 @@ return [
         'host' => env('MEILISEARCH_HOST', 'http://localhost:7700'),
         'key' => env('MEILISEARCH_KEY', null),
     ],
+
+    'tntsearch'=>[
+        'storage'=>storage_path(),// place where the index files will be stored
+        'fuzziness'=>env('TNTSEARCH_FUZZINESS',true),
+        'fuzzy'=>[
+               'prefix_length'=>2,
+               'max_expansions'=>50,
+               'distance'=>2
+        ],
+        'asYouType'=>false,
+        'searchBoolean'=>env('TNTSEARCH_BOOLEAN',false),
+        'maxDocs'=>env('TNTSEARCH_MAX_DOCS',500),
+],
 
 ];
