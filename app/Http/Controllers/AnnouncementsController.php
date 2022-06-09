@@ -19,7 +19,7 @@ class AnnouncementsController extends Controller
     public function showCategory(Category $category){
         $category_id = $category->id;
         $category_name = $category->name;
-        $announcements = Announcement::all()->where('category_id', $category_id);
+        $announcements = Announcement::all()->where([['category_id', $category_id],['is_accepted',true]]);
         return view('announcements.show-category',compact('announcements', 'category_name'));
     }
 }

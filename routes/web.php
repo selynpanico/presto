@@ -17,7 +17,7 @@ use App\Http\Controllers\RevisorController;
 */
 
 Route::get('/',[PublicController::class,'home'])->name('home');
-Route::get('/show/{announcement}', [AnnouncementsController::class,'show'])->name('announcement.show');
+Route::get('/show/{announcement}', [AnnouncementsController::class,'show'])->middleware('is_accepted')->name('announcement.show');
 Route::get('/category/{category}', [AnnouncementsController::class,'showCategory'])->name('category.show');
 Route::get('/make-revisor/{user}',[PublicController::class ,'makeRevisor'])->name('make.revisor');
 
@@ -29,20 +29,20 @@ Route::middleware('auth')->group(function(){
     Route::get('/profile/{user}', [PublicController::class,'profile'])->name('profile');
 });    
 
+
 //Rotte con middleware revisore
-Route::patch('/accetta-annuncio/{announcement}',[RevisorController::class, 'acceptAnnouncement'])->name('accept.announcement');
-Route::patch('/rifiuta-annuncio/{announcement}',[RevisorController::class, 'rejectAnnouncement'])->name('reject.announcement');
-Route::get('/revisor-panel',[RevisorController::class,'index'])->name('revisor-panel');
+Route::middleware('is_revisor')->group(function(){
+    Route::patch('/accetta-annuncio/{announcement}',[RevisorController::class, 'acceptAnnouncement'])->name('accept.announcement');
+    Route::patch('/rifiuta-annuncio/{announcement}',[RevisorController::class, 'rejectAnnouncement'])->name('reject.announcement');
+    Route::get('/revisor-panel',[RevisorController::class,'index'])->name('revisor-panel');
+    
+    Route::get('/trash-can', [RevisorController::class, 'trash_can'])->name('trash-can');
+    
+    Route::patch('/manda-in-revisione/{announcement}',[RevisorController::class,'manda_in_revisione'])->name('manda.in.revisione');
+    
+    Route::delete('/delete/{announcement}',[RevisorController::class,'delete'])->name('delete.announcement');
 
-Route::get('/trash-can', [RevisorController::class, 'trash_can'])->name('trash-can');
-
-Route::patch('/manda-in-revisione/{announcement}',[RevisorController::class,'manda_in_revisione'])->name('manda.in.revisione');
-
-Route::delete('/delete/{announcement}',[RevisorController::class,'delete'])->name('delete.announcement');
-
-// Route::middleware('is_revisor')->group(function(){
-
-// });
+});
 
     
 
