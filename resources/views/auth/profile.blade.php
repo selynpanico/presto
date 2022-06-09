@@ -24,7 +24,7 @@
                     {{App\Models\Announcement::toBeTrash()}}
                     <span class="visually-hidden">unread messages</span>
                     </span>
-                    <a href="{{route('revisor-panel')}}" class="btn btn-warning"><i class="bi bi-trash3"></i></a>
+                    <a href="{{route('trash-can')}}" class="btn btn-warning"><i class="bi bi-trash3"></i></a>
                 </div>
             </div>
         </div>

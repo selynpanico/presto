@@ -33,9 +33,17 @@ Route::middleware('auth')->group(function(){
 Route::patch('/accetta-annuncio/{announcement}',[RevisorController::class, 'acceptAnnouncement'])->name('accept.announcement');
 Route::patch('/rifiuta-annuncio/{announcement}',[RevisorController::class, 'rejectAnnouncement'])->name('reject.announcement');
 Route::get('/revisor-panel',[RevisorController::class,'index'])->name('revisor-panel');
+
+Route::get('/trash-can', [RevisorController::class, 'trash_can'])->name('trash-can');
+
+Route::patch('/manda-in-revisione/{announcement}',[RevisorController::class,'manda_in_revisione'])->name('manda.in.revisione');
+
+Route::delete('/delete/{announcement}',[RevisorController::class,'delete'])->name('delete.announcement');
+
 // Route::middleware('is_revisor')->group(function(){
 
 // });
+
     
 
 

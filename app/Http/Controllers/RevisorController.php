@@ -17,12 +17,22 @@ class RevisorController extends Controller
         return view('revisor.trash-can',compact('announcement'));
     }
 
-    public function acceptAnnouncement(Announcement$announcement)
+    public function manda_in_revisione(Announcement $announcement){
+        $announcement->setAccepted(null);
+        return redirect()->back()->with('message','Hai mandato l\'annuncio in revisione');
+    }
+
+    public function delete(Announcement $announcement){
+        $announcement->delete();
+        return redirect()->back()->with('message','Hai eliminato l\'annuncio');        
+    }
+
+    public function acceptAnnouncement(Announcement $announcement)
     {
     $announcement->setAccepted(true);
     return redirect()->back()->with('message','Complimenti,hai accettatol\'annuncio');
     }
-    public function rejectAnnouncement(Announcement$announcement)
+    public function rejectAnnouncement(Announcement $announcement)
     {
     $announcement->setAccepted(false);
     return redirect()->back()->with('message','Complimenti,hai rifiutatol\'annuncio');
