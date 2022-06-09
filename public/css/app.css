@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:600);
 @import url(https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css);
 @charset "UTF-8";
 /*!
@@ -11300,37 +11301,9 @@ body {
     margin: 0;
     padding: 0;
     background-color: #FAFAFA;
-}
-
-.slider {
-    height: 500px;
-    width: 100%;
-    background-color:antiquewhite;
-    border-radius: 110px;
-    
-}
-
-.white-grad {
-    background: 
-      linear-gradient(#ccc 0 0) padding-box, /*this is your grey background*/
-      linear-gradient(to right, #FF0091, #0072FF) border-box;
-    color: #313149;
-    padding: 10px;
-    border: 10px solid transparent;
-    border-radius: 110px;
-    display: inline-block;
-    margin: 75px 0;
-  }
-
-.text-header {
     color: #4D4D4D;
-    width: 80%;
-    font-size: 5rem;
-    letter-spacing: -3px;
-    line-height: 1;
-    position: absolute;
-    right: -30%;
 }
+
 .navbar {
     display: block;
     margin: 0 auto;
@@ -11573,15 +11546,42 @@ footer{
 }
 .social-container{
     
-    background: linear-gradient(90deg, #FF0091, #0072FF);
+    background: linear-gradient(90deg, #FF0091, #0072FF, #7209B6, #4CC8EF);
+	background-size: 300% 300%;
+	-webkit-animation: gradient 20s ease infinite;
+	        animation: gradient 20s ease infinite;
+}
+
+@-webkit-keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 @media (max-width: 768px) { 
-    .social-container p{
+    .social-container h6{
         text-align: center !important;
         margin: 0 !important;
     }
-    }
+ }
      .swiperThumbGallery2 {
         height: 80%;
         width: 100%;
@@ -11602,6 +11602,136 @@ footer{
       .swiperThumbGallery .swiper-slide-thumb-active {
         opacity: 1;
       }
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+.header-carousel {
+    border-radius: 110px;
+    border: 10px solid #0072FF;
+}
+
+
+
+.text-header {
+    color: #4D4D4D;
+    width: 80%;
+    font-size: 5rem;
+    letter-spacing: -3px;
+    line-height: 1;
+    position: absolute;
+    right: -30%;
+}
+
+
+
+
+
+
+.text {
+  position: absolute;
+  width: 100%;
+  left: 45%;
+  font-size: 5rem;
+  z-index: 98;
+}
+
+ p {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+}
+
+.word {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+}
+
+.letter {
+  display: inline-block;
+  position: relative;
+  float: left;
+  transform: translateZ(25px);
+  transform-origin: 50% 50% 25px;
+}
+
+.letter.out {
+  transform: rotateX(90deg);
+  transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.letter.behind {
+  transform: rotateX(-90deg);
+}
+
+.letter.in {
+  transform: rotateX(0deg);
+  transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.wisteria {
+  color: #F62584;
+}
+
+.belize {
+  color: #0072FF;
+}
+
+.pomegranate {
+  color: #7209B6;
+}
+
+.green {
+  color: #4CC8EF;
+}
+
+.midnight {
+  color: #7209B6;
+}
+
+
+
+  /* media queries */
+
+  @media (max-width: 768px) { 
+    .text {
+        position: absolute;
+        left: 12%;
+        top: 10%;
+        width: 80%;
+        font-size: 3rem;
+        z-index: 98;
+      }
+    h1 {
+        font-size: 3rem !important;
+        width: 100% !important;
+    }  
+ }
+/* fine media queries */
+
+
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: transparent;
+    background-clip: border-box;
+    border: 0px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+}
+
+.rounded {
+    border-radius: 30px 30px 0 0 !important;
+}
+
+.card-categoria {
+    width: 90%;
+}
 :root{
     /* Da inserire colori principali */
 }

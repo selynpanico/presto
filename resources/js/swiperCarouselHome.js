@@ -3,6 +3,9 @@
 var swiper = new Swiper(".swiperAnnouncements", {
   slidesPerView: 1,
   spaceBetween: 3,
+
+  centeredSlides: true,
+  centeredSlidesBounds: true,
     // Responsive breakpoints
   breakpoints: {
     // // when window width is >= 320px

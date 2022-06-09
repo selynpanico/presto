@@ -7,12 +7,26 @@ footer{
 }
 .social-container{
     
-    background: linear-gradient(90deg, #FF0091, #0072FF);
+    background: linear-gradient(90deg, #FF0091, #0072FF, #7209B6, #4CC8EF);
+	background-size: 300% 300%;
+	animation: gradient 20s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 @media (max-width: 768px) { 
-    .social-container p{
+    .social-container h6{
         text-align: center !important;
         margin: 0 !important;
     }
-    }
+ }
