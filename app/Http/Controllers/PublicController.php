@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Artisan;
 class PublicController extends Controller
 {
     public function home(){
-        $announcements = Announcement::take(10)->where('is_accepted',true)->get()->sortByDesc('created_at');
+        $announcements = Announcement::take(10)->where('is_accepted',true)->orderBy('created_at', 'desc')->get();
         return view('welcome',compact('announcements'));
     }
     public function profile(User $user){
@@ -26,7 +26,7 @@ class PublicController extends Controller
     }
 
     public function allAnnouncement(){
-        $announcements = Announcement::all();
+        $announcements = Announcement::where('is_accepted', true)->paginate(9);
         return view('announcements.all_announcement', compact('announcements'));
     }
 

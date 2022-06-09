@@ -42,6 +42,9 @@
         </div>
     </div>
     @endforelse
+    {{$announcements->links('vendor.pagination.custom')}}
+            
+    
     </div>
 </div>
 </x-layout>

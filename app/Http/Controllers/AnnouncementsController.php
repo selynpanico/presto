@@ -20,7 +20,7 @@ class AnnouncementsController extends Controller
         $category_id = $category->id;
         $category_name = $category->name;
         
-        $announcements = Announcement::where([['category_id', $category_id],['is_accepted',true]])->get();
+        $announcements = Announcement::where([['category_id', $category_id],['is_accepted',true]])->paginate(9);
         return view('announcements.show-category',compact('announcements', 'category_name'));
     }
 }
