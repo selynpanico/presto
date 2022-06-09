@@ -34,4 +34,8 @@ class Announcement extends Model
     {
            return Announcement::where('is_accepted',null)->count();
     }
+    public static function toBeTrash()
+    {
+           return Announcement::where('is_accepted',false)->count();
+    }
 }
