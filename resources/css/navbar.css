@@ -6,7 +6,7 @@
     box-shadow: none;
     height: 60px!important;
     overflow: hidden;
-    z-index: 10;
+    z-index: 100;
 }
 
 

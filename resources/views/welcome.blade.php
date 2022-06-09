@@ -17,7 +17,7 @@
                         <p class="card-text">{{$announcement->price}}</p>
                         <p class="card-text">{{$announcement->created_at->diffForHumans()}}</p>
                         <a href="{{route('category.show', $announcement->category)}}">
-                            <p class="mt-auto position-absolute bottom-0">{{$announcement->category->name}}</p>
+                            <img src="{{$announcement->category->icon}}" alt="{{$announcement->category->name}}" style="width: 30px; height:30px" class="position-absolute bottom-0">
                         </a>
                     </div>
                 </div>

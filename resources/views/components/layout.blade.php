@@ -18,7 +18,11 @@
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
     <title>{{$title ?? 'Presto.it'}}</title>
 </head>
+<<<<<<< HEAD
 <body >
+=======
+<body>
+>>>>>>> 12b071729a0964dd879afaf17bbe77c447bbfc6b
     <!-- Script Bladewind HELPER obbligatoriamente qui -->
     <script src="{{ asset('bladewind/js/helpers.js') }}"></script>  
 
