@@ -11549,22 +11549,7 @@ footer{
         margin: 0 !important;
     }
     }
-
-
-/* 
-      .swiper {
-        width: 100%;
-        height: 300px;
-        margin-left: auto;
-        margin-right: auto;
-      } */
-
-      /* .swiper-slide {
-        background-size: cover;
-        background-position: center;
-      } */
-
-      .swiperThumbGallery2 {
+     .swiperThumbGallery2 {
         height: 80%;
         width: 100%;
       }
@@ -11583,14 +11568,6 @@ footer{
 
       .swiperThumbGallery .swiper-slide-thumb-active {
         opacity: 1;
-      }
-
-      .swiper-slide img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        -o-object-fit: cover;
-           object-fit: cover;
       }
 :root{
     /* Da inserire colori principali */

@@ -2,7 +2,7 @@
 
 var swiper = new Swiper(".swiperAnnouncements", {
   slidesPerView: 1,
-  spaceBetween: 10,
+  spaceBetween: 3,
     // Responsive breakpoints
   breakpoints: {
     // // when window width is >= 320px
@@ -17,8 +17,12 @@ var swiper = new Swiper(".swiperAnnouncements", {
     // },
     // when window width is >= 640px
     640: {
-      slidesPerView: 4,
+      slidesPerView: 3,
       spaceBetween: 40
+    },
+    769:{
+      slidesPerView: 4,
+      spaceBetween: 50,
     }
   },
     navigation: {
