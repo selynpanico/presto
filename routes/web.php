@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\AnnouncementsController;
+use App\Http\Controllers\RevisorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +28,14 @@ Route::middleware('auth')->group(function(){
     Route::get('/became-revisor', [PublicController::class , 'requestRevisor'])->name('became.revisor');
     Route::get('/profile/{user}', [PublicController::class,'profile'])->name('profile');
 });    
+
+//Rotte con middleware revisore
+Route::patch('/accetta-annuncio/{announcement}',[RevisorController::class, 'acceptAnnouncement'])->name('accept.announcement');
+Route::patch('/rifiuta-annuncio/{announcement}',[RevisorController::class, 'rejectAnnouncement'])->name('reject.announcement');
+Route::get('/revisor-panel',[RevisorController::class,'index'])->name('revisor-panel');
+// Route::middleware('is_revisor')->group(function(){
+
+// });
     
 
 

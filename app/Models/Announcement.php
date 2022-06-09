@@ -25,4 +25,13 @@ class Announcement extends Model
     public function images(){
         return $this->hasMany(Image::class);
     }
+    public function setAccepted($value){
+        $this->is_accepted = $value;
+        $this->save();
+        return true;
+    }
+    public static function toBeRevisionedCount()
+    {
+           return Announcement::where('is_accepted',null)->count();
+    }
 }
