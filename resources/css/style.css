@@ -3,3 +3,33 @@ body {
     padding: 0;
     background-color: #FAFAFA;
 }
+
+.slider {
+    height: 500px;
+    width: 100%;
+    background-color:antiquewhite;
+    border-radius: 110px;
+    
+}
+
+.white-grad {
+    background: 
+      linear-gradient(#ccc 0 0) padding-box, /*this is your grey background*/
+      linear-gradient(to right, #FF0091, #0072FF) border-box;
+    color: #313149;
+    padding: 10px;
+    border: 10px solid transparent;
+    border-radius: 110px;
+    display: inline-block;
+    margin: 75px 0;
+  }
+
+.text-header {
+    color: #4D4D4D;
+    width: 80%;
+    font-size: 5rem;
+    letter-spacing: -3px;
+    line-height: 1;
+    position: absolute;
+    right: -30%;
+}

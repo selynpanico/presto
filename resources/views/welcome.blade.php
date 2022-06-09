@@ -1,4 +1,17 @@
 <x-layout>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-6 d-flex justify-content-end align-items-center position-relative">
+            <h1 class="text-header">lorem ipsum dolor sit amet</h1>
+        </div>
+        <div class="col-12 col-md-6">
+            <div class="slider white-grad"></div>
+        </div>
+    </div>
+</div>
+
+
     @if(count($announcements)>0)
     <h3 class="text-center mb-5">ultimi annunci caricati</h3>
     <!-- Swiper -->
