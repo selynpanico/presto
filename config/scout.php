@@ -138,9 +138,9 @@ return [
         'storage'=>storage_path(),// place where the index files will be stored
         'fuzziness'=>env('TNTSEARCH_FUZZINESS',true),
         'fuzzy'=>[
-               'prefix_length'=>0,
+               'prefix_length'=>4,
                'max_expansions'=>50,
-               'distance'=>0
+               'distance'=>4
         ],
         'asYouType'=>false,
         'searchBoolean'=>env('TNTSEARCH_BOOLEAN',false),
