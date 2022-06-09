@@ -20,6 +20,8 @@ Route::get('/',[PublicController::class,'home'])->name('home');
 Route::get('/show/{announcement}', [AnnouncementsController::class,'show'])->middleware('is_accepted')->name('announcement.show');
 Route::get('/category/{category}', [AnnouncementsController::class,'showCategory'])->name('category.show');
 Route::get('/make-revisor/{user}',[PublicController::class ,'makeRevisor'])->name('make.revisor');
+Route::get('/all-announcements', [PublicController::class, 'allAnnouncement'])->name('all.announcements');
+Route::get('/ricerca-annuncio', [PublicController::class, 'ricercaAnnuncio'])->name('ricerca.annuncio');
 
 
 // Rotte con middleware auth

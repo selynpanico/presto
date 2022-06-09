@@ -29,7 +29,7 @@
   <div id="sidebarMenu" style="z-index: 99;">
     <ul class="sidebarMenuInner">
       <li><a class="title" href="/">home</a></li>
-      <li><a class="title" href="#">vai agli articoli</a></li>
+      <li><a class="title" href="{{route('all.announcements')}}">vai agli annunci</a></li>
       <li><a class="title" href="#">contatti</a></li>
      
       <hr>

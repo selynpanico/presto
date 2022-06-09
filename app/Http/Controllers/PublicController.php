@@ -24,4 +24,14 @@ class PublicController extends Controller
         Artisan::call('presto:MakeUserRevisor',["email"=>$user->email]);
         return redirect()->route('home')->with('message',"Complimenti hai reso revisore l'utente");
     }
+
+    public function allAnnouncement(){
+        $announcements = Announcement::all();
+        return view('announcements.all_announcement', compact('announcements'));
+    }
+
+    public function ricercaAnnuncio(Request $request){
+        $announcements=Announcement::search($request->searched)->where('is_accepted',true)->paginate(10);
+        return view('announcements.index',compact('announcements'));
+    }
 }
