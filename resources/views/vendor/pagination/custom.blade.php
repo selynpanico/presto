@@ -1,6 +1,6 @@
 
     <nav aria-label="Page navigation example">
-  <ul class="pagination">
+  <ul class="pagination justify-content-center">
   @if ($paginator->onFirstPage())
             <li class="d-none page-item"><span><i class="bi bi-chevron-double-left color1"></i></span></li>
         @else

@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class CheckIfUserIsRevisor
+class CheckIfUserIsAdmin
 {
     /**
      * Handle an incoming request.
@@ -17,7 +17,7 @@ class CheckIfUserIsRevisor
      */
     public function handle(Request $request, Closure $next)
     {
-        if (Auth::user() && Auth::user()->is_revisor ||Auth::user()->is_admin) {
+        if (Auth::user() && Auth::user()->is_admin) {
            
             return $next($request);
         } 
