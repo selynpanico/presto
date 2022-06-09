@@ -59,12 +59,11 @@
                     <img src="https://picsum.photos/200" class="card-img-top rounded"alt="..." style="height:400px;">
                     <div class="card-body">
                         <h5 class="card-title">{{$announcement->title}}</h5>
-                        <pclass="card-text">{{$announcement->body}}</p>
+                        <p class="card-text">{{$announcement->body}}</p>
                     <a href="{{route('announcement.show',compact('announcement'))}}"class="btn
                         btn-primary">Visualizza </a>
-                        <a href="{{route('category.show', ['category'=>$announcement->category])}}"
-                        class="my-2 border-top pt-2 border-dark card-link btn btn-success">Categoria:{{$announcement->category->name}}</a>
-                        <pclass="card-footer">Pubblicato il:{{$announcement->created_at->format('d/
+                        
+                        <p class="card-footer">Pubblicato il:{{$announcement->created_at->format('d/
                     m/Y')}}</p>
                 </div>
                 </div>
