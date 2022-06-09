@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row  justify-content-center">
     <form method="GET"class="d-flex" action="{{route('ricerca.annuncio')}}">
-        <input name="searched"class="form-control me-2"type="search"placeholder="Search" aria-label="Search">
+        <input name="searched"class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success"type="submit">Search</button>
     </form>
     </div>
