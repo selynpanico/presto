@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
     <title>{{$title ?? 'Presto.it'}}</title>
 </head>
-<body class="d-flex flex-column min-vh-100">
+<body >
     <!-- Script Bladewind HELPER obbligatoriamente qui -->
     <script src="{{ asset('bladewind/js/helpers.js') }}"></script>  
 

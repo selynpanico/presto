@@ -12,7 +12,7 @@
     
     
     <div class="social-container"> 
-        <div class="row justify-content-end">
+        <div class="row m-0 justify-content-end">
             <div class="col-12 col-md-6">
 
                 <p class="text-white text-end me-5 mb-0 py-2">follow us
