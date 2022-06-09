@@ -1,5 +1,5 @@
 <x-layout>
-<div class="container ">
+<div class="container">
     <div class="row justify-content-center align-items-center "> 
         <div class="col-12 col-md-6">
         <form method="POST" action="{{route('login')}}">
