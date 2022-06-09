@@ -1,4 +1,5 @@
 <x-layout>
+  @if($announcement_to_check)
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-12 col-md-6">
@@ -92,10 +93,33 @@
          <h1>{{$announcement_to_check->user->name}}</h1>
          <h5>{{$announcement_to_check->body}}</h5>
          <h5>{{$announcement_to_check->price}}</h5>
-         <button class="btn btn-success">Accetta</button>
-         <button class="btn btn-warning">Rifiuta</button>
+         
+           <div class="row">
+    <div class="col-12 col-md-6">
+         <form action="{{route('accept.announcement',['announcement'=>$announcement_to_check])
+         }}"method="POST">
+         @csrf
+         @method('PATCH')
+              <button type="submit" class="btn btn-success shadow">Accetta</button>
+         </form>
+    </div>
+    <div class="col-12 col-md-6text-end">
+         <form action="{{route('reject.announcement',['announcement'=>$announcement_to_check])
+         }}"method="POST">
+         @csrf
+         @method('PATCH')
+             <button type="submit"class="btn btn-danger shadow">Rifiuta</button>
+         </form>
+    </div>
+</div>
        </div>
      </div>
    </div>
+   @else
+
+   <x-bladewind.empty-state
+    message="Non hai annunci da approvare">
+    </x-bladewind.empty-state>
+   @endif
 
 </x-layout>
