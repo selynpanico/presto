@@ -11293,6 +11293,9 @@ textarea.form-control-lg {
 h1,h2,h3{
     font-family: 'nima_linebold';
 }
+body{
+    font-family: 'Open Sans', sans-serif;
+}
 body {
     margin: 0;
     padding: 0;
@@ -11579,22 +11582,7 @@ footer{
         margin: 0 !important;
     }
     }
-
-
-/* 
-      .swiper {
-        width: 100%;
-        height: 300px;
-        margin-left: auto;
-        margin-right: auto;
-      } */
-
-      /* .swiper-slide {
-        background-size: cover;
-        background-position: center;
-      } */
-
-      .swiperThumbGallery2 {
+     .swiperThumbGallery2 {
         height: 80%;
         width: 100%;
       }
@@ -11613,14 +11601,6 @@ footer{
 
       .swiperThumbGallery .swiper-slide-thumb-active {
         opacity: 1;
-      }
-
-      .swiper-slide img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        -o-object-fit: cover;
-           object-fit: cover;
       }
 :root{
     /* Da inserire colori principali */
