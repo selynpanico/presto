@@ -24,3 +24,11 @@ Aggiungere nome per categoria
 $announcement= Announcement::paginate(9);
 php artisan scout:flush "\App\Models\Announcement"
 $ php artisan scout:import "\App\Models\Announcement"
+
+
+  /* -webkit-mask: /*4*/
+     linear-gradient(#fff 0 0) padding-box, 
+     linear-gradient(#fff 0 0); */
+
+       -webkit-mask-composite: xor; /*5'*/
+          mask-composite: exclude; /*5*/

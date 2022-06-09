@@ -5,9 +5,17 @@ body {
 }
 
 
-.header-carousel {
+/* .header-carousel {
     border-radius: 110px;
-    border: 10px solid #0072FF;
+    border: 10px solid;
+    border-image: linear-gradient(to right, #F62584, #0072FF) 1 round;
+} */
+.header-carousel {
+  border-radius: 110px; /*1*/
+  border: 10px solid transparent; /*2*/
+  background: linear-gradient(45deg,#F62584,#0072FF) border-box; /*3*/
+
+
 }
 
 
