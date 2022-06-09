@@ -42,7 +42,7 @@
         </div>
     </div>
     @endforelse
-    {{$announcements->links()}}
+    {{$announcements->links('vendor.pagination.custom')}}
     </div>
 </div>
 </x-layout>
