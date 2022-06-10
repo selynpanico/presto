@@ -32,7 +32,7 @@
                 @foreach(Auth::user()->announcements as $announcement)
                 @if($announcement->is_accepted)
                 <div class="col-12 col-md-4">
-                    <x-card :announcement="$announcement"/>
+                    <x-cards :announcement="$announcement"/>
                 </div>
                 @endif
                 @endforeach
