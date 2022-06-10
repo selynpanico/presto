@@ -11,7 +11,11 @@
     <div class="card-body">
         <h5 class="card-title">{{$announcement->title}}</h5>
             <p class="card-text">{{(strlen($announcement->body) > 20) ? substr($announcement->body, 0, 20) . '...' : $announcement->body;}}</p>
+            @if($route == 'home')
+            <p class="card-text">Pubblicato il:{{$announcement->created_at->diffForHumans()}}</p> 
+            @else
             <p class="card-text">Pubblicato il:{{$announcement->created_at->format('d/m/Y')}}</p> 
+            @endif
             <a href="{{route('announcement.show',compact('announcement'))}}"class="btn btn-primary">Visualizza </a>               
     </div>
 </div>

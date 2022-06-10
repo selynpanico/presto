@@ -19,7 +19,7 @@
         <div class="row justify-content-center">
             @forelse($announcements as $announcement)
                 <div class="col-12 col-md-4 my-4">
-                    <x-cards :announcement="$announcement"/>
+                    <x-cards :announcement="$announcement" :route="Route::currentRouteName()"/>
                 </div>
             @empty
                 <div class="col-12">
