@@ -1,6 +1,6 @@
 <x-layout>
 
-<h1>Benvenuto {{$user->name}} {{$user->surname}}</h1>
+<h2>Benvenuto {{$user->name}} {{$user->surname}}</h2>
 @if(Auth::user() && Auth::user()->is_revisor  || Auth::user()->is_admin)
 <!-- Da inserire fighezza per notifiche revisore -->
     <div class="container">

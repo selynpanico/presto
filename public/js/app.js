@@ -3268,6 +3268,10 @@ noScroll.addEventListener('click', function () {
     toggle = 0;
   }
 });
+/** searchbar animazione */
+
+/** searchbar fine animazione */
+
 /** animazione header */
 
 var words = document.getElementsByClassName('word');

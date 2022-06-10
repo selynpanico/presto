@@ -41,6 +41,9 @@ noScroll.addEventListener('click',()=>{
 })
 
 
+/** searchbar animazione */
+
+/** searchbar fine animazione */
 
 
 

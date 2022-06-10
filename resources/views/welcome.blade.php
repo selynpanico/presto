@@ -1,6 +1,6 @@
 <x-layout>
 <x-header />
-<h2 class="text-center mb-5">ultimi annunci caricati</h2>
+<h2 class="text-center my-5">ultimi annunci caricati</h2>
 @if(count($announcements)>0)
 <!-- Swiper  -->
 <div class="swiper swiperAnnouncements mb-5" >
