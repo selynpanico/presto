@@ -1,7 +1,7 @@
 // Logo responsive     
 let logo = document.getElementById('logo')
 function changeLogo(itGo){
-if(itGo.matches){
+if(theMusicPlay.matches){
   logo.setAttribute('src','/img/presto-logo-rid.svg')
 }
 else{
@@ -9,13 +9,29 @@ else{
 }
 }
 
-let itGo = window.matchMedia("(max-width:425px)")
-changeLogo(itGo)
-itGo.addListener(changeLogo)
+let theMusicPlay = window.matchMedia("(max-width:425px)")
+changeLogo(theMusicPlay)
+theMusicPlay.addListener(changeLogo)
 
 
-
-
+let example = document.querySelector('.center')
+// Spinner JS
+window.addEventListener('DOMContentLoaded',()=>{
+    example.classList.add('d-none')
+})
+let toggle = 0
+let noScroll = document.querySelector(".noScroll");
+let body = document.querySelector("body")
+noScroll.addEventListener('click',()=>{
+  if(toggle == 0){
+    body.style.overflow = "hidden"
+    toggle = 1
+  }
+  else {
+    body.style.overflow ="visible"
+    toggle = 0
+  }
+})
 
 
 

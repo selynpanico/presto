@@ -1,5 +1,5 @@
 <!-- navbar -->
-<div class="navbar d-flex">
+<div class="navbar d-flex" style="z-index: 99;">
   <a href="{{route('home')}}">
     <img class="logo" id="logo" src="/img/presto-logo.svg" alt="" width="200px">
   </a>
@@ -20,7 +20,7 @@
   </div>
 </div>
 
-  <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+  <input type="checkbox" class="openSidebarMenu noScroll" id="openSidebarMenu">
     <label for="openSidebarMenu" class="sidebarIconToggle">
       <div class="spinner diagonal part-1"></div>
       <div class="spinner horizontal"></div>

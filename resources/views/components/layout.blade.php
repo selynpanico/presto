@@ -34,11 +34,10 @@
     </script>
     @endif
 
-
+    <x-spinner />
     <x-navbar/>
     {{$slot}}
     <x-footer/>
-
 
     <!-- JS Livewire -->
     @livewireScripts

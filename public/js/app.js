@@ -3234,16 +3234,33 @@ __webpack_require__.r(__webpack_exports__);
 var logo = document.getElementById('logo');
 
 function changeLogo(itGo) {
-  if (itGo.matches) {
+  if (theMusicPlay.matches) {
     logo.setAttribute('src', '/img/presto-logo-rid.svg');
   } else {
     logo.setAttribute('src', '/img/presto-logo.svg');
   }
 }
 
-var itGo = window.matchMedia("(max-width:425px)");
-changeLogo(itGo);
-itGo.addListener(changeLogo);
+var theMusicPlay = window.matchMedia("(max-width:425px)");
+changeLogo(theMusicPlay);
+theMusicPlay.addListener(changeLogo);
+var example = document.querySelector('.center'); // Spinner JS
+
+window.addEventListener('DOMContentLoaded', function () {
+  example.classList.add('d-none');
+});
+var toggle = 0;
+var noScroll = document.querySelector(".noScroll");
+var body = document.querySelector("body");
+noScroll.addEventListener('click', function () {
+  if (toggle == 0) {
+    body.style.overflow = "hidden";
+    toggle = 1;
+  } else {
+    body.style.overflow = "visible";
+    toggle = 0;
+  }
+});
 /** animazione header */
 
 var words = document.getElementsByClassName('word');

@@ -1,7 +1,6 @@
 <x-layout>
 
 
-
 <div class="container my-5">
     <div class="row">
         <div class="col-12 col-md-4 d-flex justify-content-end align-items-center position-relative">
