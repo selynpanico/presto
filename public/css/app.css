@@ -11321,6 +11321,7 @@ html {
     position: absolute;
     right: 10px;
     top:20%;
+    cursor: pointer;
 }
 
 .form-controller{
