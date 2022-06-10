@@ -7,7 +7,7 @@
     <div class="swiper-wrapper">
         @foreach($announcements as $announcement)
             <div class="swiper-slide">
-                <x-card :announcement="$announcement"/>
+                <x-cards :announcement="$announcement" :route="Route::currentRouteName()"/>
             </div>
         @endforeach
     </div>

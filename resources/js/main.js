@@ -46,9 +46,9 @@ noScroll.addEventListener('click',()=>{
 
 /** animazione header */
 let words = document.getElementsByClassName('word');
+if(words.length){
 let wordArray = [];
 let currentWord = 0;
-
 words[currentWord].style.opacity = 1;
 for (let i = 0; i < words.length; i++) {
   splitLetters(words[i]);
@@ -99,5 +99,6 @@ function splitLetters(word) {
 
 changeWord();
 setInterval(changeWord, 4000);
+}
 
 /** fine animazione header */
