@@ -3232,76 +3232,107 @@ __webpack_require__.r(__webpack_exports__);
 
 // Logo responsive     
 var logo = document.getElementById('logo');
+var cards = document.querySelectorAll('.card');
 
 function changeLogo(itGo) {
-  if (itGo.matches) {
+  if (theMusicPlay.matches) {
     logo.setAttribute('src', '/img/presto-logo-rid.svg');
+    cards.forEach(function (card) {
+      card.classList.add('m-auto');
+    });
   } else {
     logo.setAttribute('src', '/img/presto-logo.svg');
+    cards.forEach(function (card) {
+      card.classList.remove('m-auto');
+    });
   }
 }
 
-var itGo = window.matchMedia("(max-width:425px)");
-changeLogo(itGo);
-itGo.addListener(changeLogo);
+var theMusicPlay = window.matchMedia("(max-width:425px)");
+changeLogo(theMusicPlay);
+theMusicPlay.addListener(changeLogo);
+var example = document.querySelector('.center'); // Spinner JS
+
+window.addEventListener('DOMContentLoaded', function () {
+  example.classList.add('d-none');
+});
+var toggle = 0;
+var noScroll = document.querySelector(".noScroll");
+var body = document.querySelector("body");
+noScroll.addEventListener('click', function () {
+  if (toggle == 0) {
+    body.style.overflow = "hidden";
+    toggle = 1;
+  } else {
+    body.style.overflow = "visible";
+    toggle = 0;
+  }
+});
+/** searchbar animazione */
+
+/** searchbar fine animazione */
+
 /** animazione header */
 
 var words = document.getElementsByClassName('word');
-var wordArray = [];
-var currentWord = 0;
-words[currentWord].style.opacity = 1;
 
-for (var i = 0; i < words.length; i++) {
-  splitLetters(words[i]);
-}
+if (words.length) {
+  var changeWord = function changeWord() {
+    var cw = wordArray[currentWord];
+    var nw = currentWord == words.length - 1 ? wordArray[0] : wordArray[currentWord + 1];
 
-function changeWord() {
-  var cw = wordArray[currentWord];
-  var nw = currentWord == words.length - 1 ? wordArray[0] : wordArray[currentWord + 1];
+    for (var _i = 0; _i < cw.length; _i++) {
+      animateLetterOut(cw, _i);
+    }
 
-  for (var _i = 0; _i < cw.length; _i++) {
-    animateLetterOut(cw, _i);
+    for (var _i2 = 0; _i2 < nw.length; _i2++) {
+      nw[_i2].className = 'letter behind';
+      nw[0].parentElement.style.opacity = 1;
+      animateLetterIn(nw, _i2);
+    }
+
+    currentWord = currentWord == wordArray.length - 1 ? 0 : currentWord + 1;
+  };
+
+  var animateLetterOut = function animateLetterOut(cw, i) {
+    setTimeout(function () {
+      cw[i].className = 'letter out';
+    }, i * 80);
+  };
+
+  var animateLetterIn = function animateLetterIn(nw, i) {
+    setTimeout(function () {
+      nw[i].className = 'letter in';
+    }, 340 + i * 80);
+  };
+
+  var splitLetters = function splitLetters(word) {
+    var content = word.innerHTML;
+    word.innerHTML = '';
+    var letters = [];
+
+    for (var _i3 = 0; _i3 < content.length; _i3++) {
+      var letter = document.createElement('span');
+      letter.className = 'letter';
+      letter.innerHTML = content.charAt(_i3);
+      word.appendChild(letter);
+      letters.push(letter);
+    }
+
+    wordArray.push(letters);
+  };
+
+  var wordArray = [];
+  var currentWord = 0;
+  words[currentWord].style.opacity = 1;
+
+  for (var i = 0; i < words.length; i++) {
+    splitLetters(words[i]);
   }
 
-  for (var _i2 = 0; _i2 < nw.length; _i2++) {
-    nw[_i2].className = 'letter behind';
-    nw[0].parentElement.style.opacity = 1;
-    animateLetterIn(nw, _i2);
-  }
-
-  currentWord = currentWord == wordArray.length - 1 ? 0 : currentWord + 1;
+  changeWord();
+  setInterval(changeWord, 4000);
 }
-
-function animateLetterOut(cw, i) {
-  setTimeout(function () {
-    cw[i].className = 'letter out';
-  }, i * 80);
-}
-
-function animateLetterIn(nw, i) {
-  setTimeout(function () {
-    nw[i].className = 'letter in';
-  }, 340 + i * 80);
-}
-
-function splitLetters(word) {
-  var content = word.innerHTML;
-  word.innerHTML = '';
-  var letters = [];
-
-  for (var _i3 = 0; _i3 < content.length; _i3++) {
-    var letter = document.createElement('span');
-    letter.className = 'letter';
-    letter.innerHTML = content.charAt(_i3);
-    word.appendChild(letter);
-    letters.push(letter);
-  }
-
-  wordArray.push(letters);
-}
-
-changeWord();
-setInterval(changeWord, 4000);
 /** fine animazione header */
 
 /***/ }),
@@ -3335,12 +3366,14 @@ var swiper = new Swiper(".swiperAnnouncements", (_Swiper = {
     // },
     // when window width is >= 640px
     640: {
+      slidesPerGroup: 3,
       slidesPerView: 3,
       spaceBetween: 40
     },
     769: {
-      slidesPerView: 4,
-      spaceBetween: 50
+      slidesPerGroup: 3,
+      slidesPerView: 3,
+      spaceBetween: 20
     }
   },
   navigation: {

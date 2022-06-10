@@ -4,19 +4,22 @@
     width: 100%;
     max-width: 100%;
     box-shadow: none;
-    height: 60px!important;
+    height: 62px!important;
     overflow: hidden;
     z-index: 100;
+    background-color: #FAFAFA;
+    width: 100%;
 }
 
 
 .text-login  {
     font-size: 0.8rem;
-    display: none;
+    color:#4D4D4D;
+    /* display: none; */
 }
-.img-login:hover + .text-login{
+/* .img-login:hover + .text-login{
     display: block;
-}
+} */
 
 
 .logo {

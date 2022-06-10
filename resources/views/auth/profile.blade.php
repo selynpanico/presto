@@ -1,6 +1,6 @@
 <x-layout>
 
-<h1>Benvenuto {{$user->name}} {{$user->surname}}</h1>
+<h2>Benvenuto {{$user->name}} {{$user->surname}}</h2>
 @if(Auth::user() && Auth::user()->is_revisor  || Auth::user()->is_admin)
 <!-- Da inserire fighezza per notifiche revisore -->
     <div class="container">
@@ -28,25 +28,14 @@
     @endif
     <div class="container">
         <div class="row">
-            @if(count(Auth::user()->announcements)>0)
-            @foreach(Auth::user()->announcements as $announcement)
-            @if($announcement->is_accepted)
-            <div class="col-12 col-md-4">
-                <div class="card shadow" style="width:18rem;">
-                    <img src="https://picsum.photos/200" class="card-img-top p-3 rounded"alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">{{$announcement->title}}</h5>
-                        <pclass="card-text">{{$announcement->body}}</p>
-                    <a href="{{route('announcement.show',compact('announcement'))}}"class="btn
-                        btn-primary shadow">Visualizza </a>
-                        <a href="{{route('category.show', ['category'=>$announcement->category])}}"
-                        class="my-2 border-top pt-2 border-dark card-link shadow btn btn-success">Categoria:{{$announcement->category->name}}</a>
-                        <pclass="card-footer">Pubblicato il:{{$announcement->created_at->format('d/m/Y')}}</p>
-                    </div>
+            @if(Auth::user()->getAcceptedAnnouncement()>0)
+                @foreach(Auth::user()->announcements as $announcement)
+                @if($announcement->is_accepted)
+                <div class="col-12 col-md-4">
+                    <x-cards :announcement="$announcement" :route="Route::currentRouteName()"/>
                 </div>
-            </div>
-            @endif
-            @endforeach
+                @endif
+                @endforeach
             @else
             <x-bladewind.empty-state
                 message="Crea un annuncio o attendi che un revisore lo approvi">

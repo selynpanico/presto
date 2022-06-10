@@ -1,5 +1,5 @@
 <div>
-    <h1>Crea il tuo annuncio</h1>
+    <h2>Crea il tuo annuncio</h2>
     
 
     <form wire:submit.prevent="store">

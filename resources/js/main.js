@@ -1,31 +1,57 @@
 // Logo responsive     
 let logo = document.getElementById('logo')
+let cards = document.querySelectorAll('.card')
 function changeLogo(itGo){
-if(itGo.matches){
+if(theMusicPlay.matches){
   logo.setAttribute('src','/img/presto-logo-rid.svg')
+  cards.forEach(card => {
+    card.classList.add('m-auto')
+  });
 }
 else{
   logo.setAttribute('src','/img/presto-logo.svg')
+  cards.forEach(card => {
+    card.classList.remove('m-auto')
+  });
 }
 }
 
-let itGo = window.matchMedia("(max-width:425px)")
-changeLogo(itGo)
-itGo.addListener(changeLogo)
+let theMusicPlay = window.matchMedia("(max-width:425px)")
+changeLogo(theMusicPlay)
+theMusicPlay.addListener(changeLogo)
 
 
+let example = document.querySelector('.center')
+// Spinner JS
+window.addEventListener('DOMContentLoaded',()=>{
+    example.classList.add('d-none')
+})
+let toggle = 0
+let noScroll = document.querySelector(".noScroll");
+let body = document.querySelector("body")
+noScroll.addEventListener('click',()=>{
+  if(toggle == 0){
+    body.style.overflow = "hidden"
+    toggle = 1
+  }
+  else {
+    body.style.overflow ="visible"
+    toggle = 0
+  }
+})
 
 
+/** searchbar animazione */
 
-
+/** searchbar fine animazione */
 
 
 
 /** animazione header */
 let words = document.getElementsByClassName('word');
+if(words.length){
 let wordArray = [];
 let currentWord = 0;
-
 words[currentWord].style.opacity = 1;
 for (let i = 0; i < words.length; i++) {
   splitLetters(words[i]);
@@ -76,5 +102,6 @@ function splitLetters(word) {
 
 changeWord();
 setInterval(changeWord, 4000);
+}
 
 /** fine animazione header */

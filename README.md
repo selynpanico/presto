@@ -23,10 +23,7 @@ Aggiungere nome per categoria
 
 $announcement= Announcement::paginate(9);
 php artisan scout:flush "\App\Models\Announcement"
-<<<<<<< HEAD
 php artisan scout:import "\App\Models\Announcement"
-=======
-$ php artisan scout:import "\App\Models\Announcement"
 
 
   /* -webkit-mask: /*4*/
@@ -35,4 +32,3 @@ $ php artisan scout:import "\App\Models\Announcement"
 
        -webkit-mask-composite: xor; /*5'*/
           mask-composite: exclude; /*5*/
->>>>>>> 6585c6febea6683355024c15e53fa29394df062b

@@ -3,4 +3,35 @@ body {
     padding: 0;
     background-color: #FAFAFA;
     color: #4D4D4D;
+    min-height: 100vh;
+    display:flex; 
+    flex-direction:column; 
+}
+
+html {
+    min-height: 100vh;
+}
+
+.colorGradient{
+    background: -webkit-linear-gradient(45deg,#F62584,#0072FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.provaCustom{
+    position: absolute;
+    right: 10px;
+    top:20%;
+    cursor: pointer;
+}
+
+.form-controller{
+    border-radius: 0.25rem !important;
+}
+.input-groupCustom{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 100%;
 }

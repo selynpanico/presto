@@ -1,11 +1,19 @@
 <!-- navbar -->
-<div class="navbar d-flex">
+<div class="navbar d-flex" style="z-index: 99;">
   <a href="{{route('home')}}">
     <img class="logo" id="logo" src="/img/presto-logo.svg" alt="" width="200px">
   </a>
   <div class="row img-uno justify-content-end h-100">
+  <!-- searchbar  -->
+  <div class="col-md-4 d-flex justify-content-end">
+  <div class="search-box">
+    <button class="btn-search"><i class="bi bi-search"></i></button>
+    <input type="text" class="input-search" placeholder="Type to Search...">
+    </div>
+    </div>
+  <!--fine searchbar  -->
   @guest
-    <div class="col-md-3 me-3 mt-1">
+    <div class="col-md-4 me-3 mt-1">
     <a href="{{route('login')}}"><img class="img-login" src="/img/presto-login-icon.svg" alt="" width="40%" height="">
     <p class="text-login">login</p></a>      
     </div>
@@ -20,13 +28,13 @@
   </div>
 </div>
 
-  <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+  <input type="checkbox" class="openSidebarMenu noScroll" id="openSidebarMenu">
     <label for="openSidebarMenu" class="sidebarIconToggle">
       <div class="spinner diagonal part-1"></div>
       <div class="spinner horizontal"></div>
       <div class="spinner diagonal part-2"></div>
     </label>
-  <div id="sidebarMenu" style="z-index: 99;">
+  <div id="sidebarMenu" style="z-index: 98;">
     <ul class="sidebarMenuInner">
       <li><a class="title" href="/">home</a></li>
       <li><a class="title" href="{{route('all.announcements')}}">vai agli annunci</a></li>
@@ -48,7 +56,7 @@
         <li>
           <a href="{{route('announcements.create')}}">Crea Annuncio</a>
         </li>
-        <li><a href="/logout" onclick="event.preventDefault(); getElementById('form-logout').submit();">logout</a>
+        <li><a href="/logout" onclick="event.preventDefault(); getElementById('form-logout').submit();">LogOut</a>
           <form action="{{route('logout')}}" id="form-logout" method="post" class="d-none">
             @csrf
           </form></li>

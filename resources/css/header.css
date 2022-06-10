@@ -1,15 +1,9 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:600);
 
 body {
   font-family: 'Open Sans', sans-serif;
 }
 
 
-/* .header-carousel {
-    border-radius: 110px;
-    border: 10px solid;
-    border-image: linear-gradient(to right, #F62584, #0072FF) 1 round;
-} */
 .header-carousel {
   border-radius: 110px; /*1*/
   border: 10px solid transparent; /*2*/
@@ -40,7 +34,7 @@ body {
   width: 100%;
   left: 45%;
   font-size: 5rem;
-  z-index: 98;
+  z-index: 97;
 }
 
  p {
@@ -83,7 +77,7 @@ body {
 
 .belize {
   color: #0072FF;
-}
+} 
 
 .pomegranate {
   color: #7209B6;
@@ -108,7 +102,7 @@ body {
         top: 10%;
         width: 80%;
         font-size: 3rem;
-        z-index: 98;
+        z-index: 97;
       }
     h1 {
         font-size: 3rem !important;
