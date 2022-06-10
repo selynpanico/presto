@@ -1,3 +1,4 @@
+<footer>
 <div class="social-container h-100"> 
     <div class="row m-0 justify-content-end">
         <div class="col-12 d-flex flex-column align-items-center my-2 py-2 text-white text-center"> 
@@ -18,3 +19,4 @@
         </div>
     </div>
 </div>
+</footer>

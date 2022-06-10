@@ -3,4 +3,11 @@ body {
     padding: 0;
     background-color: #FAFAFA;
     color: #4D4D4D;
+    min-height: 100vh;
+    display:flex; 
+    flex-direction:column; 
+}
+
+html {
+    min-height: 100vh;
 }

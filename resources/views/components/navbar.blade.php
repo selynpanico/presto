@@ -26,7 +26,7 @@
       <div class="spinner horizontal"></div>
       <div class="spinner diagonal part-2"></div>
     </label>
-  <div id="sidebarMenu" style="z-index: 99;">
+  <div id="sidebarMenu" style="z-index: 98;">
     <ul class="sidebarMenuInner">
       <li><a class="title" href="/">home</a></li>
       <li><a class="title" href="{{route('all.announcements')}}">vai agli annunci</a></li>
