@@ -9,6 +9,6 @@ php artisan scout:flush "\App\Models\Announcement"
 php artisan scout:import "\App\Models\Announcement"
 $ php artisan scout:import "\App\Models\Announcement"
 ## Se trovi delle card inserire 
-<x-cards :announcement="$announcement" :route="Route::currentRouteName()"/>
+<x-cards :announcement="$announcement"/>
 
 
