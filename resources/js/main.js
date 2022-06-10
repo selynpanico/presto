@@ -1,11 +1,24 @@
-window.addEventListener('DOMContentLoaded',()=>{
-    let theMusicPlay = screen.width
-    let logo = document.getElementById('logo')
-    if(theMusicPlay <= 425){
-        logo.setAttribute('src','/img/presto-logo-rid.svg')
-    }
-    console.log(theMusicPlay);
-})
+// Logo responsive     
+let logo = document.getElementById('logo')
+function changeLogo(itGo){
+if(itGo.matches){
+  logo.setAttribute('src','/img/presto-logo-rid.svg')
+}
+else{
+  logo.setAttribute('src','/img/presto-logo.svg')
+}
+}
+
+let itGo = window.matchMedia("(max-width:425px)")
+changeLogo(itGo)
+itGo.addListener(changeLogo)
+
+
+
+
+
+
+
 
 
 /** animazione header */

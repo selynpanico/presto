@@ -3230,16 +3230,20 @@ __webpack_require__.r(__webpack_exports__);
   \******************************/
 /***/ (() => {
 
-window.addEventListener('DOMContentLoaded', function () {
-  var theMusicPlay = screen.width;
-  var logo = document.getElementById('logo');
+// Logo responsive     
+var logo = document.getElementById('logo');
 
-  if (theMusicPlay <= 425) {
+function changeLogo(itGo) {
+  if (itGo.matches) {
     logo.setAttribute('src', '/img/presto-logo-rid.svg');
+  } else {
+    logo.setAttribute('src', '/img/presto-logo.svg');
   }
+}
 
-  console.log(theMusicPlay);
-});
+var itGo = window.matchMedia("(max-width:425px)");
+changeLogo(itGo);
+itGo.addListener(changeLogo);
 /** animazione header */
 
 var words = document.getElementsByClassName('word');
