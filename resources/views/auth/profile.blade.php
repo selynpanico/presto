@@ -32,7 +32,7 @@
                 @foreach(Auth::user()->announcements as $announcement)
                 @if($announcement->is_accepted)
                 <div class="col-12 col-md-4">
-                    <x-cards :announcement="$announcement"/>
+                    <x-cards :announcement="$announcement" :route="Route::currentRouteName()"/>
                 </div>
                 @endif
                 @endforeach
