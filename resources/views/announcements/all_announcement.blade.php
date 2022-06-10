@@ -29,8 +29,8 @@
                <ahref="{{route('announcement.show',compact('announcement'))}}"class="btn
                 btn-primary shadow">Visualizza </a>
                 <a href="{{route('category.show', ['category'=>$announcement->category])}}"
-                class="my-2 border-top pt-2 border-dark card-link shadow btn btn-success">Categoria:{{$announcement->category->name}}</a>
-                <pclass="card-footer">Pubblicato il:{{$announcement->created_at->format('d/
+                class="my-2 border-top pt-2 border-dark card-link shadow btn btn-success">Categoria: {{$announcement->category->name}}</a>
+                <pclass="card-footer">Pubblicato il: {{$announcement->created_at->format('d/
                m/Y')}}</p>
            </div>
         </div>
