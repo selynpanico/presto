@@ -48,7 +48,7 @@
         <li>
           <a href="{{route('announcements.create')}}">Crea Annuncio</a>
         </li>
-        <li><a href="/logout" onclick="event.preventDefault(); getElementById('form-logout').submit();">logout</a>
+        <li><a href="/logout" onclick="event.preventDefault(); getElementById('form-logout').submit();">LogOut</a>
           <form action="{{route('logout')}}" id="form-logout" method="post" class="d-none">
             @csrf
           </form></li>

@@ -36,7 +36,9 @@
 
     <x-spinner />
     <x-navbar/>
-    {{$slot}}
+    <div style="min-height: 488px">
+        {{$slot}}
+    </div>
     <x-footer/>
 
     <!-- JS Livewire -->
