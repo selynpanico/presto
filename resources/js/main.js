@@ -1,11 +1,18 @@
 // Logo responsive     
 let logo = document.getElementById('logo')
+let cards = document.querySelectorAll('.card')
 function changeLogo(itGo){
 if(theMusicPlay.matches){
   logo.setAttribute('src','/img/presto-logo-rid.svg')
+  cards.forEach(card => {
+    card.classList.add('m-auto')
+  });
 }
 else{
   logo.setAttribute('src','/img/presto-logo.svg')
+  cards.forEach(card => {
+    card.classList.remove('m-auto')
+  });
 }
 }
 

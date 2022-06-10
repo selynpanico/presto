@@ -20,12 +20,14 @@ var swiper = new Swiper(".swiperAnnouncements", {
     // },
     // when window width is >= 640px
     640: {
+    slidesPerGroup: 3,
       slidesPerView: 3,
       spaceBetween: 40
     },
     769:{
-      slidesPerView: 4,
-      spaceBetween: 50,
+      slidesPerGroup: 3,
+      slidesPerView: 3,
+      spaceBetween: 20,
     }
   },
     navigation: {

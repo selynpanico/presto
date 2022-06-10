@@ -3232,12 +3232,19 @@ __webpack_require__.r(__webpack_exports__);
 
 // Logo responsive     
 var logo = document.getElementById('logo');
+var cards = document.querySelectorAll('.card');
 
 function changeLogo(itGo) {
   if (theMusicPlay.matches) {
     logo.setAttribute('src', '/img/presto-logo-rid.svg');
+    cards.forEach(function (card) {
+      card.classList.add('m-auto');
+    });
   } else {
     logo.setAttribute('src', '/img/presto-logo.svg');
+    cards.forEach(function (card) {
+      card.classList.remove('m-auto');
+    });
   }
 }
 
@@ -3352,12 +3359,14 @@ var swiper = new Swiper(".swiperAnnouncements", (_Swiper = {
     // },
     // when window width is >= 640px
     640: {
+      slidesPerGroup: 3,
       slidesPerView: 3,
       spaceBetween: 40
     },
     769: {
-      slidesPerView: 4,
-      spaceBetween: 50
+      slidesPerGroup: 3,
+      slidesPerView: 3,
+      spaceBetween: 20
     }
   },
   navigation: {
