@@ -3240,6 +3240,65 @@ window.addEventListener('DOMContentLoaded', function () {
 
   console.log(theMusicPlay);
 });
+/** animazione header */
+
+var words = document.getElementsByClassName('word');
+var wordArray = [];
+var currentWord = 0;
+words[currentWord].style.opacity = 1;
+
+for (var i = 0; i < words.length; i++) {
+  splitLetters(words[i]);
+}
+
+function changeWord() {
+  var cw = wordArray[currentWord];
+  var nw = currentWord == words.length - 1 ? wordArray[0] : wordArray[currentWord + 1];
+
+  for (var _i = 0; _i < cw.length; _i++) {
+    animateLetterOut(cw, _i);
+  }
+
+  for (var _i2 = 0; _i2 < nw.length; _i2++) {
+    nw[_i2].className = 'letter behind';
+    nw[0].parentElement.style.opacity = 1;
+    animateLetterIn(nw, _i2);
+  }
+
+  currentWord = currentWord == wordArray.length - 1 ? 0 : currentWord + 1;
+}
+
+function animateLetterOut(cw, i) {
+  setTimeout(function () {
+    cw[i].className = 'letter out';
+  }, i * 80);
+}
+
+function animateLetterIn(nw, i) {
+  setTimeout(function () {
+    nw[i].className = 'letter in';
+  }, 340 + i * 80);
+}
+
+function splitLetters(word) {
+  var content = word.innerHTML;
+  word.innerHTML = '';
+  var letters = [];
+
+  for (var _i3 = 0; _i3 < content.length; _i3++) {
+    var letter = document.createElement('span');
+    letter.className = 'letter';
+    letter.innerHTML = content.charAt(_i3);
+    word.appendChild(letter);
+    letters.push(letter);
+  }
+
+  wordArray.push(letters);
+}
+
+changeWord();
+setInterval(changeWord, 4000);
+/** fine animazione header */
 
 /***/ }),
 
@@ -3256,6 +3315,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 var swiper = new Swiper(".swiperAnnouncements", (_Swiper = {
   slidesPerView: 1,
   spaceBetween: 3,
+  centeredSlides: true,
+  centeredSlidesBounds: true,
   // Responsive breakpoints
   breakpoints: {
     // // when window width is >= 320px
@@ -3281,9 +3342,8 @@ var swiper = new Swiper(".swiperAnnouncements", (_Swiper = {
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev'
-  },
-  centeredSlides: true
-}, _defineProperty(_Swiper, "spaceBetween", 30), _defineProperty(_Swiper, "grabCursor", true), _Swiper));
+  }
+}, _defineProperty(_Swiper, "centeredSlides", true), _defineProperty(_Swiper, "spaceBetween", 30), _defineProperty(_Swiper, "grabCursor", true), _Swiper));
 
 /***/ }),
 

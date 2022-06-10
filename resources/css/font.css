@@ -1,8 +1,8 @@
 
 @font-face {
     font-family: 'nima_linebold';
-    src: url('/fonts/nimaline-bold-webfont.woff2') format('woff2'),
-         url('/fonts/nimaline-bold-webfont.woff') format('woff');
+    src: url('/fonts/NIMAsolid-bold.woff2') format('woff2'),
+         url('/fonts/NIMAsolid-bold.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
