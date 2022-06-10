@@ -14,11 +14,12 @@
 
 .text-login  {
     font-size: 0.8rem;
-    display: none;
+    color:#4D4D4D;
+    /* display: none; */
 }
-.img-login:hover + .text-login{
+/* .img-login:hover + .text-login{
     display: block;
-}
+} */
 
 
 .logo {
