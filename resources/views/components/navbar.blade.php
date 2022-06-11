@@ -1,5 +1,5 @@
   <!-- navbar -->
-  <div class="navbar d-flex" style="z-index: 99;">
+  <div class="navbar  d-flex" style="z-index: 99;">
     <div class="row w-100">
       <div class="col-6 col-md-6 d-flex justify-content-center align-items-center">
         <a href="{{route('home')}}">
@@ -7,12 +7,12 @@
         </a>
       </div>
       <!-- searchbar  -->
-      <div class="col-6 col-md-4 d-flex justify-content-end align-items-center">
+      <form action="{{route('ricerca.annuncio')}}" class="col-6 col-md-4 d-flex justify-content-end align-items-center" method="GET">
         <div class="search-box">
           <button class="btn-search"><i class="bi bi-search"></i></button>
-          <input type="text" class="input-search" placeholder="type to search...">
+          <input type="text" name="searched" class="input-search" placeholder="type to search...">
         </div>
-      </div>
+      </form>
       <!--fine searchbar  -->
         @guest
       <div class="icon-nav col-2 col-md-2">
@@ -46,7 +46,7 @@
         @endguest
       </div>
     </div>
-  </div>
+
 
   <input type="checkbox" class="openSidebarMenu noScroll" id="openSidebarMenu">
     <label for="openSidebarMenu" class="sidebarIconToggle">

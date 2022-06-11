@@ -3,39 +3,37 @@
     
 
     <form wire:submit.prevent="store">
-        @csrf
-        <div class="mb-3">
+        @csrf 
+
+        <div class='mb-3'>
             <label for="title">Titolo Annuncio</label>
-            <input wire:model="title" type="text" class="form-control @error('title') non è valido @enderror">
-        @error('title')
-            <p class="text-danger mt-2">{{$message}}</p>
-        @enderror
-        </div>
-        <div class="mb-3">
-            <label for="body">Descrizione</label>
-            <textarea wire:model="body" type="text" class="form-control @error('body') non è valido @enderror"></textarea>
-        @error('body')
-            <p class="text-danger mt-2">{{$message}}</p>
-        @enderror
-        </div>
-        <div class="mb-3">
-            <label for="price">Prezzo</label>
-            <input wire:model="price" type="number" min="1" class="form-control @error('price') non è valido @enderror">
-             @error('price')
-                <p class="text-danger mt-2">{{$message}}</p>
+            <input wire:model="title" type="text" class="form-control @error ('title') is-invalid @enderror">
+            @error('title')
+                {{$message}}
             @enderror
         </div>
-    
+        <div class='mb-3'>
+            <label for="body">Descrizione</label>
+            <textarea wire:model="body" type="text" class="form-control @error ('body') is-invalid @enderror"></textarea>
+            @error('body')
+                {{$message}}
+            @enderror
+        </div>
         <div class="mb-3">
-            <label for="category">Categoria</label>
-            <select wire:model.defer="category" id="category" class="form-control">
-            <option value="">Scegli la categoria</option>
-            @foreach ($categories as $category)
-                <option value="{{$category->id}}">{{$category->name}}</option>    
-            @endforeach
+            <select wire:model.defer='category' id="">
+                <option value="">Scegli la categoria</option>
+                @foreach($categories as $category)
+                <option value="{{$category->id}}">{{$category->name}}</option>
+                @endforeach
             </select>
         </div>
-      
+        <div class='mb-3'>
+            <label for="price">Prezzo</label>
+            <input wire:model="price" type="number" class="form-control @error ('price') is-invalid @enderror">
+            @error('price')
+                {{$message}}
+            @enderror
+        </div>
         <div class="mb-3">
             <input wire:model="temporary_images" type="file" name="images" multiple class="form-control shadow @error('temporary_images.*')is-invalid @enderror" placeholder= 'Img'/>
             @error('temporary_images.*')
@@ -60,20 +58,15 @@
                 </div>
             </div>
             @endif
-            <button type="submit" class="btn btn-primary shadow px-4 py-2 my-4">Crea</button>
+
+        <button type="submit" class="btn btn-warning">Crea Annuncio</button>
 
         
-
-
     </form>
-
 
     @if(session()->has('message'))
     <script>
         showNotification('Success', "{{Session::get('message')}}", 'success', 3);
     </script>
     @endif
-
-
-
 </div>

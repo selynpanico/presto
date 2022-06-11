@@ -51,32 +51,41 @@ class CreateAnnouncement extends Component
 
     public function updatedTemporaryImages()
     {
-        
         if($this->validate([
             'temporary_images.*'=> 'image|max:1024',
-        ])) {
-            foreach ($this->temporary_images as $image) {
-                $this->images[] = $image;
+            ])) {
+                foreach ($this->temporary_images as $image) {
+                    $this->images[] = $image;
+                }
             }
         }
-    }
-
-    public function removeImage($key)
-    {
-        if (in_array($key, array_keys($this->images))) {
-            unset($this->images[$key]);
+        
+        public function removeImage($key)
+        {
+            if (in_array($key, array_keys($this->images))) {
+                unset($this->images[$key]);
+            }
         }
-    }
-
-
-
-   public function store()
-   {    
+        
+        
+        
+        
+        public function store()
+        {    
         $this->validate();
-        $this->announcement = Category::find($this->category)->announcements()->create($this->validate());
-        dd($this->announcement);
-        $this->announcement->user()->associate(Auth::user());
-        $this->announcement->save();
+        $this->announcement= Announcement::create([
+            'title'=>$this->title,
+            'body'=>$this->body,
+            'price'=>$this->price,
+            'category_id'=>$this->category,
+            'user_id'=>Auth::id(),
+        ]);
+
+        if (count($this->images)){
+            foreach ($this->images as $image) {
+                $this->announcement->images()->create(['path'=>$image->store('images','public')]);
+            }
+        }
 
         if(count($this->images)){
            foreach ($this->images as $image) {
