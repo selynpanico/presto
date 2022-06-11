@@ -14,6 +14,7 @@
         "laravel/tinker": "^2.7",
         "livewire/livewire": "^2.10",
         "mkocansey/bladewind": "^1.0",
+        "spatie/image": "*",
         "teamtnt/laravel-scout-tntsearch-driver": "^11.6"
     },
     "require-dev": {
