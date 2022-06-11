@@ -5,12 +5,12 @@
   </a>
   <div class="row img-uno justify-content-end h-100">
   <!-- searchbar  -->
-  <div class="col-md-4 d-flex justify-content-end">
-  <div class="search-box">
-    <button class="btn-search"><i class="bi bi-search"></i></button>
-    <input type="text" class="input-search" placeholder="Type to Search...">
-    </div>
-    </div>
+  <form action="{{route('ricerca.annuncio')}}" method="GET" class="col-md-4 d-flex justify-content-end">
+      <div class="search-box">
+        <button type="submit" class="btn-search"><i class="bi bi-search"></i></button>
+        <input type="text" name="searched" class="input-search" placeholder="Type to Search...">
+      </div>
+  </form>
   <!--fine searchbar  -->
   @guest
     <div class="col-md-4 me-3 mt-1">
