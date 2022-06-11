@@ -12,21 +12,17 @@ class CreateAnnouncement extends Component
 {
     use WithFileUploads;
   
-   public $title;
-   public $body;
-   public $price;
-   public $category;
-   public $message;
-   public $validated;
-   public $temporary_images;
-   public $images = [];
-   public $image;
-   public $announcement;
+    public $title;
+    public $body;
+    public $price;
+    public $category;
+    public $message;
+    public $validated;
+    public $temporary_images;
+    public $images = [];
+    public $image;
+    public $announcement;
   
-
-
-   
-
     protected $rules  = [
         'title' => 'required|min:6',
         'body' => 'required|min:8',
@@ -36,6 +32,7 @@ class CreateAnnouncement extends Component
         'temporary_images.*' => 'image|max:1024',
 
     ];
+
     protected $messages  = [
         'required' => 'Il campo non può essere vuoto',
         'min' => 'Il campo :attribute è troppo corto',
@@ -58,18 +55,14 @@ class CreateAnnouncement extends Component
                     $this->images[] = $image;
                 }
             }
-        }
-        
+        } 
         public function removeImage($key)
         {
             if (in_array($key, array_keys($this->images))) {
                 unset($this->images[$key]);
             }
         }
-        
-        
-        
-        
+
         public function store()
         {    
         $this->validate();

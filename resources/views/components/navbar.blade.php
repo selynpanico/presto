@@ -23,7 +23,7 @@
             </div>
           <div class="col-md-4">
               <a class="d-flex flex-column justify-content-center align-items-center" href="{{route('announcements.create')}}">
-              <img src="img/presto-aggiungi-icon.svg" alt="" width="85%" height="">
+              <img src="/img/presto-aggiungi-icon.svg" alt="" width="85%" height="">
               <p class="text-login">aggiungi</p></a>
           </div>
         </div>    
@@ -38,7 +38,7 @@
           </div>
           <div class="col-md-4">
             <a class="d-flex flex-column justify-content-center align-items-center" href="{{route('announcements.create')}}">
-            <img src="img/presto-aggiungi-icon.svg" alt="" width="85%" height="">
+            <img src="/img/presto-aggiungi-icon.svg" alt="" width="85%" height="">
             <p class="text-login">aggiungi</p></a>
           </div>    
         </div>  
