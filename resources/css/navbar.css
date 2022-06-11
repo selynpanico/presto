@@ -4,7 +4,7 @@
     width: 100%;
     max-width: 100%;
     box-shadow: none;
-    height: 62px!important;
+    height: 65px!important;
     overflow: hidden;
     z-index: 100;
     background-color: #FAFAFA;
@@ -195,7 +195,7 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
       .img-login {
         width: 8%;
         position: absolute;
-        right: 50px;
+        right: 45px;
       }
 
       .img-login:hover + .text-login {

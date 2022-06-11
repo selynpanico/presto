@@ -14,7 +14,7 @@
   <!--fine searchbar  -->
   @guest
     <div class="col-md-4 me-3 mt-1">
-    <a href="{{route('login')}}"><img class="img-login" src="/img/presto-login-icon.svg" alt="" width="40%" height="">
+    <a href="{{route('login')}}"><img class="img-login" src="/img/presto-login-icon.svg" alt="" width="35%" height="">
     <p class="text-login">login</p></a>      
     </div>
     @else
