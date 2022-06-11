@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   <!-- navbar -->
   <div class="navbar d-flex" style="z-index: 99;">
     <div class="row w-100">
@@ -45,6 +46,32 @@
       </div>
         @endguest
       </div>
+=======
+<!-- navbar -->
+<div class="navbar d-flex" style="z-index: 99;">
+  <a href="{{route('home')}}">
+    <img class="logo" id="logo" src="/img/presto-logo.svg" alt="" width="200px">
+  </a>
+  <div class="row img-uno justify-content-end h-100">
+  <!-- searchbar  -->
+  <form action="{{route('ricerca.annuncio')}}" method="GET" class="col-md-4 d-flex justify-content-end">
+      <div class="search-box">
+        <button type="submit" class="btn-search"><i class="bi bi-search"></i></button>
+        <input type="text" name="searched" class="input-search" placeholder="Type to Search...">
+      </div>
+  </form>
+  <!--fine searchbar  -->
+  @guest
+    <div class="col-md-4 me-3 mt-1">
+    <a href="{{route('login')}}"><img class="img-login" src="/img/presto-login-icon.svg" alt="" width="35%" height="">
+    <p class="text-login">login</p></a>      
+    </div>
+    @else
+    <div class="col-md-3 me-3 mt-1">
+    <a href="{{route('profile', Auth::user())}}">
+    <img class="img-login" src="/img/presto-login-icon.svg" alt="" width="40%" height="">
+      <p class="text-login">{{Auth::user()->name}}</p> 
+>>>>>>> 4eede556f3c5a7b55d48a3eb3275fabb8735fa8b
     </div>
   </div>
 
