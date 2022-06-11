@@ -9,9 +9,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Image extends Model
 {
     use HasFactory;
-    protected $fillable = [
-        'announcement_id', 'path'
-    ];
+    protected $fillable = ['path'];
 
     public function announcement(){
         return $this->belongsTo(Announcement::class);
