@@ -86,21 +86,9 @@ class CreateAnnouncement extends Component
                 $this->announcement->images()->create(['path'=>$image->store('images','public')]);
             }
         }
-
-        if(count($this->images)){
-           foreach ($this->images as $image) {
-             $this->announcement->images()->create(['path'=>$image->store('images',  'public')]);
-         }
-       }
-
-        
             session()->flash('message', 'Articolo inserito con successo, sarà pubblicato dopo la revisione');
             $this->cleanForm(); 
-
-            return redirect()->to('/');
-
-    
-
+            return redirect()->to('/nuovo/annuncio');
    }
 
    public function updated($propertyName)
