@@ -1,32 +1,52 @@
-<!-- navbar -->
-<div class="navbar d-flex" style="z-index: 99;">
-  <a href="{{route('home')}}">
-    <img class="logo" id="logo" src="/img/presto-logo.svg" alt="" width="200px">
-  </a>
-  <div class="row img-uno justify-content-end h-100">
-  <!-- searchbar  -->
-  <form action="{{route('ricerca.annuncio')}}" method="GET" class="col-md-4 d-flex justify-content-end">
-      <div class="search-box">
-        <button type="submit" class="btn-search"><i class="bi bi-search"></i></button>
-        <input type="text" name="searched" class="input-search" placeholder="Type to Search...">
+  <!-- navbar -->
+  <div class="navbar d-flex" style="z-index: 99;">
+    <div class="row w-100">
+      <div class="col-6 col-md-6 d-flex justify-content-center align-items-center">
+        <a href="{{route('home')}}">
+          <img class="logo" id="logo" src="/img/presto-logo.svg" alt="" width="200px">
+        </a>
       </div>
-  </form>
-  <!--fine searchbar  -->
-  @guest
-    <div class="col-md-4 me-3 mt-1">
-    <a href="{{route('login')}}"><img class="img-login" src="/img/presto-login-icon.svg" alt="" width="35%" height="">
-    <p class="text-login">login</p></a>      
+      <!-- searchbar  -->
+      <div class="col-6 col-md-4 d-flex justify-content-end align-items-center">
+        <div class="search-box">
+          <button class="btn-search"><i class="bi bi-search"></i></button>
+          <input type="text" class="input-search" placeholder="type to search...">
+        </div>
+      </div>
+      <!--fine searchbar  -->
+        @guest
+      <div class="icon-nav col-2 col-md-2">
+        <div class="row h-100">
+          <div class="col-md-4">
+              <a class="d-flex flex-column justify-content-center align-items-center" href="{{route('login')}}"><img src="/img/presto-login-icon.svg" alt="" width="85%" height="">
+              <p class="text-login">login</p></a>      
+            </div>
+          <div class="col-md-4">
+              <a class="d-flex flex-column justify-content-center align-items-center" href="{{route('announcements.create')}}">
+              <img src="img/presto-aggiungi-icon.svg" alt="" width="85%" height="">
+              <p class="text-login">aggiungi</p></a>
+          </div>
+        </div>    
+      </div>
+        @else
+      <div class="icon-nav col-2 col-md-2">
+        <div class="row h-100 align-items-center">
+          <div class="col-md-4">
+            <a class="d-flex flex-column justify-content-center align-items-center" href="{{route('profile', Auth::user())}}">
+            <img src="/img/presto-login-icon.svg" alt="" width="85%" height="">
+            <p class="text-login">{{Auth::user()->name}}</p></a>
+          </div>
+          <div class="col-md-4">
+            <a class="d-flex flex-column justify-content-center align-items-center" href="{{route('announcements.create')}}">
+            <img src="img/presto-aggiungi-icon.svg" alt="" width="85%" height="">
+            <p class="text-login">aggiungi</p></a>
+          </div>    
+        </div>  
+      </div>
+        @endguest
+      </div>
     </div>
-    @else
-    <div class="col-md-3 me-3 mt-1">
-    <a href="{{route('profile', Auth::user())}}">
-    <img class="img-login" src="/img/presto-login-icon.svg" alt="" width="40%" height="">
-      <p class="text-login">{{Auth::user()->name}}</p> 
-    </div>
-    </a>
-    @endguest
   </div>
-</div>
 
   <input type="checkbox" class="openSidebarMenu noScroll" id="openSidebarMenu">
     <label for="openSidebarMenu" class="sidebarIconToggle">
