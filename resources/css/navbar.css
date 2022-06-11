@@ -4,7 +4,7 @@
     width: 100%;
     max-width: 100%;
     box-shadow: none;
-    height: 65px!important;
+    height: 70px!important;
     overflow: hidden;
     z-index: 100;
     background-color: #FAFAFA;
@@ -188,10 +188,13 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
 
   @media (max-width: 768px) { 
       .logo {
-        margin-left: 20px;
-        width: 50px;
+        width: 50%;
       }
 
+      .icon-nav{
+        display: none;
+      }
+      
       .img-login {
         width: 8%;
         position: absolute;
@@ -202,5 +205,6 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
         display: block;
         margin: 30px 20px;
     }
+
    }
   /* fine media queries */
