@@ -6,7 +6,6 @@
 <div class="swiper swiperAnnouncements mb-5" >
     <div class="swiper-wrapper">
         @foreach($announcements as $announcement)
-        @dd($announcement->images())
             <div class="swiper-slide">
                 <x-cards :announcement="$announcement"/>
             </div>
