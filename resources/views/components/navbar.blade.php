@@ -5,7 +5,9 @@
         <a href="{{route('home')}}">
           <img class="logo" id="logo" src="/img/presto-logo.svg" alt="" width="200px">
         </a>
-      </div>
+
+      </div> 
+        
       <!-- searchbar  -->
       <form action="{{route('ricerca.annuncio')}}" class="col-6 col-md-4 d-flex justify-content-end align-items-center" method="GET">
         <div class="search-box">
@@ -23,7 +25,7 @@
             </div>
           <div class="col-md-4">
               <a class="d-flex flex-column justify-content-center align-items-center" href="{{route('announcements.create')}}">
-              <img src="img/presto-aggiungi-icon.svg" alt="" width="85%" height="">
+              <img src="/img/presto-aggiungi-icon.svg" alt="" width="85%" height="">
               <p class="text-login">aggiungi</p></a>
           </div>
         </div>    
@@ -38,7 +40,7 @@
           </div>
           <div class="col-md-4">
             <a class="d-flex flex-column justify-content-center align-items-center" href="{{route('announcements.create')}}">
-            <img src="img/presto-aggiungi-icon.svg" alt="" width="85%" height="">
+            <img src="/img/presto-aggiungi-icon.svg" alt="" width="85%" height="">
             <p class="text-login">aggiungi</p></a>
           </div>    
         </div>  
@@ -59,6 +61,15 @@
       <li><a class="title" href="/">home</a></li>
       <li><a class="title" href="{{route('all.announcements')}}">vai agli annunci</a></li>
       <li><a class="title" href="#">contatti</a></li>
+      <li class='nav-item'>
+          <x-locale lang='it', nation='it'/>
+        </li>
+        <li class='nav-item'>
+          <x-locale lang='en', nation='gb'/>
+        </li>
+        <li class='nav-item'>
+          <x-locale lang='fr', nation='fr'/>
+        </li>
      
       <hr>
 

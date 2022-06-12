@@ -47,7 +47,7 @@
                     <p>Anteprima Foto:</p>
                     <div class="row border border-4 border-info rounded shadow py-4">
                         @foreach($images as $key => $image)
-                        <div class="col d-flex my-3 justify-content-center">
+                        <div class="col-12 col-md-3 d-flex my-3 justify-content-center">
                             <div>
                                 <img class="img-preview mx-auto shadow rounded" src="{{$image->temporaryUrl()}}"alt="Beccate sta foto">
                                 <button type="button" class="btn btn-danger shadow d-block text-center mt-2 mx-auto" wire:click="removeImage({{$key}})">Cancella</button>

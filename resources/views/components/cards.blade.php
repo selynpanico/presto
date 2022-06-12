@@ -1,6 +1,11 @@
 <div class="card" style="width: 18rem;">   
     <div class="position-relative">
-        <img src="https://picsum.photos/200" class="card-img-top rounded"alt="..." style="height:400px;">
+        <!-- Modo nuovo per prendere le IMG -->
+                @if(count($announcement->images)>0)
+                <img src="{{$announcement->images->first()->getUrl()}}" class="card-img-top rounded" alt="..." style="height:400px;">
+                @else
+                <img src="/img/default.jpg" alt="">
+                @endif
         <div class="card-categoria">
             <a href="{{route('category.show', $announcement->category)}}">
                 <img class="home-img" src="{{$announcement->category->icon}}" alt="{$announcement->category->name">
