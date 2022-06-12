@@ -5,6 +5,7 @@
 <!-- Swiper  -->
 <div class="swiper swiperAnnouncements mb-5" >
     <div class="swiper-wrapper">
+        @dd($moreAnn);
         @foreach($announcements as $announcement)
             <div class="swiper-slide">
                 <x-cards :announcement="$announcement"/>

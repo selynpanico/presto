@@ -29,7 +29,8 @@ class AppServiceProvider extends ServiceProvider
     {
        if (Schema::hasTable('categories')) {
            $categories=Category::all();
-           View::share('categories', $categories);
+           $moreAnn = Category::MoreAnn();
+           View::share(['categories', $categories],['moreAnn',$moreAnn]);
        }
        Paginator::useBootstrap();
        
