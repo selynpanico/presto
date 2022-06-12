@@ -31,16 +31,16 @@
             <label for="price">Prezzo</label>
             <input wire:model="price" type="number" class="form-control @error ('price') is-invalid @enderror">
             @error('price')
-                {{$message}}
+            {{$message}}
             @enderror
         </div>
         <div class="mb-3">
-            <input wire:model="temporary_images" type="file" name="images" multiple class="form-control shadow @error('temporary_images.*')is-invalid @enderror" placeholder= 'Img'/>
-            @error('temporary_images.*')
+            <input wire:model="temporary_images" type="file" name="images" multiple class="form-control shadow @error('temporary_images.')is-invalid @enderror" placeholder= 'Img'/>
+            @error('temporary_images.')
                <p class="text-danger mt-2">{{$message}}</p>
             @enderror
         </div>
-        
+
         @if (!empty($images))
             <div class="row">
                 <div class="col-12">
@@ -58,6 +58,8 @@
                 </div>
             </div>
             @endif
+
+  
 
         <button type="submit" class="btn btn-warning">Crea Annuncio</button>
 

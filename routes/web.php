@@ -22,6 +22,7 @@ Route::get('/category/{category}', [AnnouncementsController::class,'showCategory
 Route::get('/make-revisor/{user}',[PublicController::class ,'makeRevisor'])->middleware('is_admin')->name('make.revisor');
 Route::get('/all-announcements', [PublicController::class, 'allAnnouncement'])->name('all.announcements');
 Route::get('/ricerca-annuncio', [PublicController::class, 'ricercaAnnuncio'])->name('ricerca.annuncio');
+Route::post('/lingua/{$lang}', [PublicController::class, 'setLanguage'])->name('set_language_locale');
 
 
 // Rotte con middleware auth

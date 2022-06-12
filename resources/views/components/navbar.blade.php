@@ -5,7 +5,9 @@
         <a href="{{route('home')}}">
           <img class="logo" id="logo" src="/img/presto-logo.svg" alt="" width="200px">
         </a>
-      </div>
+
+      </div> 
+        
       <!-- searchbar  -->
       <form action="{{route('ricerca.annuncio')}}" class="col-6 col-md-4 d-flex justify-content-end align-items-center" method="GET">
         <div class="search-box">
@@ -59,6 +61,12 @@
       <li><a class="title" href="/">home</a></li>
       <li><a class="title" href="{{route('all.announcements')}}">vai agli annunci</a></li>
       <li><a class="title" href="#">contatti</a></li>
+      <li class='d-flex justify-content-center'>
+        <x-locale lang='it' nation='it'/>
+        <x-locale lang='gb' nation='gb'/>
+        <x-locale lang='ao' nation='ao'/>
+      </li>
+      
      
       <hr>
 
