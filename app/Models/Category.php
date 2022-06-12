@@ -15,7 +15,22 @@ class Category extends Model
 
     public function announcements(){
         return $this->hasMany(Announcement::class);
-
     }
+
+    public static function MoreAnn(){
+        $categories = Category::all();
+        $moreAnn = [];
+        $categories_name = [];
+        foreach($categories as $category){
+            $moreAnn[] = $category->announcements; 
+        }
+        rsort($moreAnn);
+        $moreAnnslice = array_slice($moreAnn,0,4);
+        // dd($moreAnnslice[0]->first()->category->name);
+        foreach($moreAnnslice as $category){
+            $categories_name[] = $category->first()->category;
+        }
+        return $categories_name;
+    } 
 
 }

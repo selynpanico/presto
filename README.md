@@ -39,3 +39,7 @@ $announcement->images()->first()->getUrl("Passare come primo parametro larghezza
 
 ## Quando fate il pull fate composer install, e nel file php.ini andate a decommetnare extension=exif e extension=gd altrimenti non funziona nada, per modificare il resize andate CreateAnnouncement a riga 85 e nel dispatch, quei 2 numeri alla fine, il primo è la larghezza il 2 è l'altezza
 ## Per far funzionare le code, dovete fare un migrate e poi dovete fare un php artisan queue:work, rimane in ascolto e quando create un annuncio croppa le immagini.
+
+## Aggiunto metodo per le prime 4 categorie
+
+
