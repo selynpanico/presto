@@ -1,5 +1,26 @@
 <?php
 return [
-    'allAnnouncements' =>"Tuttu quind l'annunc'!"
+    'allAnnouncements' =>"Tuttu quind l'annunc'!",
+    'add_announcement' =>"Aggiungi",
+    'published'=>'Pubblicat\'',
+    'view'=>'Auard\'',
+    'work_for_us'=>'Fatij nghi nu',
+    'work_for_us_subtitle'=>'Si vu ca ssold di cchiù pass\' \'na ecc compà',
+    'register_to_work'=>'Compà, se nti reggistri nin pozz aiutà',
+    'register_to_add_announcement'=>'Reggistrati si vu mett n\'annuncj\'',
+    'no_announcement'=>'Mò nci sta nient, arevè cchiù tard\'',
+    'logged'=>'Weeeeeeeeee',
+    'revisor_panel'=>'Va allu pannell dellu revisor\'',
+    'create_announcement'=>'Cre\'em st\'annunc\'',
+    'Announcement_title'=>'Titolo',
+    'Announcement_description'=>'Descrizion\'',
+    'select_category'=>'Cap\'t na categorij',
+    'price'=>'Prezz',
+    'select_file'=>'Cap\'t lu file',
+    'create_announcement_button'=>'',
+    'search_bar'=>'Cerca qualcosa',
+    'navbar_announcements'=>'Videm\' che s\'arvenn\' la ggend\'',
+    'navbar_contacts'=>'Contatti',
+    'searchbar_text'=>'Scrivi cacche cos\'',
 
 ];

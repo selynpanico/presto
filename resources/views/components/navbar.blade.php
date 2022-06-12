@@ -12,7 +12,7 @@
       <form action="{{route('ricerca.annuncio')}}" class="col-6 col-md-4 d-flex justify-content-end align-items-center" method="GET">
         <div class="search-box">
           <button class="btn-search"><i class="bi bi-search"></i></button>
-          <input type="text" name="searched" class="input-search" placeholder="type to search...">
+          <input type="text" name="searched" class="input-search" placeholder="scrivere per cercare">
         </div>
       </form>
       <!--fine searchbar  -->
@@ -26,7 +26,7 @@
           <div class="col-md-4">
               <a class="d-flex flex-column justify-content-center align-items-center" href="{{route('announcements.create')}}">
               <img src="/img/presto-aggiungi-icon.svg" alt="" width="85%" height="">
-              <p class="text-login">aggiungi</p></a>
+              <p class="text-login">{{__('ui.add_announcement')}}</p></a>
           </div>
         </div>    
       </div>
@@ -64,8 +64,9 @@
       <li class='d-flex justify-content-center'>
         <x-locale lang='it' nation='it'/>
         <x-locale lang='gb' nation='gb'/>
-        <x-locale lang='ao' nation='ao'/>
+        <x-locale lang='fr' nation='fr'/>
       </li>
+
       
      
       <hr>
