@@ -61,15 +61,12 @@
       <li><a class="title" href="/">home</a></li>
       <li><a class="title" href="{{route('all.announcements')}}">vai agli annunci</a></li>
       <li><a class="title" href="#">contatti</a></li>
-      <li class='nav-item'>
-          <x-locale lang='it', nation='it'/>
-        </li>
-        <li class='nav-item'>
-          <x-locale lang='en', nation='gb'/>
-        </li>
-        <li class='nav-item'>
-          <x-locale lang='fr', nation='fr'/>
-        </li>
+      <li class='d-flex justify-content-center'>
+        <x-locale lang='it' nation='it'/>
+        <x-locale lang='gb' nation='gb'/>
+        <x-locale lang='ao' nation='ao'/>
+      </li>
+      
      
       <hr>
 
