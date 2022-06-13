@@ -49,3 +49,19 @@ html {
     max-height: 200px;
     overflow-x: hidden;
 }
+
+.border-custom{
+    
+    border-radius: 110px; /*1*/
+    border: 10px solid transparent; /*2*/
+    border-color: #0072FF;
+    padding: 5px;
+    color: #0072FF;
+   
+}
+
+.no_decoration{
+    text-decoration: none;
+
+}
+
