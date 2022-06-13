@@ -63,7 +63,7 @@
       <li><a class="title" href="#">contatti</a></li>
       <li class='d-flex justify-content-center'>
         <x-locale lang='it' nation='it'/>
-        <x-locale lang='gb' nation='gb'/>
+        <x-locale lang='en' nation='gb'/>
         <x-locale lang='fr' nation='fr'/>
       </li>
 
