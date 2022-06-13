@@ -27,9 +27,9 @@ class Category extends Model
         rsort($moreAnn);
         $moreAnnslice = array_slice($moreAnn,0,4);
         foreach($moreAnnslice as $category){
-            if( $category->first()){ 
+            if($category->first()){
                 $categories_name[] = $category->first()->category;
-                }
+            }
         }
         return $categories_name;
     } 
