@@ -11,9 +11,9 @@
     </div>
     <div class="row  justify-content-center">
         <div class="col-12 col-md-6 d-flex"> 
-            <a href="{{ route('all.announcements')}}"><img class="m-2" src="/img/icone/presto_icona-all.svg" alt="tutte le categorie" width="100%"></a> 
+            <a href="{{ route('all.announcements')}}"><img class="m-2 me-4" src="/img/icone/presto_icona-all.svg" alt="tutte le categorie" width="100%"></a> 
             @foreach($categories as $category)
-                <a href="{{route('category.show', $category)}}"><img class="m-2" src="{{ $category->icon}}" alt="{{ $category->name}}" width="100%"></a> 
+                <a href="{{route('category.show', $category)}}"><img class="m-2 me-4" src="{{ $category->icon}}" alt="{{ $category->name}}" width="100%"></a> 
             @endforeach
         </div>
     </div>

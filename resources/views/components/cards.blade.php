@@ -21,6 +21,6 @@
             @else
             <p class="card-text">Pubblicato il: {{$announcement->created_at->format('d/m/Y')}}</p> 
             @endif
-            <a href="{{route('announcement.show',compact('announcement'))}}"class="btn btn-primary">Visualizza </a>               
+            <a href="{{route('announcement.show',compact('announcement'))}}"class="btn btn-outline-secondary">visualizza </a>               
     </div>
 </div>

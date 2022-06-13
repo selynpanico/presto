@@ -24,7 +24,7 @@
             <x-bladewind::modal-icon />
         </div>
         <div class="flex-grow pb-1 pr-4 relative">
-            <h1 class="font-semibold text-gray-700 title"></h1>
+            <h2 class="font-semibold text-gray-700 title"></h2>
             <div class="pt-1 text-sm !text-gray-600 message"></div>
             <svg xmlns="http://www.w3.org/2000/svg" 
                 class="h-4 w-4 absolute right-0 cursor-pointer top-0 text-gray-400" 

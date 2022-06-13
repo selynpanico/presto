@@ -12,6 +12,14 @@ html {
     min-height: 100vh;
 }
 
+.nav-link {
+    color:#4D4D4D;
+}
+
+.nav-link:hover {
+    color:#0072FF;
+}
+
 .colorGradient{
     background: -webkit-linear-gradient(45deg,#F62584,#0072FF);
     -webkit-background-clip: text;

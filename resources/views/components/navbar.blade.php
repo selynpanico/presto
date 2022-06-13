@@ -36,7 +36,7 @@
           <div class="col-md-4">
             <a class="d-flex flex-column justify-content-center align-items-center" href="{{route('profile', Auth::user())}}">
             <img src="/img/presto-login-icon.svg" alt="" width="85%" height="">
-            <p class="text-login">{{Auth::user()->name}}</p></a>
+            <p class="text-login text-center" style="line-height:15px;" >{{Auth::user()->name}}</p></a>
           </div>
           <div class="col-md-4">
             <a class="d-flex flex-column justify-content-center align-items-center" href="{{route('announcements.create')}}">
@@ -60,16 +60,18 @@
     <ul class="sidebarMenuInner">
       <li><a class="title" href="/">home</a></li>
       <li><a class="title" href="{{route('all.announcements')}}">vai agli annunci</a></li>
-      <li><a class="title" href="#">contatti</a></li>
-      <li class='d-flex justify-content-center'>
-        <x-locale lang='it' nation='it'/>
-        <x-locale lang='en' nation='gb'/>
-        <x-locale lang='fr' nation='fr'/>
-      </li>
-
-      
+      <li><a class="title" href="#">contatti</a></li>   
      
       <hr>
+
+       <!-- lingue -->
+       
+      <li class='d-flex justify-content-center'>
+        <x-locale lang='it' nation='it'/>
+        <x-locale lang='en' nation='gb'/> 
+        <x-locale lang='fr' nation='fr'/> 
+      </li>
+      <!-- fine lingue -->
 
       <ul class="auth d-flex">
       @guest
@@ -83,15 +85,24 @@
             </li>
         @else
         <li>
-          <a href="{{route('announcements.create')}}">Crea Annuncio</a>
+          <a class="d-flex flex-column justify-content-center align-items-center" href="{{route('announcements.create')}}">
+              <img src="/img/presto-aggiungi-icon.svg" alt="" width="25%" height="">
+              <p class="text-login fs-4">aggiungi</p></a>
         </li>
-        <li><a href="/logout" onclick="event.preventDefault(); getElementById('form-logout').submit();">LogOut</a>
+        <li><a class="d-flex flex-column justify-content-center align-items-center" href="/logout" onclick="event.preventDefault(); getElementById('form-logout').submit();">
+              <img src="/img/presto-logout-icon.svg" alt="" width="25%" height="">
+                    <p class="text-login fs-4">logout</p></a>
           <form action="{{route('logout')}}" id="form-logout" method="post" class="d-none">
             @csrf
           </form></li>
         @endguest
         </ul>
     </ul> 
+
+    
   </div>
+
+
+  
   <!-- fine navbar -->
 
