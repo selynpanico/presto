@@ -36,5 +36,10 @@ return [
     'announcement_success'=>'Announcement created successfully, wait for a approvation',
     'click'=>'Click Here',
     'thanks'=>'Thanks to contact Us',
-    'trash'=>"<i class='bi bi-trash3'></i>",
+    'announcement_owner'=>'Announcement owner:',
+    'accept'=>'Accept',
+    'reject'=>'Reject',
+    'reason_for_reject'=>'Reason for reject',
+    'close_button_modal'=>'Close',
+    
 ];

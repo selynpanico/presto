@@ -36,7 +36,12 @@ return [
     'announcement_success'=>'Annunc\' creat\', aspitt\' lu revisor\' ca t\'approv\'',
     'click'=>'Clicc\' na ecc\'',
     'thanks'=>'Grazij\' compà',
-    'trash'=>'Munnezz\'',
+    'announcement_owner'=>'Annunc\' di:',
+    'accept'=>'Accett\'',
+    'reject'=>'Rifiut\'',
+    'reason_for_reject'=>'Picchè vu rifiutà??',
+    'close_button_modal'=>'Chiud',
+    'follow_us'=>'',
 
 
 ];

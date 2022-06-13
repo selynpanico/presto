@@ -36,6 +36,11 @@ return [
     'announcement_success'=>'Articolo inserito con successo, sarà pubblicato dopo la revisione',
     'click'=>'Clicca qui',
     'thanks'=>'Grazie per averci contattato',
-    'trash'=>"<i class='bi bi-trash3'></i>",
+    'announcement_owner'=>'Annuncio di:',
+    'accept'=>'Accetta',
+    'reject'=>'Rifiuta',
+    'reason_for_reject'=>'Motivo del rifiuto',
+    'close_button_modal'=>'Chiudi',
+    'follow_us'=>'',
 
 ];
