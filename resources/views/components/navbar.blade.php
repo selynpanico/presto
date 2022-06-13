@@ -69,7 +69,7 @@
       <li class='d-flex justify-content-center'>
         <x-locale lang='it' nation='it'/>
         <x-locale lang='en' nation='gb'/> 
-        <x-locale lang='fr' nation='ab'/> 
+        <x-locale lang='ab' nation='ab'/> 
       </li>
       <!-- fine lingue -->
 
@@ -94,8 +94,21 @@
                     <p class="text-login fs-4">{{__('ui.logout')}}</p></a>
           <form action="{{route('logout')}}" id="form-logout" method="post" class="d-none">
             @csrf
-          </form></li>
+          </form>
+        </li>
+        <!-- <li class="d-md-none d-block">
+          <a class="d-flex flex-column justify-content-center align-items-center" href="{{route('announcements.create')}}">
+              <img src="/img/presto-login-icon.svg" alt="" width="25%" height="">
+              <p class="text-login fs-4">{{Auth::user()->name}}</p></a>
+        </li> -->
         @endguest
+        </ul>
+        <ul class="auth d-flex">
+          <li class="d-md-none d-block">
+            <a class="d-flex flex-column justify-content-center align-items-center" href="{{route('profile', Auth::user())}}">
+                <img src="/img/presto-login-icon.svg" alt="" width="25%" height="">
+                <p class="text-login fs-4">{{Auth::user()->name}}</p></a>
+          </li>
         </ul>
     </ul> 
 
