@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-12 col-md-6">
-               <h2>Annuncio di: {{$announcement_to_check->user->name}} {{$announcement_to_check->user->surname}}</h2>
+               <h2>{{__('ui.announcement_owner')}} {{$announcement_to_check->user->name}} {{$announcement_to_check->user->surname}}</h2>
 
             </div>
         </div>
@@ -57,22 +57,23 @@
                 <form action="{{route('accept.announcement',['announcement'=>$announcement_to_check])}}"method="POST">
                 @csrf
                 @method('PATCH')
-                      <button type="submit" class="btn btn-success shadow">Accetta</button>
+                      <button type="submit" class="btn btn-success shadow">{{__('ui.accept')}}</button>
                 </form>
             </div>      
                 <div class="col-6">
-                  <button class='btn btn-danger shadow' onclick="showModal('info')">Rifiuta</button>
+                  <button class='btn btn-danger shadow' onclick="showModal('info')">{{__('ui.reject')}}</button>
               <x-bladewind.modal
                   ok_button_label=''
                   type="info"
-                  title="Motivo del Rifiuto"
+                  title="{{__('ui.reason_for_reject')}}"
                   size='xl'
-                  name="info">
+                  name="info"
+                  cancel_button_label="{{__('ui.close_button_modal')}}">
                   <form action="{{route('reject.announcement',['announcement'=>$announcement_to_check])}}"method="POST">
                   @csrf
                   @method('PATCH')
-                  <x-bladewind.textarea placeholder="Motivo del rifiuto"  />
-                      <button type="submit"class="btn btn-danger shadow">Rifiuta</button>
+                  <x-bladewind.textarea placeholder="{{__('ui.reason_for_reject')}}"  />
+                      <button type="submit"class="btn btn-danger shadow">{{__('ui.reject')}}</button>
                   </form>
               </x-bladewind.modal>
             </div>

@@ -34,4 +34,12 @@ return [
     'password_confirmation'=>'Password Confirmation',
     'delete'=>'Delete',
     'announcement_success'=>'Announcement created successfully, wait for a approvation',
+    'click'=>'Click Here',
+    'thanks'=>'Thanks to contact Us',
+    'announcement_owner'=>'Announcement owner:',
+    'accept'=>'Accept',
+    'reject'=>'Reject',
+    'reason_for_reject'=>'Reason for reject',
+    'close_button_modal'=>'Close',
+    
 ];

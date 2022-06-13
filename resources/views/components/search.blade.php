@@ -22,7 +22,7 @@
                     <button class="btn btn-light dropdown-toggle d-flex justify-content-center align-items-center my-2" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                     Categoria <img class="ms-2" src="/img/icone/presto_icona-all.svg" alt="" width="20px">
                     </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <ul class="dropdown-menu scrollable-menu" aria-labelledby="dropdownMenuButton1">
                     <li><a class='dropdown-item' href="{{ route('all.announcements')}}"><img class="m-2" src="/img/icone/presto_icona-all.svg" alt="tutte le categorie" width="20%">Tutti gli annunci</a></li>
                     @foreach($categories as $category)
                     <li><a class='dropdown-item' href="{{route('category.show', $category)}}"><img class="m-2" src="{{ $category->icon}}" alt="{{ $category->name}}" width="20%">{{$category->name}}</a></li>
