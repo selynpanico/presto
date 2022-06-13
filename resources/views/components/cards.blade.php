@@ -13,7 +13,7 @@
         </div>
         <div class="mx-auto lineCard"></div>
     </div> 
-    <div class="card-body">
+    <div class="card-body d-flex flex-column align-items-center">
         <h5 class="card-title">{{$announcement->title}}</h5>
             <p class="card-text">{{(strlen($announcement->body) > 20) ? substr($announcement->body, 0, 20) . '...' : $announcement->body;}}</p>
             @if(Route::currentRouteName() == 'home')
@@ -21,6 +21,6 @@
             @else
             <p class="card-text">{{__('ui.published')}}: {{$announcement->created_at->format('d/m/Y')}}</p> 
             @endif
-            <a href="{{route('announcement.show',compact('announcement'))}}"class="btn btn-outline-secondary">{{__('ui.view')}}</a>               
+            <a href="{{route('announcement.show',compact('announcement'))}}"class="btn btn-outline-secondary w-50">{{__('ui.view')}}</a>               
     </div>
 </div>

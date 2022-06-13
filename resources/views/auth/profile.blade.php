@@ -1,6 +1,11 @@
 <x-layout>
-
-<h2>{{__('ui.logged')}} {{$user->name}} {{$user->surname}}</h2>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h2>{{__('ui.logged')}} {{$user->name}} {{$user->surname}}</h2>
+        </div>
+    </div>
+</div>
 @if(Auth::user() && Auth::user()->is_revisor  || Auth::user()->is_admin)
 <!-- Da inserire fighezza per notifiche revisore -->
     <div class="container">
