@@ -190,7 +190,9 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
       .logo {
         width: 50%;
       }
-
+      .sidebarMenuInner li{
+        font-size:large;
+    }
       .icon-nav{
         display: none;
       }
