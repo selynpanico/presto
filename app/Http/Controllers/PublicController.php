@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Category;
 use App\Mail\BecomeAdvisor;
 use App\Models\Announcement;
 use Illuminate\Http\Request;
@@ -13,8 +14,15 @@ use Illuminate\Support\Facades\Artisan;
 class PublicController extends Controller
 {
     public function home(){
+        if(count(Announcement::all())>0){
+            $moreAnn = Category::MoreAnn();          
+        }
+        else {
+            $moreAnn = Category::take(4)->get();
+
+        }
         $announcements = Announcement::take(10)->where('is_accepted',true)->orderBy('created_at', 'desc')->get();
-        return view('welcome',compact('announcements'));
+        return view('welcome',compact('announcements','moreAnn'));
     }
     public function profile(User $user){
         return view('auth.profile',compact('user'));

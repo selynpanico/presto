@@ -1,11 +1,11 @@
 <x-layout>
+    
 <x-header />
 <h2 class="text-center my-5">{{__('ui.allAnnouncements')}}</h2>
 @if(count($announcements)>0)
 <!-- Swiper  -->
 <div class="swiper swiperAnnouncements mb-5" >
     <div class="swiper-wrapper">
-        @dd($moreAnn);
         @foreach($announcements as $announcement)
             <div class="swiper-slide">
                 <x-cards :announcement="$announcement"/>
