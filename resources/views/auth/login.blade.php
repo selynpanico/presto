@@ -15,10 +15,16 @@
             <div class="mb-3">
                 <label for="exampleInputEmail1">{{__('ui.email_address')}}</label>
                 <input type="email" name='email' class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                @error('email')
+                        <p class="text-danger">{{$message}}</p>
+                    @enderror
             </div>
             <div class="mb-3">
                 <label for="exampleInputPassword1">{{__('ui.password')}}</label>
                 <input type="password" name='password' class="form-control" id="exampleInputPassword1">
+                @error('password')
+                        <p class="text-danger">{{$message}}</p>
+                    @enderror
             </div>
             <button type="submit" class="btn btn-custom fw-bold">{{__('ui.login')}}</button>
         </form>

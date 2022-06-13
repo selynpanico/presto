@@ -14,7 +14,7 @@
         </div>
         <div class='mb-3'>
             <label for="body">{{__('ui.announcement_description')}}</label>
-            <textarea wire:model="body" type="text" class="form-control @error ('body') is-invalid @enderror"></textarea>
+            <textarea wire:model="body" type="text" class="form-control @error ('body') is-invalid @enderror" rows="1"></textarea>
             @error('body')
                 {{$message}}
             @enderror
@@ -26,6 +26,9 @@
                 <option value="{{$category->id}}"><x-category-name categoryName="{{$category->name}}" /></option>
                 @endforeach
             </select>
+            @error('category')
+            {{$message}}
+            @enderror
         </div>
         <div class='mb-5'>
             <label for="price">{{__('ui.price')}}</label>
