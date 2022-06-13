@@ -51,10 +51,13 @@ html {
 }
 
 .border-custom{
+    background: 
+    linear-gradient(#fff 0 0) padding-box,
+    linear-gradient(45deg,#F62584,#0072FF) border-box;
     
     border-radius: 110px; /*1*/
     border: 10px solid transparent; /*2*/
-    border-color: #0072FF;
+    /* border-color: #0072FF; */
     padding: 5px;
     color: #0072FF;
    
