@@ -32,5 +32,8 @@ return [
     'name'=>'Nome',
     'surname'=>'Cognom\'',
     'password_confirmation'=>'Ariscriv\' la passuord',
+    'delete'=>'Cancell\'',
+    'announcement_success'=>'Annunc\' creat\', aspitt\' lu revisor\' ca t\'approv\'',
+
 
 ];

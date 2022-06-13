@@ -87,7 +87,7 @@ class CreateAnnouncement extends Component
 
             File::deleteDirectory(storage_path('/app/livewire-tmp'));
         }
-            session()->flash('message', 'Articolo inserito con successo, sarà pubblicato dopo la revisione');
+            session()->flash('message', "{{__('ui.announcement_success')}}");
             $this->cleanForm(); 
             return redirect()->to('/nuovo/annuncio');
    }

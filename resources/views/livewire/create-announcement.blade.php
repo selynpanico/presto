@@ -1,19 +1,19 @@
 <div>
-    <h2>Crea il tuo annuncio</h2>
+    <h2>{{__('ui.create_announcement')}}</h2>
     
 
     <form wire:submit.prevent="store">
         @csrf 
 
         <div class='mb-3'>
-            <label for="title">Titolo Annuncio</label>
+            <label for="title">{{__('ui.announcement_title')}}</label>
             <input wire:model="title" type="text" class="form-control @error ('title') is-invalid @enderror">
             @error('title')
                 {{$message}}
             @enderror
         </div>
         <div class='mb-3'>
-            <label for="body">Descrizione</label>
+            <label for="body">{{__('ui.announcement_description')}}</label>
             <textarea wire:model="body" type="text" class="form-control @error ('body') is-invalid @enderror"></textarea>
             @error('body')
                 {{$message}}
@@ -21,14 +21,14 @@
         </div>
         <div class="mb-3">
             <select wire:model.defer='category' id="">
-                <option value="">Scegli la categoria</option>
+                <option value="">{{__('ui.select_category')}}</option>
                 @foreach($categories as $category)
                 <option value="{{$category->id}}">{{$category->name}}</option>
                 @endforeach
             </select>
         </div>
         <div class='mb-3'>
-            <label for="price">Prezzo</label>
+            <label for="price">{{__('ui.price')}}</label>
             <input wire:model="price" type="number" class="form-control @error ('price') is-invalid @enderror">
             @error('price')
             {{$message}}
@@ -50,7 +50,7 @@
                         <div class="col-12 col-md-3 d-flex my-3 justify-content-center">
                             <div>
                                 <img class="img-preview mx-auto shadow rounded" src="{{$image->temporaryUrl()}}"alt="Beccate sta foto">
-                                <button type="button" class="btn btn-danger shadow d-block text-center mt-2 mx-auto" wire:click="removeImage({{$key}})">Cancella</button>
+                                <button type="button" class="btn btn-danger shadow d-block text-center mt-2 mx-auto" wire:click="removeImage({{$key}})">{{__('ui.delete')}}</button>
                             </div>
                         </div>
                         @endforeach
@@ -61,7 +61,7 @@
 
   
 
-        <button type="submit" class="btn btn-warning">Crea Annuncio</button>
+        <button type="submit" class="btn btn-warning">{{__('ui.create_announcement')}}</button>
 
         
     </form>

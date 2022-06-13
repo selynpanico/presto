@@ -31,6 +31,8 @@ return [
     'logout'=>'Esci',
     'name'=>'Nome',
     'surname'=>'Cognome',
-    'password_confirmation'=>'Conferma Password', 
+    'password_confirmation'=>'Conferma Password',
+    'delete'=>'Cancella', 
+    'announcement_success'=>'Articolo inserito con successo, sarà pubblicato dopo la revisione',
 
 ];

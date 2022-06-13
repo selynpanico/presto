@@ -12,8 +12,8 @@ return [
     'logged'=>'Welcome',
     'revisor_panel'=>'Go to revisor panel',
     'create_announcement'=>'Create your announcement',
-    'Announcement_title'=>'Title',
-    'Announcement_description'=>'Description',
+    'announcement_title'=>'Title',
+    'announcement_description'=>'Description',
     'select_category'=>'Select Category',
     'price'=>'Price',
     'select_file'=>'Select file',
@@ -32,4 +32,6 @@ return [
     'name'=>'Name',
     'surname'=>'Surname',
     'password_confirmation'=>'Password Confirmation',
+    'delete'=>'Delete',
+    'announcement_success'=>'Announcement created successfully, wait for a approvation',
 ];
