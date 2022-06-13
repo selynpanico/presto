@@ -12,7 +12,7 @@
       <form action="{{route('ricerca.annuncio')}}" class="col-6 col-md-4 d-flex justify-content-end align-items-center" method="GET">
         <div class="search-box">
           <button class="btn-search"><i class="bi bi-search"></i></button>
-          <input type="text" name="searched" class="input-search" placeholder="scrivere per cercare">
+          <input type="text" name="searched" class="input-search" placeholder="{{__('ui.searchbar_text')}}">
         </div>
       </form>
       <!--fine searchbar  -->
@@ -21,7 +21,7 @@
         <div class="row h-100">
           <div class="col-md-4">
               <a class="d-flex flex-column justify-content-center align-items-center" href="{{route('login')}}"><img src="/img/presto-login-icon.svg" alt="" width="85%" height="">
-              <p class="text-login">login</p></a>      
+              <p class="text-login">{{__('ui.login')}}</p></a>      
             </div>
           <div class="col-md-4">
               <a class="d-flex flex-column justify-content-center align-items-center" href="{{route('announcements.create')}}">
@@ -58,9 +58,9 @@
     </label>
   <div id="sidebarMenu" style="z-index: 98;">
     <ul class="sidebarMenuInner">
-      <li><a class="title" href="/">home</a></li>
-      <li><a class="title" href="{{route('all.announcements')}}">vai agli annunci</a></li>
-      <li><a class="title" href="#">contatti</a></li>   
+      <li><a class="title" href="/">{{__('ui.home')}}</a></li>
+      <li><a class="title" href="{{route('all.announcements')}}">{{__('ui.navbar_announcements')}}</a></li>
+      <li><a class="title" href="#">{{__('ui.contacts')}}</a></li>   
      
       <hr>
 
@@ -77,21 +77,21 @@
       @guest
             <li class="fs-4">
               <img class="m-auto" src="/img/presto-login-icon.svg" alt="" width="20%" height="">
-              <a href="{{route('login')}}">login</a>
+              <a href="{{route('login')}}">{{__('ui.login')}}</a>
             </li>     
             <li class="fs-4">
               <img class="m-auto" src="/img/presto-register-icon.svg" alt="" width="20%" height="" >
-              <a href="{{route('register')}}">registrati</a>
+              <a href="{{route('register')}}">{{__('ui.register')}}</a>
             </li>
         @else
         <li>
           <a class="d-flex flex-column justify-content-center align-items-center" href="{{route('announcements.create')}}">
               <img src="/img/presto-aggiungi-icon.svg" alt="" width="25%" height="">
-              <p class="text-login fs-4">aggiungi</p></a>
+              <p class="text-login fs-4">{{__('ui.add_announcement')}}</p></a>
         </li>
         <li><a class="d-flex flex-column justify-content-center align-items-center" href="/logout" onclick="event.preventDefault(); getElementById('form-logout').submit();">
               <img src="/img/presto-logout-icon.svg" alt="" width="25%" height="">
-                    <p class="text-login fs-4">logout</p></a>
+                    <p class="text-login fs-4">{{__('ui.logout')}}</p></a>
           <form action="{{route('logout')}}" id="form-logout" method="post" class="d-none">
             @csrf
           </form></li>

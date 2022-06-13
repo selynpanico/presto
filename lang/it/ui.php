@@ -1,6 +1,6 @@
 <?php
 return [
-    'allAnnouncements' =>"PORCAPUTTANA gli annunci!",
+    'allAnnouncements' =>"Tutti gli annunci!",
     'add_announcement' =>"Aggiungi",
     'published'=>'Pubblicato',
     'view'=>'Visualizza',
@@ -22,6 +22,15 @@ return [
     'navbar_announcements'=>'Vai agli annunci',
     'navbar_contacts'=>'Contatti',
     'searchbar_text'=>'Scrivi qualcosa',
-    
+    'contacts'=>'Contatti',
+    'email_address'=>'Indirizzo Email',
+    'password'=>'Password',
+    'login'=>'Entra',
+    'home'=>'Home',
+    'register'=>'Registrati',
+    'logout'=>'Esci',
+    'name'=>'Nome',
+    'surname'=>'Cognome',
+    'password_confirmation'=>'Conferma Password', 
 
 ];

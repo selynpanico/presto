@@ -5,26 +5,26 @@
             <form method="POST" action="{{route('register')}}">
                 @csrf
                 <div class="mb-3">
-                    <label>Nome</label>
+                    <label>{{__('ui.name')}}</label>
                     <input type="text" name="name" class="form-control">
                 </div>
                 <div class="mb-3">
-                    <label>Cognome</label>
+                    <label>{{__('ui.surname')}}</label>
                     <input type="text" name="surname" class="form-control">
                 </div>
                 <div class="mb-3">
-                    <label>Indirizzo email</label>
+                    <label>{{__('ui.email_address')}}</label>
                     <input type="email" name="email" class="form-control">
                 </div>
                 <div class="mb-3">
-                    <label >Password</label>
+                    <label >{{__('ui.password')}}</label>
                     <input type="password" name="password" class="form-control" id="exampleInputPassword1">
                 </div>
                 <div class="mb-3">
-                    <label >Conferma password</label>
+                    <label >{{__('ui.password_confirmation')}}</label>
                     <input type="password" name="password_confirmation" class="form-control" id="exampleInputPassword1">
                 </div>
-                <button type="submit" class="btn btn-primary">Registrati!</button>
+                <button type="submit" class="btn btn-primary">{{__('ui.register')}}!</button>
             </form>
             </div>
         </div>

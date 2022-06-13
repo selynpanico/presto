@@ -1,7 +1,7 @@
 <?php
 return [
     'allAnnouncements' =>"Tuttu quind l'annunc'!",
-    'add_announcement' =>"Aggiungi",
+    'add_announcement' =>"Aggiung'",
     'published'=>'Pubblicat\'',
     'view'=>'Auard\'',
     'work_for_us'=>'Fatij nghi nu',
@@ -18,9 +18,19 @@ return [
     'price'=>'Prezz',
     'select_file'=>'Cap\'t lu file',
     'create_announcement_button'=>'',
-    'search_bar'=>'Cerca qualcosa',
+    'search_bar'=>'Cerc\' cacche cos\'',
     'navbar_announcements'=>'Videm\' che s\'arvenn\' la ggend\'',
     'navbar_contacts'=>'Contatti',
     'searchbar_text'=>'Scrivi cacche cos\'',
+    'contacts'=>'Contatt\'',
+    'email_address'=>'Indirizz\' meil',
+    'password'=>'Passuord',
+    'login'=>'Entr\'',
+    'home'=>'Statt\'a la cas\'',
+    'register'=>'Reggistrati',
+    'logout'=>'Arvatt\'n',
+    'name'=>'Nome',
+    'surname'=>'Cognom\'',
+    'password_confirmation'=>'Ariscriv\' la passuord',
 
 ];

@@ -22,5 +22,14 @@ return [
     'navbar_announcements'=>'Go to the announcements',
     'navbar_contacts'=>'All Contacts',
     'searchbar_text'=>'Type to search...',
-
+    'contacts'=>'Contacts',
+    'email_address'=>'Email Address',
+    'password'=>'Password',
+    'login'=>'Login',
+    'home'=>'Home',
+    'register'=>'Register',
+    'logout'=>'Logout',
+    'name'=>'Name',
+    'surname'=>'Surname',
+    'password_confirmation'=>'Password Confirmation',
 ];
