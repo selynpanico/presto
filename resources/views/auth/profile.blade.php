@@ -1,6 +1,6 @@
 <x-layout>
 
-<h2>Benvenuto {{$user->name}} {{$user->surname}}</h2>
+<h2>{{__('ui.logged')}} {{$user->name}} {{$user->surname}}</h2>
 @if(Auth::user() && Auth::user()->is_revisor  || Auth::user()->is_admin)
 <!-- Da inserire fighezza per notifiche revisore -->
     <div class="container">
@@ -11,7 +11,7 @@
                     {{App\Models\Announcement::toBeRevisionedCount()}}
                     <span class="visually-hidden">unread messages</span>
                     </span>
-                    <a href="{{route('revisor-panel')}}" class="btn btn-warning">Vai al pannello revisore</a>
+                    <a href="{{route('revisor-panel')}}" class="btn btn-warning">{{__('ui.revisor_panel')}}</a>
                 </div>
             </div>
             <div class="col-12 col-md-6">
@@ -20,7 +20,11 @@
                     {{App\Models\Announcement::toBeTrash()}}
                     <span class="visually-hidden">unread messages</span>
                     </span>
+                    @if(session('locale')=='fr')
+                    <a href="{{route('trash-can')}}" class="btn btn-warning">Munnezz'</a>
+                    @else
                     <a href="{{route('trash-can')}}" class="btn btn-warning"><i class="bi bi-trash3"></i></a>
+                    @endif
                 </div>
             </div>
         </div>

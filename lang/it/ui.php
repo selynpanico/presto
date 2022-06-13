@@ -12,8 +12,8 @@ return [
     'logged'=>'Benvenuto',
     'revisor_panel'=>'Vai al pannello revisore',
     'create_announcement'=>'Crea il tuo annuncio',
-    'Announcement_title'=>'Titolo',
-    'Announcement_description'=>'Descrizione',
+    'announcement_title'=>'Titolo',
+    'announcement_description'=>'Descrizione',
     'select_category'=>'Scegli una categoria',
     'price'=>'Prezzo',
     'select_file'=>'Scegli il file',
@@ -34,5 +34,8 @@ return [
     'password_confirmation'=>'Conferma Password',
     'delete'=>'Cancella', 
     'announcement_success'=>'Articolo inserito con successo, sarà pubblicato dopo la revisione',
+    'click'=>'Clicca qui',
+    'thanks'=>'Grazie per averci contattato',
+    'trash'=>"<i class='bi bi-trash3'></i>",
 
 ];

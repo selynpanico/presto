@@ -34,4 +34,7 @@ return [
     'password_confirmation'=>'Password Confirmation',
     'delete'=>'Delete',
     'announcement_success'=>'Announcement created successfully, wait for a approvation',
+    'click'=>'Click Here',
+    'thanks'=>'Thanks to contact Us',
+    'trash'=>"<i class='bi bi-trash3'></i>",
 ];

@@ -12,8 +12,8 @@ return [
     'logged'=>'Weeeeeeeeee',
     'revisor_panel'=>'Va allu pannell dellu revisor\'',
     'create_announcement'=>'Cre\'em st\'annunc\'',
-    'Announcement_title'=>'Titolo',
-    'Announcement_description'=>'Descrizion\'',
+    'announcement_title'=>'Titolo',
+    'announcement_description'=>'Descrizion\'',
     'select_category'=>'Cap\'t na categorij',
     'price'=>'Prezz',
     'select_file'=>'Cap\'t lu file',
@@ -34,6 +34,9 @@ return [
     'password_confirmation'=>'Ariscriv\' la passuord',
     'delete'=>'Cancell\'',
     'announcement_success'=>'Annunc\' creat\', aspitt\' lu revisor\' ca t\'approv\'',
+    'click'=>'Clicc\' na ecc\'',
+    'thanks'=>'Grazij\' compà',
+    'trash'=>'Munnezz\'',
 
 
 ];
