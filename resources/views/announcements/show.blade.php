@@ -4,6 +4,7 @@
            <div class="col-12 col-md-6">
             @if(count($announcement->images)==0)
             <!-- Immagine di default -->
+            <img src="/img/default.jpg" alt="">
             @elseif(count($announcement->images)==1)
             <img src="{{$announcement->images->first()->getUrl()}}" class="card-img-top rounded" alt="..." style="height:400px;">
             @else          
