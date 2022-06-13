@@ -7,7 +7,7 @@
              @if(Auth::user())
                 <livewire:revisor-request-button />
              @else
-                <a class="btn btn-warning" href="{{route('register')}}">{{__('ui.register_to_work')}}</a>
+                <a class="btn btn-light" href="{{route('register')}}">{{__('ui.register_to_work')}}</a>
             @endif  
         </div>
         <div class="col-12 col-md-6">

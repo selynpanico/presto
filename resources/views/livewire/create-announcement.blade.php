@@ -27,9 +27,9 @@
                 @endforeach
             </select>
         </div>
-        <div class='mb-3'>
+        <div class='mb-5'>
             <label for="price">{{__('ui.price')}}</label>
-            <input wire:model="price" type="number" class="form-control @error ('price') is-invalid @enderror">
+            <input wire:model="price" type="number" class="form-control @error ('price') is-invalid @enderror" style="width: 10%">
             @error('price')
             {{$message}}
             @enderror
@@ -61,7 +61,7 @@
 
   
 
-        <button type="submit" class="btn btn-warning">{{__('ui.create_announcement')}}</button>
+        <button type="submit" class="btn btn-custom fw-bold mt-3">{{__('ui.create_announcement')}}</button>
 
         
     </form>

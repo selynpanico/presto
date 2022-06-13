@@ -20,7 +20,7 @@
                 <label for="exampleInputPassword1">{{__('ui.password')}}</label>
                 <input type="password" name='password' class="form-control" id="exampleInputPassword1">
             </div>
-            <button type="submit" class="btn btn-primary">{{__('ui.login')}}</button>
+            <button type="submit" class="btn btn-custom fw-bold">{{__('ui.login')}}</button>
         </form>
         </div>
     </div>
