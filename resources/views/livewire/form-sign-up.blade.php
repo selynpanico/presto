@@ -25,7 +25,7 @@
                     <label >{{__('ui.password_confirmation')}}</label>
                     <input type="password" name="password_confirmation" class="form-control" id="exampleInputPassword1">
                 </div>
-                <button type="submit" class="btn btn-custom fw-bold">{{__('ui.register')}}!</button>
+                <button type="submit" class="btn btn-custom fw-bold my-5">{{__('ui.register')}}!</button>
             </form>
             </div>
         </div>
