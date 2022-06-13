@@ -4,7 +4,7 @@
                 @if(count($announcement->images)>0)
                 <img src="{{$announcement->images->first()->getUrl()}}" class="card-img-top rounded" alt="..." style="height:400px;">
                 @else
-                <img src="/img/default.jpg" alt="">
+                <img src="/img/default.jpg" class="card-img-top rounded"  style="height:400px;" alt="">
                 @endif
         <div class="card-categoria">
             <a href="{{route('category.show', $announcement->category)}}">

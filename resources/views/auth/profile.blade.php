@@ -25,7 +25,7 @@
                     {{App\Models\Announcement::toBeTrash()}}
                     <span class="visually-hidden">unread messages</span>
                     </span>
-                    @if(session('locale')=='fr')
+                    @if(session('locale')=='ab')
                     <a href="{{route('trash-can')}}" class="btn btn-warning">Munnezz'</a>
                     @else
                     <a href="{{route('trash-can')}}" class="btn btn-warning"><i class="bi bi-trash3"></i></a>

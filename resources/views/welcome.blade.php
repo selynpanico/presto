@@ -6,12 +6,12 @@
 <div class="container my-5">
     <div class="row">
         @foreach($moreAnn as $category_moreAnn)
-        <div class="col-6 d-flex justify-content-center py-2">
-            <a class='no_decoration' href="{{route('category.show', $category_moreAnn)}}">
+        <div class="col-6 col-lg-3 d-flex justify-content-center py-2">
+            <a class='no_decoration d-flex align-items-center flex-column colorCustomCategory' href="{{route('category.show', $category_moreAnn)}}">
                 <div class='d-flex align-items-center flex-column border-custom'>
                     <img width='60%' src="{{$category_moreAnn->icon}}" alt="">
-                    <p class='text-center mt-3'>{{(strlen($category_moreAnn->name) > 10) ? substr($category_moreAnn->name, 0, 10) . '...' : $category_moreAnn->name;}}</p>
                 </div>
+                <p class='text-center fs-4   mt-3'>{{$category_moreAnn->name}}</p>
             </a>
         </div>
         @endforeach

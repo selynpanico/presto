@@ -67,9 +67,9 @@
        <!-- lingue -->
        
       <li class='d-flex justify-content-center'>
-        <x-locale lang='it' nation='it'/>
-        <x-locale lang='en' nation='gb'/> 
-        <x-locale lang='ab' nation='ab'/> 
+        <x-locale custclass="tricolore" lang='it' nation='it'/>
+        <x-locale custclass="unionjack" lang='en' nation='gb'/> 
+        <x-locale custclass="abruzzo" lang='ab' nation='ab'/> 
       </li>
       <!-- fine lingue -->
 

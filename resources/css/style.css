@@ -59,12 +59,16 @@ html {
     border: 10px solid transparent; /*2*/
     /* border-color: #0072FF; */
     padding: 5px;
-    color: #0072FF;
    
+}
+.tricolore:hover{
+  
+    background: -webkit-linear-gradient(#029346 20%,#fff 5%,#D92026 3%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .no_decoration{
+    color: #4D4D4D;
     text-decoration: none;
-
 }
-

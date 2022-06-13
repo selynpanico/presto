@@ -42,4 +42,3 @@ $announcement->images()->first()->getUrl("Passare come primo parametro larghezza
 
 ## Aggiunto metodo per le prime 4 categorie
 
-
