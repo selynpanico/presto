@@ -41,5 +41,16 @@ return [
     'reject'=>'Reject',
     'reason_for_reject'=>'Reason for reject',
     'close_button_modal'=>'Close',
+    'category_house' =>'',
+    'category_electronics' =>'',
+    'category_moda' =>'',
+    'category_motors' =>'',
+    'category_sport' =>'',
+    'category_music' =>'',
+    'category_collecting' =>'',
+    'category_books' =>'',
+    'category_animals' =>'',
+    'category_videogames' =>'',
+
     
 ];

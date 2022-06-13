@@ -42,5 +42,14 @@ return [
     'reason_for_reject'=>'Motivo del rifiuto',
     'close_button_modal'=>'Chiudi',
     'follow_us'=>'',
-
+    'category_house' =>'',
+    'category_electronics' =>'',
+    'category_moda' =>'',
+    'category_motors' =>'',
+    'category_sport' =>'',
+    'category_music' =>'',
+    'category_collecting' =>'',
+    'category_books' =>'',
+    'category_animals' =>'',
+    'category_videogames' =>'',
 ];

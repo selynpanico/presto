@@ -25,7 +25,9 @@
                     <ul class="dropdown-menu scrollable-menu" aria-labelledby="dropdownMenuButton1">
                     <li><a class='dropdown-item' href="{{ route('all.announcements')}}"><img class="m-2" src="/img/icone/presto_icona-all.svg" alt="tutte le categorie" width="20%">Tutti gli annunci</a></li>
                     @foreach($categories as $category)
-                    <li><a class='dropdown-item' href="{{route('category.show', $category)}}"><img class="m-2" src="{{ $category->icon}}" alt="{{ $category->name}}" width="20%">{{$category->name}}</a></li>
+                    <li><a class='dropdown-item' href="{{route('category.show', $category)}}"><img class="m-2" src="{{ $category->icon}}" alt="{{ $category->name}}" width="20%">
+                        <x-category-name categoryName="{{$category->name}}" />
+                    </a></li>
                 @endforeach
                     </ul>
                 </div>

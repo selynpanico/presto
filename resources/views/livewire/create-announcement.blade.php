@@ -23,7 +23,7 @@
             <select wire:model.defer='category' onfocus='this.size=5;' onblur='this.size=1;' onchange='this.size=1; this.blur();' id="">
                 <option value="">{{__('ui.select_category')}}</option>
                 @foreach($categories as $category)
-                <option value="{{$category->id}}">{{$category->name}}</option>
+                <option value="{{$category->id}}"><x-category-name categoryName="{{$category->name}}" /></option>
                 @endforeach
             </select>
         </div>
