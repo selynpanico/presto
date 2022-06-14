@@ -11292,8 +11292,8 @@ textarea.form-control-lg {
   background-position: 50%;
   background-repeat: no-repeat;
   position: relative;
-  display: inline-block;
-  width: 1.33333333em;
+  /* display: inline-block; */
+  width: 2.33333333em;
   line-height: 1em;
 }
 .flag-icon:before {
@@ -12964,10 +12964,10 @@ html {
     linear-gradient(#fff 0 0) padding-box,
     linear-gradient(45deg,#F62584,#0072FF) border-box;
     
-    border-radius: 110px; /*1*/
+    border-radius: 65px; /*1*/
     border: 10px solid transparent; /*2*/
     /* border-color: #0072FF; */
-    padding: 5px;
+    padding: 30px;
     color: #0072FF;
    
 }
@@ -13312,6 +13312,9 @@ body {
 
 
 
+.text-color{
+color: #4D4D4D;
+}
 
 .text {
   position: absolute;

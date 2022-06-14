@@ -28,6 +28,9 @@ body {
 
 
 
+.text-color{
+color: #4D4D4D;
+}
 
 .text {
   position: absolute;
