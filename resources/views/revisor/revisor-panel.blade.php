@@ -17,16 +17,6 @@
             <img src="/img/default.jpg" alt="">
             @elseif(count($announcement_to_check->images)==1)
             <img src="{{$announcement_to_check->images->first()->getUrl()}}" class="card-img-top rounded" alt="..." style="height:400px;">
-                    <div>
-                      <h5>Revisione Immagine</h5>
-                      <ul>
-                      <li>Adulti:<span class="{{$announcement_to_check->images->first()->adult}}"></span></li>
-                      <li>Satira:<span class="{{$announcement_to_check->images->first()->spoof}}"></span></li>
-                      <li>Medicina:<span class="{{$announcement_to_check->images->first()->medical}}"></span></li>
-                      <li>Violenza:<span class="{{$announcement_to_check->images->first()->violence}}"></span></li>
-                      <li>Contenuto Ammiccante: <span class="{{$announcement_to_check->images->first()->racy}}"></span></li>
-                      </ul>
-                    </div>
             @else          
              <!-- Swiper -->
               <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper swiperThumbGallery2">
@@ -54,31 +44,39 @@
           </div> <!--Fine col swiper -->
        </div>
        <!-- EndSwiper -->
-       
-       <table class="table">
-  <thead>
-    <tr>
-      <th scope="col">Image Number</th>
-      <th scope="col">Adulti</th>
-      <th scope="col">Satira</th>
-      <th scope="col">Medicina</th>
-      <th scope="col">Violenza</th>
-      <th scope="col">Contenuto Ammiccante</th>
-    </tr>
-  </thead>
-  <tbody>
-  @foreach($announcement_to_check->images as $image)
-    <tr>
-      <th scope="row">{{$loop->iteration}}</th>
-      <td><span class="{{$image->adult}}"></span></td>
-      <td><span class="{{$image->spoof}}"></span></td>
-      <td><span class="{{$image->medical}}"></span></td>
-      <td><span class="{{$image->violence}}"></span></td>
-      <td><span class="{{$image->racy}}"></span></td>
-    </tr>
-  @endforeach
-  </tbody>
-</table>
+    <!-- Tabella annunci -->
+    <div class="container my-5">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-6">
+          <h5 class="text-center">Revisione immagini</h5>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Image Number</th>
+                <th scope="col">Adulti</th>
+                <th scope="col">Satira</th>
+                <th scope="col">Medicina</th>
+                <th scope="col">Violenza</th>
+                <th scope="col">Contenuto Ammiccante</th>
+              </tr>
+            </thead>
+            <tbody>
+            @foreach($announcement_to_check->images as $image)
+              <tr>
+                <th scope="row">{{$loop->iteration}}</th>
+                <td><span class="{{$image->adult}}"></span></td>
+                <td><span class="{{$image->spoof}}"></span></td>
+                <td><span class="{{$image->medical}}"></span></td>
+                <td><span class="{{$image->violence}}"></span></td>
+                <td><span class="{{$image->racy}}"></span></td>
+              </tr>
+            @endforeach
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
    </div>
    <div class="container">
      <div class="row justify-content-center">
