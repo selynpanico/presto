@@ -61,26 +61,48 @@
                 </form>
             </div>      
                 <div class="col-6">
-                  <button class='btn btn-danger shadow' onclick="showModal('info')">{{__('ui.reject')}}</button>
-              <x-bladewind.modal
-                  ok_button_label=''
-                  type="info"
-                  title="{{__('ui.reason_for_reject')}}"
-                  size='xl'
-                  name="info"
-                  cancel_button_label="{{__('ui.close_button_modal')}}">
-                  <form action="{{route('reject.announcement',['announcement'=>$announcement_to_check])}}"method="POST">
-                  @csrf
-                  @method('PATCH')
-                  <x-bladewind.textarea placeholder="{{__('ui.reason_for_reject')}}"  />
-                      <button type="submit"class="btn btn-danger shadow">{{__('ui.reject')}}</button>
-                  </form>
-              </x-bladewind.modal>
+                 <button type="button" class="btn btn-danger shadow" data-bs-toggle="modal" data-bs-target="#exampleModal">{{__('ui.reject')}}</button>
+                </div>
+              </div>
             </div>
           </div>
-       </div>
-     </div>
-   </div>
+        </div>
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">{{__('ui.reason_for_reject')}}</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+           <form action="{{route('reject.announcement',['announcement'=>$announcement_to_check])}}"method="POST">
+            @csrf
+            @method('PATCH')
+            <x-bladewind.textarea placeholder="{{__('ui.reason_for_reject')}}"  />
+                <button type="submit"class="btn btn-danger shadow">{{__('ui.reject')}}</button>
+            </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{__('ui.close_button_modal')}}</button>
+      </div>
+    </div>
+  </div>
+</div>
+        <!-- <x-bladewind.modal
+            ok_button_label=''
+            type="info"
+            title="{{__('ui.reason_for_reject')}}"
+            size='xl'
+            name="info"
+            cancel_button_label="{{__('ui.close_button_modal')}}">
+            <form action="{{route('reject.announcement',['announcement'=>$announcement_to_check])}}"method="POST">
+            @csrf
+            @method('PATCH')
+            <x-bladewind.textarea placeholder="{{__('ui.reason_for_reject')}}"  />
+                <button type="submit"class="btn btn-danger shadow">{{__('ui.reject')}}</button>
+            </form>
+        </x-bladewind.modal> -->
+        
    @else
 
    <x-bladewind.empty-state
