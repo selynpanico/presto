@@ -47,8 +47,8 @@
    <div class="container">
      <div class="row justify-content-center">
        <div class="col-12 col-md-6">
-         <h1>{{$announcement_to_check->title}}</h1>
-         <h1>{{$announcement_to_check->user->name}}</h1>
+         <h2>{{$announcement_to_check->title}}</h2>
+         <h5>{{$announcement_to_check->user->name}}</h5>
          <h5>{{$announcement_to_check->body}}</h5>
          <h5>{{$announcement_to_check->price}}</h5>
         

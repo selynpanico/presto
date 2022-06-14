@@ -99,6 +99,11 @@ color: #4D4D4D;
   /* media queries */
 
   @media (max-width: 768px) { 
+
+    .header-carousel {
+      margin-top: 45%;
+    }
+
     .text {
         position: absolute;
         left: 12%;
