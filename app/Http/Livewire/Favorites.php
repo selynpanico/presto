@@ -18,18 +18,22 @@ class Favorites extends Component
     }
     public function mount($announcement){
         $this->announcement = $announcement;
-        $this->contain = Auth::user()->favouriteAnnouncements->contains($announcement);
+        if(Auth::user()){
+            $this->contain = Auth::user()->favouriteAnnouncements->contains($announcement);
+        }
     }
     
     public function like(){
-        if(!Auth::user()->favouriteAnnouncements->contains($this->announcement)){
-            Auth::user()->favouriteAnnouncements()->attach($this->announcement->id);
-            $this->contain = true;
-
-        }
-        else{
-            Auth::user()->favouriteAnnouncements()->detach($this->announcement->id);
-            $this->contain = false;
+        if(Auth::user()){
+            if(!Auth::user()->favouriteAnnouncements->contains($this->announcement)){
+                Auth::user()->favouriteAnnouncements()->attach($this->announcement->id);
+                $this->contain = true;
+    
+            }
+            else{
+                Auth::user()->favouriteAnnouncements()->detach($this->announcement->id);
+                $this->contain = false;
+            }
         }
     }
 }
