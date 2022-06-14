@@ -2,7 +2,7 @@
 <div class="container">
     <div class="row">
         <div class="col-12 text-center">
-            <h1>{{__('ui.login')}}</h1>
+            <h2>{{__('ui.login')}}</h2>
         </div>
     </div>
 </div>

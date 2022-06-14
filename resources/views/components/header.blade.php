@@ -19,7 +19,7 @@
                     <img src="/img/header/plant-g389750406_1920.jpg" class="d-block w-100" alt="...">
                     </div>
                     <div class="carousel-item">
-                    <img src="/img/header/plant-g389750406_1920.jpg" class="d-block w-100" alt="...">
+                    <img src="/img/header/plant-g389750406_1920_1.jpg" class="d-block w-100" alt="...">
                     </div>
                     <div class="carousel-item">
                     <img src="/img/header/plant-g389750406_1920.jpg" class="d-block w-100" alt="...">
