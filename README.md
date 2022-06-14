@@ -41,4 +41,7 @@ $announcement->images()->first()->getUrl("Passare come primo parametro larghezza
 ## Per far funzionare le code, dovete fare un migrate e poi dovete fare un php artisan queue:work, rimane in ascolto e quando create un annuncio croppa le immagini.
 
 ## Aggiunto metodo per le prime 4 categorie
+## Da aggiungere sezione preferiti
 
+## User 11
+https://www.youtube.com/watch?v=pQf_zj7yKYM&ab_channel=SurfsideMedia

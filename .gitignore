@@ -15,4 +15,7 @@ yarn-error.log
 /storage/articles.index-shm
 /storage/articles.index-wal
 google_credential.json
+<<<<<<< HEAD
 
+=======
+>>>>>>> a875c4ddea451b736661c5f36f12b8c012ba6bc1
