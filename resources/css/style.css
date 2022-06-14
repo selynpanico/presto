@@ -20,6 +20,10 @@ a:hover {
     color:#0072FF;
 }
 
+a:link {
+    text-decoration: none;
+}
+
 .nav-link {
     color:#4D4D4D;
 }
