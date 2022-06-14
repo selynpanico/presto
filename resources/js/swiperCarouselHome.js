@@ -25,8 +25,8 @@ var swiper = new Swiper(".swiperAnnouncements", {
       spaceBetween: 40
     },
     769:{
-      slidesPerGroup: 3,
-      slidesPerView: 3,
+      slidesPerGroup: 4,
+      slidesPerView: 4,
       spaceBetween: 20,
     }
   },
