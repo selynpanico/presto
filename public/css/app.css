@@ -13385,7 +13385,7 @@ color: #4D4D4D;
   @media (max-width: 768px) { 
 
     .header-carousel {
-      margin-top: 45% !important;
+      margin-top: 45%;
     }
 
     .text {
