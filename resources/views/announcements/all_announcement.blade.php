@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row">
             @forelse($announcements as $announcement)
-                <div class="col-12 col-md-4 my-4">
+                <div class="col-12 col-md-4 my-4 d-flex justify-content-center">
                     <x-cards :announcement="$announcement"/>
                 </div>
             @empty

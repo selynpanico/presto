@@ -10,11 +10,16 @@
         </div>
     </div>
     <div class="row  justify-content-center">
-        <div class="col-12 col-md-6 d-flex">
-            <div class='d-none d-md-flex'>
-                <a href="{{ route('all.announcements')}}"><img class="m-2" src="/img/icone/presto_icona-all.svg" alt="tutte le categorie" width="100%"></a> 
+        <div class="col-12 col-md-10 d-flex">
+            <div class='d-none d-md-flex justify-content-center align-items-baseline text-center my-5'>
+                <a href="{{ route('all.announcements')}}"><img class="m-2" src="/img/icone/presto_icona-all.svg" alt="tutte le categorie" width="100%">
+                <p>tutti gli articoli</p>
+                </a> 
                 @foreach($categories as $category)
-                    <a href="{{route('category.show', $category)}}"><img class="m-2" src="{{ $category->icon}}" alt="{{ $category->name}}" width="100%"></a> 
+                    <a href="{{route('category.show', $category)}}"><img class="my-2" src="{{ $category->icon}}" alt="{{ $category->name}}" width="100%">
+                    <p><x-category-name categoryName="{{$category->name}}"/></p>
+                    </a> 
+                   
                 @endforeach
             </div>
             <div class='d-md-none'>
