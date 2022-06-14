@@ -109,6 +109,7 @@
                 <img src="/img/presto-login-icon.svg" alt="" width="25%" height="">
                 <p class="text-login fs-4">{{Auth::user()->name}}</p></a>
           </li>
+          <!-- Aggiungere carrello -->
         </ul>
         @endguest
     </ul> 
