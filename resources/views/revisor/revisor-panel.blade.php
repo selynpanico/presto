@@ -17,16 +17,6 @@
             <img src="/img/default.jpg" alt="">
             @elseif(count($announcement_to_check->images)==1)
             <img src="{{$announcement_to_check->images->first()->getUrl()}}" class="card-img-top rounded" alt="..." style="height:400px;">
-                    <div>
-                      <h5>Revisione Immagine</h5>
-                      <ul>
-                      <li>Adulti:<span class="{{$announcement_to_check->images->first()->adult}}"></span></li>
-                      <li>Satira:<span class="{{$announcement_to_check->images->first()->spoof}}"></span></li>
-                      <li>Medicina:<span class="{{$announcement_to_check->images->first()->medical}}"></span></li>
-                      <li>Violenza:<span class="{{$announcement_to_check->images->first()->violence}}"></span></li>
-                      <li>Contenuto Ammiccante: <span class="{{$announcement_to_check->images->first()->racy}}"></span></li>
-                      </ul>
-                    </div>
             @else          
              <!-- Swiper -->
               <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper swiperThumbGallery2">
