@@ -12,6 +12,14 @@ html {
     min-height: 100vh;
 }
 
+a {
+    color:#4D4D4D;
+}
+
+a:hover {
+    color:#0072FF;
+}
+
 .nav-link {
     color:#4D4D4D;
 }
@@ -68,3 +76,33 @@ html {
 
 }
 
+
+
+/* animazione preferiti */
+
+.heart {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 60%;
+    bottom: -13%;
+    transform: translate(-50%, -50%);
+    background: url(https://cssanimation.rocks/images/posts/steps/heart.png) no-repeat;
+    background-position: 0 0;
+    cursor: pointer;
+    animation: fave-heart 1s steps(28);
+  }
+  .heart:hover {
+    background-position: -2800px 0;
+    transition: background 1s steps(28);
+  }
+  @keyframes fave-heart {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: -2800px 0;
+    }
+  }
+  
+  /* fine animazione preferiti */
