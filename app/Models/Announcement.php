@@ -37,6 +37,9 @@ class Announcement extends Model
     public function images(){
         return $this->hasMany(Image::class);
     }
+    public function users(){
+        return $this->belongsToMany(User::class);
+    }
     public function setAccepted($value){
         $this->is_accepted = $value;
         $this->save();

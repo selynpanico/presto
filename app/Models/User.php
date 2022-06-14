@@ -47,6 +47,9 @@ class User extends Authenticatable
     public function announcements(){
         return $this->hasMany(Announcement::class);
     }
+    public function favouriteAnnouncements(){
+        return $this->belongsToMany(Announcement::class);
+    }
     public function getAcceptedAnnouncement(){
         return $this->announcements()->where('is_accepted',true)->count();
     }

@@ -44,31 +44,39 @@
           </div> <!--Fine col swiper -->
        </div>
        <!-- EndSwiper -->
-       
-       <table class="table">
-  <thead>
-    <tr>
-      <th scope="col">Image Number</th>
-      <th scope="col">Adulti</th>
-      <th scope="col">Satira</th>
-      <th scope="col">Medicina</th>
-      <th scope="col">Violenza</th>
-      <th scope="col">Contenuto Ammiccante</th>
-    </tr>
-  </thead>
-  <tbody>
-  @foreach($announcement_to_check->images as $image)
-    <tr>
-      <th scope="row">{{$loop->iteration}}</th>
-      <td><span class="{{$image->adult}}"></span></td>
-      <td><span class="{{$image->spoof}}"></span></td>
-      <td><span class="{{$image->medical}}"></span></td>
-      <td><span class="{{$image->violence}}"></span></td>
-      <td><span class="{{$image->racy}}"></span></td>
-    </tr>
-  @endforeach
-  </tbody>
-</table>
+    <!-- Tabella annunci -->
+    <div class="container my-5">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-6">
+          <h5 class="text-center">Revisione immagini</h5>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Image Number</th>
+                <th scope="col">Adulti</th>
+                <th scope="col">Satira</th>
+                <th scope="col">Medicina</th>
+                <th scope="col">Violenza</th>
+                <th scope="col">Contenuto Ammiccante</th>
+              </tr>
+            </thead>
+            <tbody>
+            @foreach($announcement_to_check->images as $image)
+              <tr>
+                <th scope="row">{{$loop->iteration}}</th>
+                <td><span class="{{$image->adult}}"></span></td>
+                <td><span class="{{$image->spoof}}"></span></td>
+                <td><span class="{{$image->medical}}"></span></td>
+                <td><span class="{{$image->violence}}"></span></td>
+                <td><span class="{{$image->racy}}"></span></td>
+              </tr>
+            @endforeach
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
    </div>
    <div class="container">
      <div class="row justify-content-center">

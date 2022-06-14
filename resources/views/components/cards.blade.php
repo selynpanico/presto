@@ -21,6 +21,7 @@
             @else
             <p class="card-text">{{__('ui.published')}}: {{$announcement->created_at->format('d/m/Y')}}</p> 
             @endif
-            <a href="{{route('announcement.show',compact('announcement'))}}"class="btn btn-outline-secondary w-50">{{__('ui.view')}}</a>               
+            <a href="{{route('announcement.show',compact('announcement'))}}"class="btn btn-outline-secondary w-50">{{__('ui.view')}}</a>   
+            <livewire:favorites :announcement="$announcement" />           
     </div>
 </div>
