@@ -33,7 +33,7 @@
             </div>
             @endif
             <div class="col-3 my-3">
-                <a href="" class="btn btn-warning">Preferiti</a>
+                <a href="{{route('favourite')}}" class="btn btn-warning">Preferiti</a>
             </div>
         </div>
     </div>

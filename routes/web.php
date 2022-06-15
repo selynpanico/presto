@@ -33,6 +33,7 @@ Route::middleware('auth')->group(function(){
     Route::get('/became-revisor', [PublicController::class , 'requestRevisor'])->name('became.revisor');
     Route::get('/profile/{user}', [PublicController::class,'profile'])->name('profile');
     Route::get('/cart' ,[PublicController::class , 'cart'])->name('cart');
+    Route::get('/favourite', [PublicController::class , 'favouriteAnn'])->name('favourite');
 });    
 
 

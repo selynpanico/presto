@@ -51,6 +51,10 @@ class PublicController extends Controller
     public function contacts(){
         return view('contacts');
     }
+    public function favouriteAnn(){
+        $announcements = Auth::user()->favouriteAnnouncements()->paginate(9);
+        return view('favourite',compact('announcements'));
+    }
     public function cart(){
         $announcements = Auth::user()->cartItem;
         $total = 0;
