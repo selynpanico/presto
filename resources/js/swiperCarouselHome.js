@@ -22,7 +22,7 @@ var swiper = new Swiper(".swiperAnnouncements", {
     640: {
     slidesPerGroup: 4,
       slidesPerView: 4,
-      spaceBetween: 40
+      spaceBetween: 20
     },
     769:{
       slidesPerGroup: 4,
@@ -35,7 +35,6 @@ var swiper = new Swiper(".swiperAnnouncements", {
     prevEl: '.swiper-button-prev',
     },
     centeredSlides: true,
-    spaceBetween: 30,
     grabCursor: true,
     // pagination: {
     //   el: ".swiper-pagination",

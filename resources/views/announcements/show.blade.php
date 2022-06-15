@@ -40,7 +40,12 @@
             <h6 class="mb-4">{{$announcement->user->name}}</h6>
             <h5 class="mb-2" >{{$announcement->body}}</h5>
             <h5 class="mb-4 fw-light">{{$announcement->price}}&euro;</h5>
+            @if(Auth::user())
             <livewire:cart :announcement="$announcement" />
+            @else
+            <button class="btn btn-primary disabled"><p class="text-white">Per acquistare registrati</p><i class="text-white bi bi-cart-plus"></i></button>
+
+            @endif
           </div>
         </div> <!--End row -->
    </div><!--End container -->
