@@ -11292,8 +11292,8 @@ textarea.form-control-lg {
   background-position: 50%;
   background-repeat: no-repeat;
   position: relative;
-  display: inline-block;
-  width: 1.33333333em;
+  /* display: inline-block; */
+  width: 2.33333333em;
   line-height: 1em;
 }
 .flag-icon:before {
