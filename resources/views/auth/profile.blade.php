@@ -1,8 +1,8 @@
 <x-layout>
 <div class="container">
     <div class="row">
-        <div class="col-12">
-            <h2>{{__('ui.logged')}} {{$user->name}} {{$user->surname}}</h2>
+        <div class="col-12 my-5">
+            <h2 class="text-center">{{__('ui.logged')}} {{$user->name}} {{$user->surname}}</h2>
         </div>
     </div>
 </div>
@@ -12,21 +12,21 @@
         <div class="row justify-content-between">
             <div class="col-8">
                 <div class="position-relative">
-                    <span class="position-absolute top-0 translate-middle badge rounded-pill bg-danger">
+                    <span class="position-absolute top-0 translate-middle badge rounded-pill" style="background: #0072FF;">
                     {{App\Models\Announcement::toBeRevisionedCount()}}
                     <span class="visually-hidden">unread messages</span>
                     </span>
-                    <a href="{{route('revisor-panel')}}" class="btn btn-warning">{{__('ui.revisor_panel')}}</a>
+                    <a href="{{route('revisor-panel')}}" class="btn text-white" style=" background: #FF0091;">{{__('ui.revisor_panel')}}</a>
                 </div>
             </div>
             <div class="col-3">
                 <div class="position-relative">
-                    <span class="position-absolute top-0 translate-middle badge rounded-pill bg-danger">
+                    <span class="position-absolute top-0 translate-middle badge rounded-pill" style=" background: #FF0091;">
                     {{App\Models\Announcement::toBeTrash()}}
                     <span class="visually-hidden">unread messages</span>
                     </span>
   
-                    <a href="{{route('trash-can')}}" class="btn btn-warning"><i class="bi bi-trash3"></i></a>
+                    <a href="{{route('trash-can')}}" class="btn text-white" style="background: #0072FF;"><i class="bi bi-trash3"></i></a>
                 </div>
             </div>
         </div>
