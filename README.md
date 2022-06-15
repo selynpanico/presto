@@ -45,3 +45,7 @@ $announcement->images()->first()->getUrl("Passare come primo parametro larghezza
 
 ## User 11
 https://www.youtube.com/watch?v=pQf_zj7yKYM&ab_channel=SurfsideMedia
+
+
+                <a href="" class="btn btn-warning">@dd(App\Models\User::countCart())</a>
+

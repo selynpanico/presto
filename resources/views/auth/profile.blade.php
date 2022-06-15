@@ -30,11 +30,6 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-6">
-                <a href="" class="btn btn-warning"></a>
-            </div>
-        </div>
     </div>
     @endif
     <div class="container">

@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-12 col-md-4 d-flex justify-content-end align-items-center position-relative">
             <div class="text">
-                <h1 style="font-size:5rem;width: 200%;">lorem ipsum</h1>
+                <h1 style="font-size:5rem;width: 200%;">Presto è</h1>
                     <p style="font-weight:bold;" >
                         <span class="word wisteria">tasty.</span>
                         <span class="word pomegranate">fancy.</span>

@@ -33,12 +33,22 @@
         @else
       <div class="icon-nav col-2 col-md-2">
         <div class="row h-100 align-items-center">
-          <div class="col-md-4">
+          <div class="col-md-3">
             <a class="d-flex flex-column justify-content-center align-items-center" href="{{route('profile', Auth::user())}}">
             <img src="/img/presto-login-icon.svg" alt="" width="85%" height="">
             <p class="text-login text-center" style="line-height:15px;" >{{Auth::user()->name}}</p></a>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-3">
+          <a class="d-flex flex-column justify-content-center align-items-center position-relative" href="{{route('profile', Auth::user())}}">
+            <span class="position-absolute top-0 end-0 translate-middle badge rounded-pill bg-danger">
+                    {{App\Models\User::countCart()}}
+                    <span class="visually-hidden">unread messages</span>
+            </span>
+                <img src="/img/presto-carrello-icon.svg" alt="" width="85%" height="">
+                <p class="text-login">Carrello</p>
+            </a>
+          </div>
+          <div class="col-md-3">
             <a class="d-flex flex-column justify-content-center align-items-center" href="{{route('announcements.create')}}">
             <img src="/img/presto-aggiungi-icon.svg" alt="" width="85%" height="">
             <p class="text-login">{{__('ui.add_announcement')}}</p></a>
@@ -77,12 +87,14 @@
       <ul class="auth d-flex">
       @guest
             <li class="fs-4">
+              <a href="{{route('login')}}">
               <img class="m-auto" src="/img/presto-login-icon.svg" alt="" width="20%" height="">
-              <a href="{{route('login')}}">{{__('ui.login')}}</a>
+              {{__('ui.login')}}</a>
             </li>     
             <li class="fs-4">
+            <a href="{{route('register')}}">
               <img class="m-auto" src="/img/presto-register-icon.svg" alt="" width="20%" height="" >
-              <a href="{{route('register')}}">{{__('ui.register')}}</a>
+              {{__('ui.register')}}</a>
             </li>
         @else
         <li>
@@ -90,13 +102,17 @@
               <img src="/img/presto-aggiungi-icon.svg" alt="" width="25%" height="">
               <p class="text-login fs-4">{{__('ui.add_announcement')}}</p></a>
         </li>
-        <li><a class="d-flex flex-column justify-content-center align-items-center" href="/logout" onclick="event.preventDefault(); getElementById('form-logout').submit();">
-              <img src="/img/presto-logout-icon.svg" alt="" width="25%" height="">
-                    <p class="text-login fs-4">{{__('ui.logout')}}</p></a>
-          <form action="{{route('logout')}}" id="form-logout" method="post" class="d-none">
-            @csrf
-          </form>
-        </li>
+        <li class="d-md-none d-block">
+            <a class="d-flex flex-column justify-content-center align-items-center position-relative" href="{{route('profile', Auth::user())}}">
+            <span class="position-absolute top-0 end-0 translate-middle badge rounded-pill bg-danger">
+                    {{App\Models\User::countCart()}}
+                    <span class="visually-hidden">unread messages</span>
+                  </span>
+                  <img src="/img/presto-carrello-icon.svg" alt="" width="30%" height="">
+                  <p class="text-login fs-4">Carrello</p>
+            </a>
+          </li>
+
       </ul>
         <!-- <li class="d-md-none d-block">
           <a class="d-flex flex-column justify-content-center align-items-center" href="{{route('announcements.create')}}">
@@ -109,6 +125,15 @@
                 <img src="/img/presto-login-icon.svg" alt="" width="25%" height="">
                 <p class="text-login fs-4">{{Auth::user()->name}}</p></a>
           </li>
+          <li>
+            <a class="d-flex flex-column justify-content-center align-items-center" href="/logout" onclick="event.preventDefault(); getElementById('form-logout').submit();">
+              <img src="/img/presto-logout-icon.svg" alt="" width="25%" height="">
+                    <p class="text-login fs-4">{{__('ui.logout')}}</p></a>
+          <form action="{{route('logout')}}" id="form-logout" method="post" class="d-none">
+            @csrf
+          </form>
+        </li>
+
           <!-- Aggiungere carrello -->
         </ul>
         @endguest
