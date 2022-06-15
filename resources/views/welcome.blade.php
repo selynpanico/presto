@@ -36,4 +36,18 @@
         <a href="{{route('register')}}" class="btn btn-primary">{{__('ui.register_to_add_announcement')}}</a>
     </x-bladewind.empty-state>
 @endif
+
+@if(session('locale')=='ab')
+    <script>
+        window.history.pushState('','','allaCas\'')
+    </script>
+@elseif(session('locale')=='it')                
+    <script>
+        window.history.pushState('','','casa')
+    </script>
+@elseif(session('locale')=='gb')
+    <script>
+         window.history.pushState('','','home')
+    </script>
+@endif
 </x-layout>

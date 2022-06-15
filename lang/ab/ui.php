@@ -52,7 +52,8 @@ return [
     'category_books' =>'Libbri',
     'category_animals' =>'Li bestij\'',
     'category_videogames' =>'La pleistescion',
-    'all_category_welcome'=>'Li categorije nghi cchù annunc\''
+    'all_category_welcome'=>'Li categorije nghi cchù annunc\'',
+    'profile_empty_state'=>'Scriv\' cacche cos\' o aspitt\' che cacchidun t\'approv\'',
 
 
 ];

@@ -52,6 +52,7 @@ return [
     'category_animals' =>'Animals',
     'category_videogames' =>'Videogames',
     'all_category_welcome'=>'Category with more announcements',
+    'profile_empty_state'=>'Crate an announcement or wait for its approvation',
 
     
 ];

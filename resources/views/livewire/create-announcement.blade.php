@@ -75,3 +75,16 @@
     </script>
     @endif
 </div>
+@if(session('locale')=='ab')
+        <script>
+            window.history.pushState('','','\'gnov\'/annunc\'')
+        </script>
+        @elseif(session('locale')=='it')                
+        <script>
+            window.history.pushState('','','annuncio')
+        </script>
+        @elseif(session('locale')=='gb')
+        <script>
+            window.history.pushState('','','')
+        </script>
+@endif

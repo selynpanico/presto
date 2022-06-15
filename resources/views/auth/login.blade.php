@@ -31,4 +31,17 @@
         </div>
     </div>
 </div>
+@if(session('locale')=='ab')
+        <script>
+            window.history.pushState('','','entr\'')
+        </script>
+        @elseif(session('locale')=='it')                
+        <script>
+            window.history.pushState('','','entra')
+        </script>
+        @elseif(session('locale')=='gb')
+        <script>
+            window.history.pushState('','','login')
+        </script>
+    @endif
 </x-layout>

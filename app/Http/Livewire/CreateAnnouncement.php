@@ -86,8 +86,8 @@ class CreateAnnouncement extends Component
                 $newImage = $this->announcement->images()->create(['path'=>$image->store($newFileName,'public')]);
 
                 RemoveFaces::withChain([
-                    new GoogleVisionSafeSearch($newImage->id),
                     new GoogleVisionLabelImage($newImage->id),
+                    new GoogleVisionSafeSearch($newImage->id),
                     new ResizeImage($newImage->path , 300 , 400),
                     new Watermark($newImage->id),
                 ])->dispatch($newImage->id);
