@@ -63,19 +63,6 @@
 
         </div>
     </div>
-<!-- 
-    @if(session('locale')=='ab')
-        <script>
-            window.history.pushState('','','profil\'')
-        </script>
-        @elseif(session('locale')=='it')                
-        <script>
-            window.history.pushState('','','profilo')
-        </script>
-        @elseif(session('locale')=='gb')
-        <script>
-            window.history.pushState('','','profile')
-        </script>
-    @endif -->
+    </div> 
 
 </x-layout>
