@@ -49,5 +49,5 @@
     <script>
          window.history.pushState('','','home')
     </script>
-@endif
-</x-layout> -->
+@endif-->
+</x-layout> 
