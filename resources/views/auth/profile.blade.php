@@ -34,7 +34,7 @@
 
             <div class="col-2 col-md-3 d-flex justify-content-center">
                 <div class="position-relative">
-                    <a href="" class="btn btn-warning">Preferiti</a>
+                    <a href="{{route('favourite')}}" class="btn btn-warning">Preferiti</a>
                 </div>
             </div>
         </div>
