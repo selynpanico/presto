@@ -12,7 +12,7 @@
 <!-- Da inserire fighezza per notifiche revisore -->
     <div class="container mt-3 mb-5">
         <div class="row">
-            <div class="col-8 col-md-3 d-flex justify-content-center">
+            <div class="col-7 col-md-3 d-flex justify-content-center">
                 <div class="position-relative">
                     <span class="position-absolute top-0 translate-middle badge rounded-pill" style="background: #0072FF;">
                     {{App\Models\Announcement::toBeRevisionedCount()}}
@@ -21,19 +21,21 @@
                     <a href="{{route('revisor-panel')}}" class="btn text-white" style=" background: #FF0091;">{{__('ui.revisor_panel')}}</a>
                 </div>
             </div>
-            <div class="col-4 col-md-8  d-flex justify-content-start">
+            <div class="col-2 me-2 col-md-5 d-flex justify-content-start">
                 <div class="position-relative">
                     <span class="position-absolute top-0 translate-middle badge rounded-pill" style=" background: #FF0091;">
                     {{App\Models\Announcement::toBeTrash()}}
                     <span class="visually-hidden">unread messages</span>
                     </span>
-  
                     <a href="{{route('trash-can')}}" class="btn text-white" style="background: #0072FF;"><i class="bi bi-trash3"></i></a>
                 </div>
             </div>
             @endif
-            <div class="col-3 my-3">
-                <a href="" class="btn btn-warning">Preferiti</a>
+
+            <div class="col-2 col-md-3 d-flex justify-content-center">
+                <div class="position-relative">
+                    <a href="" class="btn btn-warning">Preferiti</a>
+                </div>
             </div>
         </div>
     </div>
