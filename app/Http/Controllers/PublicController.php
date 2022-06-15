@@ -51,6 +51,12 @@ class PublicController extends Controller
     public function contacts(){
         return view('contacts');
     }
-
-
+    public function cart(){
+        $announcements = Auth::user()->cartItem;
+        $total = 0;
+            foreach($announcements as $announcement){
+                $total = $announcement->price + $total;
+            }
+        return view('carts')->with(compact('announcements', 'total'));
+    }
 }

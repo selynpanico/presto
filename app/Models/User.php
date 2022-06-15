@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Models\Announcement;
 use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -56,5 +57,9 @@ class User extends Authenticatable
     public function cartItem(){
         
         return $this->belongsToMany(Announcement::class,'cart_items');
+    }
+
+    public static function countCart(){
+        return Auth::user()->cartItem()->count();
     }
 }

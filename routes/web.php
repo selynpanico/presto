@@ -32,6 +32,7 @@ Route::middleware('auth')->group(function(){
     Route::get('/nuovo/annuncio', [AnnouncementsController::class, 'createAnnouncement'])->name('announcements.create'); 
     Route::get('/became-revisor', [PublicController::class , 'requestRevisor'])->name('became.revisor');
     Route::get('/profile/{user}', [PublicController::class,'profile'])->name('profile');
+    Route::get('/cart' ,[PublicController::class , 'cart'])->name('cart');
 });    
 
 
