@@ -16,7 +16,9 @@
             <!-- Immagine di default -->
             <img src="/img/default.jpg" alt="">
             @elseif(count($announcement_to_check->images)==1)
-            <img src="{{$announcement_to_check->images->first()->getUrl()}}" class="card-img-top rounded" alt="..." style="height:400px;">
+            <div class="d-flex justify-content-center">
+              <img src="{{$announcement_to_check->images->first()->getUrl()}}" class="rounded" alt="...">
+            </div>
             @else          
              <!-- Swiper -->
               <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper swiperThumbGallery2">
@@ -47,7 +49,7 @@
     <!-- Tabella annunci -->
     <div class="container my-5">
       <div class="row justify-content-center">
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-6" style="overflow-x:auto">
           <h5 class="text-center">Revisione immagini</h5>
           <table class="table">
             <thead>

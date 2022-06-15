@@ -37,13 +37,19 @@ class Watermark implements ShouldQueue
         if(!$i){
             return;
         }
-
+        $croppedImage = public_path($i->getUrl(300,400));
+        $imageCrop = SpatieImage::load($croppedImage);
+        $imageCrop->watermark(public_path('img/watermark/presto-watermark.png'))
+        ->watermarkHeight(30,Manipulations::UNIT_PERCENT)
+        ->watermarkWidth(30,Manipulations::UNIT_PERCENT)
+        ->watermarkPosition(Manipulations::POSITION_TOP)
+        ->save();
         $srcPath = storage_path('app/public/'. $i->path);
         $image = SpatieImage::load($srcPath);
         $image->watermark(public_path('img/watermark/presto-watermark.png'))
-        ->watermarkOpacity(50)
         ->watermarkHeight(30,Manipulations::UNIT_PERCENT)
         ->watermarkWidth(30,Manipulations::UNIT_PERCENT)
+        ->watermarkPosition(Manipulations::POSITION_TOP)
         ->save();
     }
 }

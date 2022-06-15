@@ -11292,8 +11292,8 @@ textarea.form-control-lg {
   background-position: 50%;
   background-repeat: no-repeat;
   position: relative;
-  /* display: inline-block; */
-  width: 2.33333333em;
+  display: inline-block;
+  width: 1.33333333em;
   line-height: 1em;
 }
 .flag-icon:before {
@@ -12996,9 +12996,9 @@ a:link {
 .heart {
     width: 100px;
     height: 100px;
-    position: absolute;
+    /* position: absolute;
     left: 60%;
-    bottom: -13%;
+    bottom: -13%; */
     transform: translate(-50%, -50%);
     background: url(https://cssanimation.rocks/images/posts/steps/heart.png) no-repeat;
     background-position: 0 0;
