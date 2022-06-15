@@ -32,7 +32,7 @@
         </div>
         <div class='mb-5'>
             <label for="price">{{__('ui.price')}}</label>
-            <input wire:model="price" type="number" class="form-control @error ('price') is-invalid @enderror" style="width: 10%">
+            <input wire:model="price" type="number" class="form-control @error ('price') is-invalid @enderror" style="width: 15%">
             @error('price')
             {{$message}}
             @enderror

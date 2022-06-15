@@ -125,4 +125,10 @@ a:link {
         .cuore {
             display: none;
         }
+
+        .border-custom{
+            border-radius: 50px; /*1*/
+            border: 8px solid transparent; /*2*/
+           
+        }
      }

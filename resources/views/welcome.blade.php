@@ -3,7 +3,7 @@
 <x-header />
 @if(count($announcements)>0)
 <h3 class='text-center'>{{__('ui.all_category_welcome')}}</h3>
-<div class="container my-5">
+<div class="container mt-5">
     <div class="row">
         @foreach($moreAnn as $category_moreAnn)
         <div class="col-6 col-lg-3 d-flex justify-content-center py-2">
@@ -17,7 +17,7 @@
         @endforeach
     </div>
 </div>
-<h2 class="text-center my-5">{{__('ui.allAnnouncements')}}</h2>
+<h3 class="text-center my-5">{{__('ui.allAnnouncements')}}</h3>
 <!-- Swiper  -->
 <div class="swiper swiperAnnouncements mb-5" >
     <div class="swiper-wrapper">

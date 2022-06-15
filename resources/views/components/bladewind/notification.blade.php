@@ -41,10 +41,10 @@
         type='success', 
         dismiss_in=10) => {
         let border_color = { 
-            "success" : "border-green-400/80",
+            "success" : "border-blue-400/80",
             "error" : "border-red-400/80",
             "warning" : "border-yellow-400/80",
-            "info" : "border-blue-400/80",
+            "info" : "border-green-400/80",
         };
         let dismiss_in_seconds = (dismiss_in*1000);
         dom_el('.bw-notification .title').innerText = title;
