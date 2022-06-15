@@ -9,8 +9,8 @@
 @if(Auth::user() && Auth::user()->is_revisor  || Auth::user()->is_admin)
 <!-- Da inserire fighezza per notifiche revisore -->
     <div class="container mt-3 mb-5">
-        <div class="row justify-content-between">
-            <div class="col-8">
+        <div class="row">
+            <div class="col-8 col-md-3 d-flex justify-content-center">
                 <div class="position-relative">
                     <span class="position-absolute top-0 translate-middle badge rounded-pill" style="background: #0072FF;">
                     {{App\Models\Announcement::toBeRevisionedCount()}}
@@ -19,7 +19,7 @@
                     <a href="{{route('revisor-panel')}}" class="btn text-white" style=" background: #FF0091;">{{__('ui.revisor_panel')}}</a>
                 </div>
             </div>
-            <div class="col-3">
+            <div class="col-4 col-md-8  d-flex justify-content-start">
                 <div class="position-relative">
                     <span class="position-absolute top-0 translate-middle badge rounded-pill" style=" background: #FF0091;">
                     {{App\Models\Announcement::toBeTrash()}}
