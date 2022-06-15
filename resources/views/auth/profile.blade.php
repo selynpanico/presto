@@ -34,7 +34,7 @@
 
             <div class="col-2 col-md-3 d-flex justify-content-center">
                 <div class="position-relative">
-                    <a href="{{route('favourite')}}" class="btn btn-warning">Preferiti</a>
+                    <a href="{{route('favourite')}}" class="btn" style="color: #FF0091; border-color: #FF0091;">Preferiti<i wire:click="like" class="ms-1 bi bi-heart" style="cursor: pointer;"></i></a>
                 </div>
             </div>
         </div>
