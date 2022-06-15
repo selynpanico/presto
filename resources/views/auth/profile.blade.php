@@ -25,12 +25,14 @@
                     {{App\Models\Announcement::toBeTrash()}}
                     <span class="visually-hidden">unread messages</span>
                     </span>
-                    @if(session('locale')=='ab')
-                    <a href="{{route('trash-can')}}" class="btn btn-warning">Munnezz'</a>
-                    @else
+  
                     <a href="{{route('trash-can')}}" class="btn btn-warning"><i class="bi bi-trash3"></i></a>
-                    @endif
                 </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <a href="" class="btn btn-warning"></a>
             </div>
         </div>
     </div>
@@ -59,7 +61,7 @@
 
         </div>
     </div>
-
+<!-- 
     @if(session('locale')=='ab')
         <script>
             window.history.pushState('','','profil\'')
@@ -72,6 +74,6 @@
         <script>
             window.history.pushState('','','profile')
         </script>
-    @endif
+    @endif -->
 
 </x-layout>

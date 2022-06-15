@@ -53,4 +53,8 @@ class Announcement extends Model
     {
            return Announcement::where('is_accepted',false)->count();
     }
+
+    public function userCart(){
+        return $this->belongsToMany(User::class,'cart_items');
+    }
 }

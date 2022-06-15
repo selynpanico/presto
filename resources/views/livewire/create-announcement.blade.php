@@ -75,7 +75,7 @@
     </script>
     @endif
 </div>
-@if(session('locale')=='ab')
+<!-- @if(session('locale')=='ab')
         <script>
             window.history.pushState('','','\'gnov\'/annunc\'')
         </script>
@@ -87,4 +87,4 @@
         <script>
             window.history.pushState('','','')
         </script>
-@endif
+@endif -->
