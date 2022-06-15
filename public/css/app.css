@@ -13038,6 +13038,13 @@ a:link {
     height: 100vh !important;
     }
     }
+
+    @media (max-width: 768px) {
+        .cuore {
+            display: none;
+        }
+     }
+
 .navbar {
     display: block;
     margin: 0 auto;
