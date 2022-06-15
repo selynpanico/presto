@@ -51,6 +51,7 @@ return [
     'category_books' =>'Books',
     'category_animals' =>'Animals',
     'category_videogames' =>'Videogames',
+    'all_category_welcome'=>'Category with more announcements',
 
     
 ];

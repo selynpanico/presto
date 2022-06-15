@@ -2,7 +2,7 @@
     
 <x-header />
 @if(count($announcements)>0)
-<h3 class='text-center'>Categorie con più annunci</h3>
+<h3 class='text-center'>{{__('ui.all_category_welcome')}}</h3>
 <div class="container my-5">
     <div class="row">
         @foreach($moreAnn as $category_moreAnn)
@@ -11,7 +11,7 @@
                 <div class='d-flex align-items-center flex-column border-custom'>
                     <img width='60%' src="{{$category_moreAnn->icon}}" alt="">
                 </div>
-                <p class='text-color text-center fs-4 mt-3'>{{$category_moreAnn->name}}</p>
+                <p class='text-color text-center fs-4 mt-3'><x-category-name categoryName="{{$category_moreAnn->name}}"/></p>
             </a>
         </div>
         @endforeach

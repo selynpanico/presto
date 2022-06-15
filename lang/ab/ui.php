@@ -48,10 +48,11 @@ return [
     'category_motors' =>'Lu motorin\'',
     'category_sport' =>'Lu pallon\'',
     'category_music' =>'La music\'',
-    'category_collecting' =>'',
+    'category_collecting' =>'Robba vecchj\'',
     'category_books' =>'Libbri',
     'category_animals' =>'Li bestij\'',
     'category_videogames' =>'La pleistescion',
+    'all_category_welcome'=>'Li categorije nghi cchù annunc\''
 
 
 ];
