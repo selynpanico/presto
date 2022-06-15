@@ -1,5 +1,5 @@
 <x-layout>
-<h2 class="text-center">I tuoi annunci preferiti</h2>
+<h2 class="text-center my-5">I tuoi annunci preferiti</h2>
 
 <div class="container">
         <div class="row">
