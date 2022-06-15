@@ -2,7 +2,7 @@
   @if($announcement_to_check)
     <div class="container my-3">
         <div class="row justify-content-center">
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-6 text-center">
                <h2>{{__('ui.announcement_owner')}} {{$announcement_to_check->user->name}} {{$announcement_to_check->user->surname}}</h2>
 
             </div>
@@ -94,12 +94,13 @@
   
 
    <div class="container my-3">
-     <div class="row justify-content-center">
+     <div class="row justify-content-center mb-5">
        <div class="col-12">
          <h2>{{$announcement_to_check->title}}</h2>
-         <h5>{{$announcement_to_check->user->name}}</h5>
-         <h5>{{$announcement_to_check->body}}</h5>
-         <h5>{{$announcement_to_check->price}}</h5>
+         <hr width="30%">
+         <h6 class="mb-4">{{$announcement_to_check->user->name}}</h6>
+         <h5 class="mb-2">{{$announcement_to_check->body}}</h5>
+         <h5 class="mb-4 fw-light">{{$announcement_to_check->price}}&euro;</h5>
         
           <div class="row flex-direction-row justify-content-between">
             <div class="col-6">
@@ -107,11 +108,9 @@
                 @csrf
                 @method('PATCH')
                       <button type="submit" class="btn btn-success shadow">{{__('ui.accept')}}</button>
+                      <button type="button" class="btn btn-danger shadow" data-bs-toggle="modal" data-bs-target="#exampleModal">{{__('ui.reject')}}</button>
                 </form>
             </div>      
-                <div class="col-6">
-                 <button type="button" class="btn btn-danger shadow" data-bs-toggle="modal" data-bs-target="#exampleModal">{{__('ui.reject')}}</button>
-                </div>
             </div>
         </div>
       </div>
