@@ -2,10 +2,10 @@
 <div class="social-container h-100"> 
     <div class="row m-0 justify-content-end">
         <div class="col-12 d-flex flex-column align-items-center my-3 py-2 text-white text-center"> 
-            <h5>{{__('ui.work_for_us')}}</h5>
-            <h6>{{__('ui.work_for_us_subtitle')}}</h6>
+            <h5 class="opacity-70">{{__('ui.work_for_us')}}</h5>
+            <h6 class="opacity-70">{{__('ui.work_for_us_subtitle')}}</h6>
             @if(Auth::user() && Auth::user()->is_revisor)
-                <h4 class="fs-6 mt-2">Gia sei revisore</h4>
+                <h4 class="fs-6 mt-2 ">Gia sei revisore</h4>
                 @elseif(Auth::user())
                 <livewire:revisor-request-button />
              @else
