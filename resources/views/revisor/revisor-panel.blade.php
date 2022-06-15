@@ -1,6 +1,6 @@
 <x-layout>
   @if($announcement_to_check)
-    <div class="container">
+    <div class="container my-3">
         <div class="row justify-content-center">
             <div class="col-12 col-md-6">
                <h2>{{__('ui.announcement_owner')}} {{$announcement_to_check->user->name}} {{$announcement_to_check->user->surname}}</h2>
@@ -8,9 +8,9 @@
             </div>
         </div>
     </div>
-<div class="container">
-       <div class="row justify-content-center">
-           <div class="col-12 col-md-6">
+<div class="container my-3 py-3">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-6">
              <!-- Swiper -->
              @if(count($announcement_to_check->images)==0)
             <!-- Immagine di default -->
@@ -43,13 +43,8 @@
                 </div>
             </div>
             @endif
-          </div> <!--Fine col swiper -->
-       </div>
-       <!-- EndSwiper -->
-    <!-- Tabella annunci -->
-    <div class="container my-5">
-      <div class="row justify-content-center">
-        <div class="col-12 col-md-6" style="overflow-x:auto">
+    </div> <!--Fine col swiper -->
+    <div class="col-12 col-md-6" style="overflow-x:auto">
           <h5 class="text-center">Revisione immagini</h5>
           <table class="table">
             <thead>
@@ -75,14 +70,24 @@
             @endforeach
             </tbody>
           </table>
-        </div>
-      </div>
-    </div>
+        <h5 class="text-center">Tags</h5>
+    @foreach($announcement_to_check->images as $image)
+    <div class="imageLabels visually-hidden">
+      @foreach($image->labels as $label)
+      <p>{{$label}}</p>
+      @endforeach
+  </div>
+    @endforeach
 
-   </div>
-   <div class="container">
+    </div> <!-- Fine col table -->
+  </div> <!--End row -->
+</div><!--End container -->
+       <!-- EndSwiper -->
+  
+
+   <div class="container my-3">
      <div class="row justify-content-center">
-       <div class="col-12 col-md-6">
+       <div class="col-12">
          <h2>{{$announcement_to_check->title}}</h2>
          <h5>{{$announcement_to_check->user->name}}</h5>
          <h5>{{$announcement_to_check->body}}</h5>
@@ -99,45 +104,32 @@
                 <div class="col-6">
                  <button type="button" class="btn btn-danger shadow" data-bs-toggle="modal" data-bs-target="#exampleModal">{{__('ui.reject')}}</button>
                 </div>
+            </div>
+        </div>
+      </div>
+    </div>
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">{{__('ui.reason_for_reject')}}</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                  <form action="{{route('reject.announcement',['announcement'=>$announcement_to_check])}}"method="POST">
+                    @csrf
+                    @method('PATCH')
+                      <x-bladewind.textarea placeholder="{{__('ui.reason_for_reject')}}"  />
+                        <button type="submit"class="btn btn-danger shadow">{{__('ui.reject')}}</button>
+                    </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{__('ui.close_button_modal')}}</button>
               </div>
             </div>
           </div>
         </div>
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">{{__('ui.reason_for_reject')}}</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-           <form action="{{route('reject.announcement',['announcement'=>$announcement_to_check])}}"method="POST">
-            @csrf
-            @method('PATCH')
-            <x-bladewind.textarea placeholder="{{__('ui.reason_for_reject')}}"  />
-                <button type="submit"class="btn btn-danger shadow">{{__('ui.reject')}}</button>
-            </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{__('ui.close_button_modal')}}</button>
-      </div>
-    </div>
-  </div>
-</div>
-        <!-- <x-bladewind.modal
-            ok_button_label=''
-            type="info"
-            title="{{__('ui.reason_for_reject')}}"
-            size='xl'
-            name="info"
-            cancel_button_label="{{__('ui.close_button_modal')}}">
-            <form action="{{route('reject.announcement',['announcement'=>$announcement_to_check])}}"method="POST">
-            @csrf
-            @method('PATCH')
-            <x-bladewind.textarea placeholder="{{__('ui.reason_for_reject')}}"  />
-                <button type="submit"class="btn btn-danger shadow">{{__('ui.reject')}}</button>
-            </form>
-        </x-bladewind.modal> -->
+
         
    @else
 
@@ -145,5 +137,25 @@
     message="Non hai annunci da approvare">
     </x-bladewind.empty-state>
    @endif
+  <script>
+    window.addEventListener('DOMContentLoaded',()=>{
+      let slides = document.querySelectorAll('.swiperThumbGallery2 .swiper-slide');
+      let tbody = document.querySelectorAll('tbody tr')
+      let imageLabels = document.querySelectorAll('.imageLabels')
+      console.log(imageLabels);
+      setInterval(()=>{
+        slides.forEach((el,i)=>{
+          if(el.classList.contains('swiper-slide-active')){
+            tbody[i].classList.add('activeCustom');
+            imageLabels[i].classList.remove('visually-hidden')
+          }
+          else{
+            imageLabels[i].classList.add('visually-hidden')
+            tbody[i].classList.remove('activeCustom')
+          }
+        })
+      },0)
 
+    })
+  </script>
 </x-layout>
