@@ -13032,6 +13032,12 @@ a:link {
   .activeCustom{
     background-color: #4d4d4d8e;
   }
+
+  @media (min-width: 1025px) {
+    .h-custom {
+    height: 100vh !important;
+    }
+    }
 .navbar {
     display: block;
     margin: 0 auto;

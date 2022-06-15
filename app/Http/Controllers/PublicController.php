@@ -53,6 +53,10 @@ class PublicController extends Controller
     }
     public function cart(){
         $announcements = Auth::user()->cartItem;
-        return view('carts')->with(compact('announcements'));
+        $total = 0;
+            foreach($announcements as $announcement){
+                $total = $announcement->price + $total;
+            }
+        return view('carts')->with(compact('announcements', 'total'));
     }
 }
