@@ -43,7 +43,7 @@
                         <div style="width: 80px;">
                           <h5 class="mb-0">{{$announcement->price}}</h5>
                         </div>
-                        <a href="#!" style="color: #cecece;"><i class="fas fa-trash-alt"></i></a>
+                        <livewire:remove-to-cart :announcement="$announcement"/>
                       </div>
                     </div>
                   </div>
@@ -117,11 +117,10 @@
                       <p class="mb-2">{{$total+20}}&euro;</p>
                     </div>
 
-                    <button type="button" class="btn btn-outline-light btn-block btn-lg">
                       <div class="d-flex justify-content-between">
-                        <span>Checkout<i class="fas fa-long-arrow-alt-right ms-2"></i></span>
+                  <a href=""class="btn btn-outline-light d-flex justify-content-center align-items-center my-2">Cechkout <img src="/img/icone/presto_icona-all.svg" style="width:20px;" alt=""class="ms-2"></a>   
+
                       </div>
-                    </button>
 
                   </div>
                 </div>
