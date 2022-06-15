@@ -12,7 +12,7 @@
                     </p>
             </div>      
         </div>
-        <div class="col-12 col-md-8">
+        <div class="col-12 col-md-8 mb-4">
             <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner header-carousel">
                     <div class="carousel-item active">
