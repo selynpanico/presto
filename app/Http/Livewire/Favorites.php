@@ -26,6 +26,7 @@ class Favorites extends Component
     public function like(){
         if(Auth::user()){
             if(!Auth::user()->favouriteAnnouncements->contains($this->announcement)){
+                
                 Auth::user()->favouriteAnnouncements()->attach($this->announcement->id);
                 $this->contain = true;
     

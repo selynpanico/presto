@@ -53,4 +53,8 @@ class User extends Authenticatable
     public function getAcceptedAnnouncement(){
         return $this->announcements()->where('is_accepted',true)->count();
     }
+    public function cartItem(){
+        
+        return $this->belongsToMany(Announcement::class,'cart_items');
+    }
 }

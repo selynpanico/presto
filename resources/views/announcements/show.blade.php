@@ -39,7 +39,7 @@
             <h2>{{$announcement->user->name}}</h2>
             <h5>{{$announcement->body}}</h5>
             <h5>{{$announcement->price}}</h5>
-            <button class="btn btn-success">Acquista ora</button>
+            <livewire:cart :announcement="$announcement" />
           </div>
         </div> <!--End row -->
    </div><!--End container -->
