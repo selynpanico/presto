@@ -37,7 +37,7 @@
     </x-bladewind.empty-state>
 @endif
 
-@if(session('locale')=='ab')
+<!-- @if(session('locale')=='ab')
     <script>
         window.history.pushState('','','allaCas\'')
     </script>
@@ -50,4 +50,4 @@
          window.history.pushState('','','home')
     </script>
 @endif
-</x-layout>
+</x-layout> -->

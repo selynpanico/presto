@@ -51,4 +51,8 @@ class PublicController extends Controller
     public function contacts(){
         return view('contacts');
     }
+    public function cart(){
+        $announcements = Auth::user()->cartItem;
+        return view('carts')->with(compact('announcements'));
+    }
 }
