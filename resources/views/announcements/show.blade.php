@@ -1,5 +1,5 @@
 <x-layout>
-   <div class="container">
+   <div class="container my-3 py-3">
        <div class="row justify-content-center">
            <div class="col-12 col-md-6">
             @if(count($announcement->images)==0)
@@ -33,20 +33,18 @@
             </div>
             @endif
           </div> <!--Fine col swiper -->
-       </div>
-       <!-- EndSwiper -->
-   </div>
-   <div class="container">
-     <div class="row justify-content-center">
-       <div class="col-12 col-md-6">
-         <h2>{{$announcement->title}}</h2>
-         <h2>{{$announcement->user->name}}</h2>
-         <h5>{{$announcement->body}}</h5>
-         <h5>{{$announcement->price}}</h5>
-         <button class="btn btn-success">Acquista ora</button>
-       </div>
-     </div>
-   </div>
+          <!-- EndSwiper -->
+          <div class="col-12 col-md-6">
+            <h2>{{$announcement->title}}</h2>
+            <h2>{{$announcement->user->name}}</h2>
+            <h5>{{$announcement->body}}</h5>
+            <h5>{{$announcement->price}}</h5>
+            <button class="btn btn-success">Acquista ora</button>
+          </div>
+        </div> <!--End row -->
+   </div><!--End container -->
+
+   
    
 
 </x-layout>
