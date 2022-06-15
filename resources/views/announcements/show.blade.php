@@ -1,6 +1,6 @@
 <x-layout>
    <div class="container my-3 py-3">
-       <div class="row justify-content-center">
+       <div class="row justify-content-center align-items-center">
            <div class="col-12 col-md-6">
             @if(count($announcement->images)==0)
             <!-- Immagine di default -->
@@ -34,11 +34,12 @@
             @endif
           </div> <!--Fine col swiper -->
           <!-- EndSwiper -->
-          <div class="col-12 col-md-6">
+          <div class="col-12 col-md-4">
             <h2>{{$announcement->title}}</h2>
-            <h2>{{$announcement->user->name}}</h2>
-            <h5>{{$announcement->body}}</h5>
-            <h5>{{$announcement->price}}</h5>
+            <hr>
+            <h6 class="mb-4">{{$announcement->user->name}}</h6>
+            <h5 class="mb-2" >{{$announcement->body}}</h5>
+            <h5 class="mb-4 fw-light">{{$announcement->price}}€</h5>
             <livewire:cart :announcement="$announcement" />
           </div>
         </div> <!--End row -->
