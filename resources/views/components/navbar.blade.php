@@ -102,6 +102,14 @@
               <img src="/img/presto-aggiungi-icon.svg" alt="" width="25%" height="">
               <p class="text-login fs-4">{{__('ui.add_announcement')}}</p></a>
         </li>
+        <li class="d-none d-md-block">
+            <a class="d-flex flex-column justify-content-center align-items-center" href="/logout" onclick="event.preventDefault(); getElementById('form-logout').submit();">
+              <img src="/img/presto-logout-icon.svg" alt="" width="25%" height="">
+                    <p class="text-login fs-4">{{__('ui.logout')}}</p></a>
+          <form action="{{route('logout')}}" id="form-logout" method="post" class="d-none">
+            @csrf
+          </form>
+        </li>
         <li class="d-md-none d-block">
             <a class="d-flex flex-column justify-content-center align-items-center position-relative" href="{{route('profile', Auth::user())}}">
             <span class="position-absolute top-0 end-0 translate-middle badge rounded-pill bg-danger">
@@ -125,7 +133,7 @@
                 <img src="/img/presto-login-icon.svg" alt="" width="25%" height="">
                 <p class="text-login fs-4">{{Auth::user()->name}}</p></a>
           </li>
-          <li>
+          <li class="d-md-none">
             <a class="d-flex flex-column justify-content-center align-items-center" href="/logout" onclick="event.preventDefault(); getElementById('form-logout').submit();">
               <img src="/img/presto-logout-icon.svg" alt="" width="25%" height="">
                     <p class="text-login fs-4">{{__('ui.logout')}}</p></a>

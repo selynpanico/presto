@@ -10,6 +10,8 @@ class Cart extends Component
     public $announcement;
     public $contain;
     public function setInCart(){
+    if(Auth::user()){
+            
         if(!Auth::user()->cartItem->contains($this->announcement)){
             Auth::user()->cartItem()->attach($this->announcement->id);
             $this->contain = true;
@@ -18,6 +20,7 @@ class Cart extends Component
             Auth::user()->cartItem()->detach($this->announcement);
             $this->contain = false;
         }
+    }
     }
     
     public function mount($announcement){
