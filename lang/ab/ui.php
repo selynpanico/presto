@@ -10,7 +10,7 @@ return [
     'register_to_add_announcement'=>'Reggistrati si vu mett n\'annuncj\'',
     'no_announcement'=>'Mò nci sta nient, arevè cchiù tard\'',
     'logged'=>'Weeeeeeeeee',
-    'revisor_panel'=>'Va allu pannell dellu revisor\'',
+    'revisor_panel'=>'Va allu pannell\'',
     'create_announcement'=>'Cre\'em st\'annunc\'',
     'announcement_title'=>'Titolo',
     'announcement_description'=>'Descrizion\'',
