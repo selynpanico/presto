@@ -71,13 +71,21 @@
             </tbody>
           </table>
         <h5 class="text-center">Tags</h5>
-    @foreach($announcement_to_check->images as $image)
-    <div class="imageLabels visually-hidden">
-      @foreach($image->labels as $label)
-      <p>{{$label}}</p>
-      @endforeach
-  </div>
-    @endforeach
+      @if(count($announcement_to_check->images) == 1)
+      <div>
+        @foreach($announcement_to_check->images->first()->labels as $label)
+          <p>{{$label}}</p>
+        @endforeach
+      </div> 
+      @else
+        @foreach($announcement_to_check->images as $image)
+        <div class="imageLabels visually-hidden">
+            @foreach($image->labels as $label)
+            <p>{{$label}}</p>
+            @endforeach
+        </div>
+        @endforeach
+      @endif
 
     </div> <!-- Fine col table -->
   </div> <!--End row -->

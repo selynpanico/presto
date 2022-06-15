@@ -21,15 +21,15 @@ Route::get('/show/{announcement}', [AnnouncementsController::class,'show'])->mid
 Route::get('/category/{category}', [AnnouncementsController::class,'showCategory'])->name('category.show');
 Route::get('/make-revisor/{user}',[PublicController::class ,'makeRevisor'])->middleware('is_admin')->name('make.revisor');
 Route::get('/all-announcements', [PublicController::class, 'allAnnouncement'])->name('all.announcements');
-Route::get('/search-announcement', [PublicController::class, 'ricercaAnnuncio'])->name('ricerca.annuncio');
-Route::post('/lang/{lang}',[PublicController::class, 'setLanguage'])->name('set_language_locale');
+Route::get('/ricerca-annuncio', [PublicController::class, 'ricercaAnnuncio'])->name('ricerca.annuncio');
+Route::post('/lingua/{lang}',[PublicController::class, 'setLanguage'])->name('set_language_locale');
 Route::get('/contacts',[PublicController::class , 'contacts'])->name('contacts');
 
 
 
 // Rotte con middleware auth
 Route::middleware('auth')->group(function(){
-    Route::get('/new-announcement', [AnnouncementsController::class, 'createAnnouncement'])->name('announcements.create'); 
+    Route::get('/nuovo/annuncio', [AnnouncementsController::class, 'createAnnouncement'])->name('announcements.create'); 
     Route::get('/became-revisor', [PublicController::class , 'requestRevisor'])->name('became.revisor');
     Route::get('/profile/{user}', [PublicController::class,'profile'])->name('profile');
     Route::get('/cart' ,[PublicController::class , 'cart'])->name('cart');
@@ -39,8 +39,8 @@ Route::middleware('auth')->group(function(){
 
 //Rotte con middleware revisore
 Route::middleware('is_revisor')->group(function(){
-    Route::patch('/accept/{announcement}',[RevisorController::class, 'acceptAnnouncement'])->name('accept.announcement');
-    Route::patch('/reject/{announcement}',[RevisorController::class, 'rejectAnnouncement'])->name('reject.announcement');
+    Route::patch('/accetta-annuncio/{announcement}',[RevisorController::class, 'acceptAnnouncement'])->name('accept.announcement');
+    Route::patch('/rifiuta-annuncio/{announcement}',[RevisorController::class, 'rejectAnnouncement'])->name('reject.announcement');
     Route::get('/revisor-panel',[RevisorController::class,'index'])->name('revisor-panel');
     
     Route::get('/trash-can', [RevisorController::class, 'trash_can'])->name('trash-can');
