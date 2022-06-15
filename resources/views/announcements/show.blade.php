@@ -39,7 +39,7 @@
             <hr>
             <h6 class="mb-4">{{$announcement->user->name}}</h6>
             <h5 class="mb-2" >{{$announcement->body}}</h5>
-            <h5 class="mb-4 fw-light">{{$announcement->price}}€</h5>
+            <h5 class="mb-4 fw-light">{{$announcement->price}}&euro;</h5>
             <livewire:cart :announcement="$announcement" />
           </div>
         </div> <!--End row -->
