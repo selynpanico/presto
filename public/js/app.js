@@ -3368,7 +3368,7 @@ var swiper = new Swiper(".swiperAnnouncements", (_Swiper = {
     640: {
       slidesPerGroup: 4,
       slidesPerView: 4,
-      spaceBetween: 40
+      spaceBetween: 20
     },
     769: {
       slidesPerGroup: 4,
@@ -3380,7 +3380,7 @@ var swiper = new Swiper(".swiperAnnouncements", (_Swiper = {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev'
   }
-}, _defineProperty(_Swiper, "centeredSlides", true), _defineProperty(_Swiper, "spaceBetween", 30), _defineProperty(_Swiper, "grabCursor", true), _Swiper));
+}, _defineProperty(_Swiper, "centeredSlides", true), _defineProperty(_Swiper, "grabCursor", true), _Swiper));
 
 /***/ }),
 
