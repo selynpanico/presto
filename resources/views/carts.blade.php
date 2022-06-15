@@ -11,7 +11,7 @@
             <div class="row">
 
               <div class="col-lg-7">
-                <h5 class="mb-3"><a href="#!" class="text-body"><i
+                <h5 class="mb-3"><a href="{{route('all.announcements')}}" class="text-body"><i
                       class="fas fa-long-arrow-alt-left me-2"></i>Continue shopping</a></h5>
                 <hr>
 
