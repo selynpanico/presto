@@ -40,7 +40,7 @@
           </div>
           <div class="col-md-3">
           <a class="d-flex flex-column justify-content-center align-items-center position-relative" href="{{route('cart')}}">
-            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill" style=" background-color: #FF0091;">
                     {{App\Models\User::countCart()}}
                     <span class="visually-hidden">unread messages</span>
             </span>
@@ -112,7 +112,7 @@
         </li>
         <li class="d-md-none d-block">
             <a class="d-flex flex-column justify-content-center align-items-center position-relative" href="{{route('cart')}}">
-            <span class="position-absolute top-0 end-0 translate-middle badge rounded-pill bg-danger">
+            <span class="position-absolute top-0 end-0 translate-middle badge rounded-pill" style=" background-color: #FF0091;">
                     {{App\Models\User::countCart()}}
                     <span class="visually-hidden">unread messages</span>
                   </span>

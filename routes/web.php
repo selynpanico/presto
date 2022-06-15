@@ -26,6 +26,7 @@ Route::post('/lingua/{lang}',[PublicController::class, 'setLanguage'])->name('se
 Route::get('/contacts',[PublicController::class , 'contacts'])->name('contacts');
 
 
+
 // Rotte con middleware auth
 Route::middleware('auth')->group(function(){
     Route::get('/nuovo/annuncio', [AnnouncementsController::class, 'createAnnouncement'])->name('announcements.create'); 
