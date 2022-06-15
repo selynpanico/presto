@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-12 col-md-6">
-               <h2>Annuncio di: {{$announcement->user->name}} {{$announcement->user->surname}}</h2>
+               <h2 class="text-center my-4" >Annuncio di: {{$announcement->user->name}} {{$announcement->user->surname}}</h2>
 
             </div>
         </div>
@@ -45,19 +45,21 @@
    </div>
    <div class="container">
      <div class="row justify-content-center">
-       <div class="col-12 col-md-6">
-         <h1>{{$announcement->title}}</h1>
-         <h5>{{$announcement->body}}</h5>
-         <h5>{{$announcement->price}}</h5>
+       <div class="col-12 col-md-6 my-5">
+            <h2>{{$announcement->title}}</h2>
+            <hr>
+            <h5 class="mb-2" >{{$announcement->body}}</h5>
+            <h5 class="mb-4 fw-light">{{$announcement->price}}&euro;</h5>
          
            <div class="row flex-direction-row justify-content-between">
-    <div class="col-6">
+         <div class="col-6">
          <form action="{{route('manda.in.revisione',['announcement'=>$announcement])
          }}"method="POST">
          @csrf
          @method('PATCH')
               <button type="submit" class="btn btn-success shadow">Manda in Revisione</button>
          </form>
+         
     </div>
     <div class="col-6">
          <form action="{{route('delete.announcement',['announcement'=>$announcement])
