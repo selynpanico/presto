@@ -6,10 +6,10 @@
         </div>
     </div>
 </div>
+<div class="container mt-3 mb-5">
+    <div class="row justify-content-between">
 @if(Auth::user() && Auth::user()->is_revisor  || Auth::user()->is_admin)
 <!-- Da inserire fighezza per notifiche revisore -->
-    <div class="container mt-3 mb-5">
-        <div class="row justify-content-between">
             <div class="col-8">
                 <div class="position-relative">
                     <span class="position-absolute top-0 translate-middle badge rounded-pill bg-danger">
@@ -29,9 +29,12 @@
                     <a href="{{route('trash-can')}}" class="btn btn-warning"><i class="bi bi-trash3"></i></a>
                 </div>
             </div>
+            @endif
+            <div class="col-3 my-3">
+                <a href="" class="btn btn-warning">Preferiti</a>
+            </div>
         </div>
     </div>
-    @endif
     <div class="container">
         <div class="row">
             @if(Auth::user()->getAcceptedAnnouncement()>0)
