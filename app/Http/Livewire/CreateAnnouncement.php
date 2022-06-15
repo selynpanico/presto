@@ -2,14 +2,15 @@
 
 namespace App\Http\Livewire;
 
+use App\Jobs\Watermark;
 use Livewire\Component;
 use App\Models\Category;
 use App\Jobs\RemoveFaces;
 use App\Jobs\ResizeImage;
 use App\Models\Announcement;
 use Livewire\WithFileUploads;
+use App\Jobs\GoogleVisionLabelImage;
 use App\Jobs\GoogleVisionSafeSearch;
-use App\Jobs\Watermark;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 
@@ -81,15 +82,14 @@ class CreateAnnouncement extends Component
 
         if (count($this->images)){
             foreach ($this->images as $image) {
-                // $image->watermark('/img/watermark/presto-watermark.png');
-                // $this->announcement->images()->create(['path'=>$image->store('images','public')]);
                 $newFileName = "announcements/{$this->announcement->id}";
                 $newImage = $this->announcement->images()->create(['path'=>$image->store($newFileName,'public')]);
 
                 RemoveFaces::withChain([
-                    new ResizeImage($newImage->path , 300 , 400),
                     new GoogleVisionSafeSearch($newImage->id),
-                    new Watermark($newImage->id)
+                    new GoogleVisionLabelImage($newImage->id),
+                    new ResizeImage($newImage->path , 300 , 400),
+                    new Watermark($newImage->id),
                 ])->dispatch($newImage->id);
                 
         

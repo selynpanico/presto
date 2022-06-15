@@ -87,9 +87,9 @@ a:link {
 .heart {
     width: 100px;
     height: 100px;
-    position: absolute;
+    /* position: absolute;
     left: 60%;
-    bottom: -13%;
+    bottom: -13%; */
     transform: translate(-50%, -50%);
     background: url(https://cssanimation.rocks/images/posts/steps/heart.png) no-repeat;
     background-position: 0 0;

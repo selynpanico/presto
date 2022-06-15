@@ -6,7 +6,9 @@
             <!-- Immagine di default -->
             <img src="/img/default.jpg" alt="">
             @elseif(count($announcement->images)==1)
-            <img src="{{$announcement->images->first()->getUrl()}}" class="card-img-top rounded" alt="..." style="height:400px;">
+            <div class="d-flex justify-content-center">
+              <img src="{{$announcement->images->first()->getUrl()}}" class="rounded" alt="...">
+            </div>
             @else          
              <!-- Swiper -->
               <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper swiperThumbGallery2">

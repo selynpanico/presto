@@ -1,8 +1,8 @@
-<div class="card" style="width: 18rem;">   
+<div class="card">   
     <div class="position-relative">
         <!-- Modo nuovo per prendere le IMG -->
                 @if(count($announcement->images)>0)
-                <img src="{{$announcement->images->first()->getUrl()}}" class="card-img-top rounded" alt="..." style="height:400px;">
+                <img src="{{$announcement->images->first()->getUrl(300,400)}}" class="card-img-top rounded" alt="..." style="height:400px;">
                 @else
                 <img src="/img/default.jpg" class="card-img-top rounded"  style="height:400px;" alt="">
                 @endif
@@ -21,7 +21,7 @@
             @else
             <p class="card-text">{{__('ui.published')}}: {{$announcement->created_at->format('d/m/Y')}}</p> 
             @endif
-            <a href="{{route('announcement.show',compact('announcement'))}}"class="btn btn-outline-secondary w-50">{{__('ui.view')}}</a>   
+            <a href="{{route('announcement.show',compact('announcement'))}}"class="btn btn-outline-secondary d-flex justify-content-center align-items-center my-2">{{__('ui.view')}} <img src="/img/icone/presto_icona-all.svg" style="width:20px;" alt=""class="ms-2"></a>   
             <livewire:favorites :announcement="$announcement" />           
     </div>
 </div>
