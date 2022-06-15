@@ -68,9 +68,9 @@
     </label>
   <div id="sidebarMenu" style="z-index: 98;">
     <ul class="sidebarMenuInner">
-      <li><a class="title" href="/">{{__('ui.home')}}</a></li>
-      <li><a class="title" href="{{route('all.announcements')}}">{{__('ui.navbar_announcements')}}</a></li>
-      <li><a class="title" href="{{route('contacts')}}">{{__('ui.contacts')}}</a></li>   
+      <li><a class="title fs-1" href="/">{{__('ui.home')}}</a></li>
+      <li><a class="title fs-1" href="{{route('all.announcements')}}">{{__('ui.navbar_announcements')}}</a></li>
+      <li><a class="title fs-1" href="{{route('contacts')}}">{{__('ui.contacts')}}</a></li>   
      
       <hr>
 

@@ -118,7 +118,7 @@
                     </div>
 
                       <div class="d-flex justify-content-between">
-                  <a href=""class="btn btn-outline-primary d-flex justify-content-center align-items-center my-2">Checkout <img src="/img/icone/presto_icona-all.svg" style="width:20px;" alt=""class="ms-2"></a>   
+                  <a href=""class="btn btn-outline-light d-flex justify-content-center align-items-center my-2 fw-bold">Checkout <img src="/img/icone/presto_icona-all.svg" style="width:20px;" alt=""class="ms-2"></a>   
 
                       </div>
 
