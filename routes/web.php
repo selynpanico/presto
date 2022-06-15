@@ -23,7 +23,7 @@ Route::get('/make-revisor/{user}',[PublicController::class ,'makeRevisor'])->mid
 Route::get('/all-announcements', [PublicController::class, 'allAnnouncement'])->name('all.announcements');
 Route::get('/ricerca-annuncio', [PublicController::class, 'ricercaAnnuncio'])->name('ricerca.annuncio');
 Route::post('/lingua/{lang}',[PublicController::class, 'setLanguage'])->name('set_language_locale');
-Route::get('/contacts/contacts', [PublicController::class, 'contacts'])->name('contacts');
+
 
 
 // Rotte con middleware auth
