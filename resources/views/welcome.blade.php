@@ -2,7 +2,7 @@
     
 <x-header />
 @if(count($announcements)>0)
-<h3 class='text-center'>Categorie con più annunci</h3>
+<h3 class='text-center'>{{__('ui.all_category_welcome')}}</h3>
 <div class="container my-5">
     <div class="row">
         @foreach($moreAnn as $category_moreAnn)
@@ -11,7 +11,7 @@
                 <div class='d-flex align-items-center flex-column border-custom'>
                     <img width='60%' src="{{$category_moreAnn->icon}}" alt="">
                 </div>
-                <p class='text-color text-center fs-4 mt-3'>{{$category_moreAnn->name}}</p>
+                <p class='text-color text-center fs-4 mt-3'><x-category-name categoryName="{{$category_moreAnn->name}}"/></p>
             </a>
         </div>
         @endforeach
@@ -35,5 +35,19 @@
         message="{{__('ui.no_announcement')}}">
         <a href="{{route('register')}}" class="btn btn-primary">{{__('ui.register_to_add_announcement')}}</a>
     </x-bladewind.empty-state>
+@endif
+
+@if(session('locale')=='ab')
+    <script>
+        window.history.pushState('','','allaCas\'')
+    </script>
+@elseif(session('locale')=='it')                
+    <script>
+        window.history.pushState('','','casa')
+    </script>
+@elseif(session('locale')=='gb')
+    <script>
+         window.history.pushState('','','home')
+    </script>
 @endif
 </x-layout>

@@ -13005,10 +13005,10 @@ a:link {
     cursor: pointer;
     -webkit-animation: fave-heart 1s steps(28);
             animation: fave-heart 1s steps(28);
-  }
-  .heart:hover {
     background-position: -2800px 0;
     transition: background 1s steps(28);
+  }
+  .heart:hover {
   }
   @-webkit-keyframes fave-heart {
     0% {
@@ -13028,6 +13028,10 @@ a:link {
   }
   
   /* fine animazione preferiti */
+
+  .activeCustom{
+    background-color: #4d4d4d8e;
+  }
 .navbar {
     display: block;
     margin: 0 auto;

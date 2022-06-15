@@ -53,13 +53,25 @@
                 </div>
             @else
             <x-bladewind.empty-state
-                message="Crea un annuncio o attendi che un revisore lo approvi">
+                message="{{__('ui.profile_empty_state')}}">
             </x-bladewind.empty-state>
             @endif
 
         </div>
     </div>
 
-<!-- Da inserire tutti gli annunci dell'utente -->
+    @if(session('locale')=='ab')
+        <script>
+            window.history.pushState('','','profil\'')
+        </script>
+        @elseif(session('locale')=='it')                
+        <script>
+            window.history.pushState('','','profilo')
+        </script>
+        @elseif(session('locale')=='gb')
+        <script>
+            window.history.pushState('','','profile')
+        </script>
+    @endif
 
 </x-layout>

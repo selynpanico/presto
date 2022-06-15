@@ -52,4 +52,7 @@ return [
     'category_books' =>'Libri',
     'category_animals' =>'Animali',
     'category_videogames' =>'Console e Videogiochi',
+    'all_category_welcome'=>'Categorie con più annunci',
+    'profile_empty_state'=>'Crea un annuncio o attendi che un revisore lo approvi',
+    'new_announcement'
 ];
