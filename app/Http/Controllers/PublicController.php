@@ -52,6 +52,7 @@ class PublicController extends Controller
         return view('contacts');
     }
     public function cart(){
-        return view('cart');
+        $announcements = Auth::user()->cartItem;
+        return view('carts')->with(compact('announcements'));
     }
 }
