@@ -43,7 +43,7 @@
     </script>
 @elseif(session('locale')=='it')                
     <script>
-        window.history.pushState('','','casa')
+        window.history.pushState('','','benvenuto')
     </script>
 @elseif(session('locale')=='gb')
     <script>
