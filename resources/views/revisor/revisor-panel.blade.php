@@ -73,16 +73,20 @@
         <h5 class="text-center">Tags</h5>
       @if(count($announcement_to_check->images) == 1)
       <div>
-        @foreach($announcement_to_check->images->first()->labels as $label)
+        @foreach($announcement_to_check->images()->first()->labels as $label)
           <p>{{$label}}</p>
         @endforeach
       </div> 
       @else
         @foreach($announcement_to_check->images as $image)
         <div class="imageLabels visually-hidden">
+          @if($image->labels)
             @foreach($image->labels as $label)
             <p>{{$label}}</p>
             @endforeach
+            @else
+            <p>Attendi il caricamento...</p>
+          @endif
         </div>
         @endforeach
       @endif
